@@ -1,5 +1,5 @@
-@baseUrl=https://shielded-savannah-41389.herokuapp.com/api
-@accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjUzNjA1MzcyLCJleHAiOjE2NTg3ODkzNzJ9.KqdM0ceWLVSn93MotPwYOK17sR39KAs1fwrnorUlWHA
+@baseUrl=https://clisha-dev-server.herokuapp.com/api
+@accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjYxMzUzNDI5LCJleHAiOjE2NjY1Mzc0Mjl9.Gp5TyKqhtZ2hmwlhpspYkmwAymg0njiWEdOc2eAMTAw
 
 ### Create task
 POST {{ baseUrl }}/admin/tasks   
@@ -9,8 +9,8 @@ Content-Type: application/json
 {
     "points":308,
     "url":"https://expectoo.de/",
-    "start":"2022-07-15",
-    "task_type":"google_search",
+    "start":"2022-09-02",
+    "task_type":"website_click",
    "google_search":{ 
      "title": "Entwickler- IT Experten - Nearshore | Expectoo GmbH",
     "search_phrase": "Entwickler- IT Experten - Nearshore | Expectoo GmbH"
@@ -27,6 +27,7 @@ Content-Type: application/json
 ### Login
 POST {{ baseUrl }}/admin/authenticate 
 Content-Type: application/json 
+
 {
     "email":"admin@expectoo.dev",
     "password":"clisha_@dmin"

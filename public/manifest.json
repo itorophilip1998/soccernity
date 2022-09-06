@@ -1,27 +1,25 @@
 {
-  "short_name": "Fulga Devotional",
-  "name": "Fulga Devotional",
-  "description":"Fulga Sunday School Manual And Devotional",
+  "short_name": "Clisha",
+  "name": "Clisha",
   "icons": [
     {
-      "src": "logo.png",
+      "src": "Fevicon.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo.png",
+      "src": "Fevicon.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo.png",
+      "src": "Fevicon.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#3f51b5",
-  "theme": "#3f51b5",
+  "theme_color": "#7543ae",
   "background_color": "#ffffff"
 }

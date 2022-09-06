@@ -1,7 +1,6 @@
-import { configureStore } from "@reduxjs/toolkit";
-import data from "./data"
+import { configureStore } from "@reduxjs/toolkit"; 
 export const store = configureStore({
-    reducer: {
-        data 
-    },
+  reducer: {
+   
+  },
 });
