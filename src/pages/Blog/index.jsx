@@ -1,9 +1,10 @@
 import React from 'react'
+import Hero from './components/Hero' 
 
 function Blog() {
   return (
     <div>
-      Blog
+      <Hero/>
     </div>
   )
 }

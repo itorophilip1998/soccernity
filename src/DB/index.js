@@ -16,3 +16,12 @@ export const nav = [
         link: "/#about",
     },
 ];
+
+export const categories = [
+    'All',
+    'Premier League',
+    'La Liga',
+    'Champions League',
+    'NPFL',
+    'More'
+];

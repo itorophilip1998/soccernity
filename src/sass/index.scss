@@ -13,7 +13,12 @@
 @import './pages/blog';
 
 // components
-// @import './components/*';
+@import './components/input';
 
 // utils
 // @import './utils/*';
+
+body {
+    padding: 3rem;
+    font-family: 'Montserrat' !important;
+}

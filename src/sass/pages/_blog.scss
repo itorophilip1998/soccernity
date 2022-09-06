@@ -1,0 +1,24 @@
+#hero {
+    background-image: url("../../../public/images/hero.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    margin-top: 2rem;
+    color: #fff;
+    height: 259px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        width: 433px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 59px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+}

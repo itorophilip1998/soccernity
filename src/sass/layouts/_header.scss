@@ -1,0 +1,36 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .logo {
+        width: 204px;
+        height: 53px;
+        background: #D9D9D9;
+        border-radius: 25px;
+    }
+
+    nav {
+
+        a {
+            color: rgba(77, 69, 0, 0.47);
+            text-decoration: none !important;
+            margin: 0 10px;
+            cursor: pointer;
+            
+            &:hover,
+            &:active,
+            &:focus {
+                color: #4D4500;
+            }
+
+        }
+
+        .isactive {
+            color: #4D4500;
+        }
+        img{ 
+            margin-left: 2px;
+        }
+    }
+}
