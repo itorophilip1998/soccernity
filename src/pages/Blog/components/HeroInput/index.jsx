@@ -2,9 +2,9 @@ import React from 'react'
 
 function HeroInput() {
   return (
-    <section className="heroInput">
+    <section id="heroInput">
       <img src="/images/search.png" alt="" />
-      <input type="text" placeholder='Search Topics' />
+      <input type="text" placeholder='Search Topics'  />
     </section>
   )
 }

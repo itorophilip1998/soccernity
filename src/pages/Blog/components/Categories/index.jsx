@@ -1,14 +1,24 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { Link } from 'react-router-dom'
 import {categories} from "../../../../DB"
-function index() {
+function Categories() {
+    const [isFocus, setisFocus] = useState("All")
   return (
-    <section id="categories">
+      <div>
+           <section id="categories">
           {categories.map((item, key) =>
-              <Link to={`#`} key={key}>{item}</Link>
+              <Link to={`#`} key={key}
+                className={item === isFocus ? 'isFocus' : ""}
+                onClick={() => setisFocus(item)}>
+                  {item}
+              </Link>
           )}
-    </section>
+          </section>
+          
+          <h1 className='trendingTopic'>{ isFocus === "All" ? 'Trending Topics' : isFocus}</h1>
+         
+   </div>
   )
 }
 
-export default index
+export default Categories
