@@ -13,10 +13,12 @@ export default function Header() {
       </div>
       <nav >
         {nav.map((item, key) =>
-          <Link key={key} to={item.link} onClick={()=>handleLink(key)} className={isHover===key?"isactive":''} >
+     
+            <Link key={key} to={item.link} onClick={()=>handleLink(key)} className={isHover===key?"isactive":''} >
             {item.name}
-            {isHover===key && <img src="/images/under_line_link.png" alt="" />}
+            {/* {isHover===key && <img src="/images/under_line_link.png" alt="" />} */}
           </Link>
+  
         )}
       </nav> 
     </header>

@@ -18,6 +18,10 @@ function BlogCard(props) {
               </p>
               </div>
           </div>) }
+
+          <div className="loadMore col ">
+            <button className='loadMore-btn'>See More</button>
+          </div>
     </div>
   )
 }

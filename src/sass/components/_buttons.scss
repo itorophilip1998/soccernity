@@ -1,0 +1,23 @@
+.loadMore-btn {
+    width: 202px;
+    height: 56px;
+    border: 3px solid #1E1E1E;
+    box-sizing: border-box;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+    display: inline;
+    background: white;
+
+    &:hover {
+        background: #000000;
+        color: white;
+    }
+
+    transition: 0.7s;
+    -webkit-transition: 0.7s;
+    -moz-transition: 0.7s;
+    -ms-transition: 0.7s;
+    -o-transition: 0.7s;
+}
