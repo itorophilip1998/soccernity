@@ -9,9 +9,10 @@ export default function Header() {
   return (
     <header> 
 
-      <nav class="navbar navbar-expand-md navbar-light  p-0">
+      <nav class="navbar navbar-expand-md navbar-light ">
    
-          <Link class="navbar-brand ml-0" to="#"><div className="logo"></div></Link>
+        <div className="container">
+            <Link class="navbar-brand ml-0" to="#"><div className="logo"></div></Link>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                 aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -27,6 +28,7 @@ export default function Header() {
           
           </ul>
           
+        </div>
         </div>
       
       </nav>
