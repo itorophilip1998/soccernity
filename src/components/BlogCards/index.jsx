@@ -1,5 +1,6 @@
 import React from 'react'
 import moment from 'moment/moment';
+import { Link } from 'react-router-dom';
 function BlogCard(props) {
   return (
     <div className={'row m-0 blogcards'}> 
@@ -10,7 +11,9 @@ function BlogCard(props) {
           </div>     
               <div className="card-body">
               {blog.isTop && <div className='tag' >{blog.category}</div>}
-              <h3>{blog.topic}</h3> 
+            <h3>
+            <Link to={"/blog/blog_id"}>{blog.topic}</Link>
+            </h3> 
               <p className='body'>{blog.body}</p>
               <p className='time'>
                   <img src="/images/time.png" alt="" />
