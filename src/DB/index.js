@@ -67,7 +67,7 @@ export const blog = [
         body: "A double from Wilfried Zaha helped Crystal Palace to a 3-1 win against Aston Villa, picking up their first Premier League win of the new season.",
         date: Date.now(),
         img: "/images/blog1.png",
-        isTop: true 
+        isTop: true
     },
     {
         category: "La Liga",
@@ -101,8 +101,6 @@ export const blog = [
         body: "A double from Wilfried Zaha helped Crystal Palace to a 3-1 win against Aston Villa, picking up their first Premier League win of the new season.",
         date: Date.now(),
         img: "/images/blog2.png"
-
-
     },
     {
         category: "La Liga",
@@ -130,11 +128,11 @@ export const footer = [
     },
     {
         name: "Privacy Policy",
-        link: "/terms-condition"
-    }, 
+        link: "/privacy-policy"
+    },
     {
         name: "Contact Us",
-        link: "/terms-condition"
+        link: "/contact"
     },
 
 ]

@@ -9,6 +9,7 @@ import WebFont from 'webfontloader';
 import Header from "./layouts/Header";
 import Footer from "./layouts/Footer/Footer";
 import SingleBlog from "./pages/Blog/components/SingleBlog";
+import Contact from "./pages/Contact";
 
 function App() {
   const dispatch = useDispatch();
@@ -34,6 +35,7 @@ function App() {
           {/* Public Route start*/}
           <Route path="/" element={<Blog />} />
           <Route path="/blog/:id" element={<SingleBlog />} />
+          <Route path="/contact" element={<Contact />} />
           {/* Public Route end*/}
         </Routes>
       </main> 
