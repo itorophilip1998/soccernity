@@ -125,3 +125,28 @@ export const blog = [
     },
 
 ];
+
+export const footer = [
+    {
+        name: "Terms of Service",
+        link: "/terms-condition"
+    },
+    {
+        name: "Privacy Policy",
+        link: "/terms-condition"
+    },
+    {
+        name: "Privacy Settings",
+        link: "/terms-condition"
+    }
+    ,
+    {
+        name: "Terms of Service",
+        link: "/terms-condition"
+    },
+    {
+        name: "Contact Us",
+        link: "/terms-condition"
+    },
+
+]

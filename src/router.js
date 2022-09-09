@@ -8,6 +8,7 @@ import { useDispatch } from "react-redux";
 import WebFont from 'webfontloader';
 import Header from "./layouts/Header";
 import Footer from "./layouts/Footer/Footer";
+import SingleBlog from "./pages/Blog/components/SingleBlog";
 
 function App() {
   const dispatch = useDispatch();
@@ -22,9 +23,9 @@ function App() {
   }, []);
 
   return (
-    <div className="w-100">
-      <Router>
-        <Header />
+    <Router>
+      <Header />
+      <main>
         <Routes>
           {/* Private Route start*/}
 
@@ -32,12 +33,12 @@ function App() {
 
           {/* Public Route start*/}
           <Route path="/" element={<Blog />} />
+          <Route path="/blog/:id" element={<SingleBlog />} />
           {/* Public Route end*/}
         </Routes>
-        <Footer />
-      </Router>
-
-    </div>
+      </main> 
+      <Footer />
+    </Router>
   );
 }
 
