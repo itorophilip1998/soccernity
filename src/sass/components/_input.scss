@@ -1,8 +1,9 @@
 input {
     border: 0;
     outline: 0;
-    &:focus{
-    outline: none !important;
+
+    &:focus {
+        outline: none !important;
     }
 }
  

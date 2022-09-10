@@ -6,7 +6,7 @@ import {blog} from "../../DB"
 function Blog() {
   
   return (
-    <div>
+    <div> 
       <Hero />
       <Categories />  
       <BlogCards blog={blog}/>

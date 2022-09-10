@@ -3,11 +3,12 @@ import Hero from '../Blog/components/Hero'
 
 function Contact() {
   return (
-    <div className='contact'>
+    <div className='contact '>
           <Hero />
           <h2 className='conTxt'>Contact Us</h2>
           <form   >
-              <div class="form-group"> 
+              <div className="container py-5 col-xl-6 col-md-10 mx-auto">
+                    <div class="form-group"> 
                 <input type="text" class="form-control" name="" id="" aria-describedby="emailHelpId" placeholder="Name"/>
                 {/* <small id="emailHelpId" class="form-text text-muted">Help text</small> */}
               </div>
@@ -31,10 +32,11 @@ function Contact() {
                   <textarea name="" id="" cols="30" rows="10" className='form-control' placeholder='Enter your message here'></textarea>
                 {/* <small id="emailHelpId" class="form-text text-muted">Help text</small> */}
               </div>
-              <div className="form-group text-center">
+              <div className="form-group mb-0  text-center">
             <button className='loadMore-btn'>Submit</button>
                   
               </div>
+            </div>
           </form>
     </div>
   )

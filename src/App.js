@@ -26,7 +26,7 @@ function App() {
   return (
     <Router>
       <Header className="container" />
-      <main className="container">
+      <main >
         <Routes>
           {/* Private Route start*/}
 
@@ -38,8 +38,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           {/* Public Route end*/}
         </Routes>
-      </main> 
-      <Footer className="container"/>
+      </main>
+      <Footer className="container" />
     </Router>
   );
 }

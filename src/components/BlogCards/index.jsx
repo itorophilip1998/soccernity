@@ -3,7 +3,8 @@ import moment from 'moment/moment';
 import { Link } from 'react-router-dom';
 function BlogCard(props) {
   return (
-    <div className={'row m-0 blogcards'}> 
+    <div className="container pb-3">
+       <div className={'row m-0 blogcards'}> 
       {props?.blog?.map((blog, key) =>
         <div key={key} className={  `${blog.isTop ? 'headeline-cards' : 'detailed-cards col-md-4 mx-auto'} my-3`}>
            <div className="img">
@@ -26,6 +27,7 @@ function BlogCard(props) {
             <button className='loadMore-btn'>See More</button>
           </div>
     </div>
+   </div>
   )
 }
 
