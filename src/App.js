@@ -8,7 +8,7 @@ import { useDispatch } from "react-redux";
 import WebFont from 'webfontloader';
 import Header from "./layouts/Header";
 import Footer from "./layouts/Footer/Footer";
-import SingleBlog from "./pages/Blog/components/SingleBlog";
+import SingleBlog from "./pages/SingleBlog";
 import Contact from "./pages/Contact";
 
 function App() {

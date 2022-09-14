@@ -9,19 +9,22 @@ export default function Header() {
   return (
     <header > 
 
-      <nav class="navbar navbar-expand-md navbar-light ">
+      <nav className="navbar navbar-expand-md navbar-light ">
    
         <div className="container">
-            <Link class="navbar-brand ml-0" to="#"><div className="logo"></div></Link>
-            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+          <Link className="navbar-brand ml-0" to="#">
+            <img src="/logo.png" alt="" className='logoImg' />
+            <span className='logoName'>Soccernity</span>
+            </Link>
+            <button className="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                 aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+              <span className="navbar-toggler-icon"></span>
             </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-          <ul class="navbar-nav ml-auto mt-2 mt-lg-0"> 
+        <div className="collapse navbar-collapse" id="collapsibleNavId">
+          <ul className="navbar-nav ml-auto mt-2 mt-lg-0"> 
             {nav.map((item, key) =>
-                <li class="nav-item"   key={key} >
-                  <Link class="nav-link" to={item.link} onClick={()=>handleLink(key)} className={isHover===key?"isactive":''} > {item.name}</Link>
+                <li className="nav-item"   key={key} >
+                  <Link  to={item.link} onClick={()=>handleLink(key)} className={`nav-link ${isHover===key?"isactive":''}`} > {item.name}</Link>
                 </li> 
               )}
 
