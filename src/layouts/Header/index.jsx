@@ -24,11 +24,10 @@ export default function Header() {
           <ul className="navbar-nav ml-auto mt-2 mt-lg-0"> 
             {nav.map((item, key) =>
                 <li className="nav-item"   key={key} >
-                  <Link  to={item.link} onClick={()=>handleLink(key)} className={`nav-link ${isHover===key?"isactive":''}`} > {item.name}</Link>
+                  <Link  to={item.link} onClick={()=>handleLink(key)} className={`nav-link `} > {item.name}</Link>
                 </li> 
               )}
-
-          
+ 
           </ul>
           
         </div>

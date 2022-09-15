@@ -9,7 +9,7 @@ function TrendingNews() {
       <div className='trendingNews'>
           <h1 >More Trending News</h1>
        <div className={'row m-0 p-0 blogcards'}> 
-      {trend?.map((blog, key) => (<div key={key} className={  `detailed-cards col-md-4 mx-auto my-3 `}>
+      {trend?.map((blog, key) => (<div key={key} className={`detailed-cards col-md-4 mx-auto my-3 `}>
            <div className="img">
               <img src={blog.img} alt="" /> 
           </div>     

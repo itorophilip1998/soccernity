@@ -5,6 +5,9 @@ header {
         cursor: pointer;
         margin: 0 10px;
         padding-bottom: 3px;
+        font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
 
         &:hover,
         &:active,
@@ -12,17 +15,27 @@ header {
             color: #4D4500;
         }
 
-        &:focus {
-            border-bottom: 2px dotted #4D4500;
+
+
+
+    }
+
+    .nav-link {
+        &::after {
+            background: red;
+            width: 100px;
+            height: 100px;
+            content: " ";
+            background-image: url("../../../public/images/under_line_link.png");
         }
     }
 
 }
 
-.isactive {
-    color: #4D4500;
-    border-bottom: 2px dotted #4D4500;
-}
+// .isactive {
+//     color: #4D4500;
+//     border-bottom: 2px dotted #4D4500;
+// }
 
 .logo {
     width: 204px;
@@ -35,9 +48,10 @@ header {
     width: 55px;
 
 }
-.logoName{
+
+.logoName {
     font-weight: bolder;
     margin-left: 0.6rem;
     font-size: 30px;
-    color:#282E65
+    color: #282E65
 }
