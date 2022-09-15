@@ -24,7 +24,9 @@ export default function Header() {
           <ul className="navbar-nav ml-auto mt-2 mt-lg-0"> 
             {nav.map((item, key) =>
                 <li className="nav-item"   key={key} >
-                  <Link  to={item.link} onClick={()=>handleLink(key)} className={`nav-link `} > {item.name}</Link>
+                <Link to={item.link} onClick={() => handleLink(key)} className={`nav-link `} > {item.name}
+               {isHover===key && <div className='underlinImg'><img src="/images/under_line_link.png" alt="" /></div>}
+                </Link>
                 </li> 
               )}
  
