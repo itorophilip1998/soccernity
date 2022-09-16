@@ -1,4 +1,22 @@
 .commentBox {
-    .commentProfileLogo {}
+    .commentProfileLogo {
+        width: 56px;
+        height: 56px;
+    }
 
+    h5 {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+
+        color: #1E1E1E;
+    }
+
+    .rounder-box {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+
+        background: rgba(0, 0, 0, 0.2);
+    }
 }
