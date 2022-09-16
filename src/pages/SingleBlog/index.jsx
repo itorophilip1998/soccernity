@@ -2,6 +2,7 @@ import React from 'react'
 import {Facebook,Twitter,WhatsApp,Share} from '@material-ui/icons';
 import Slider from './components/Slider';
 import TrendingNews from '../../components/TrendingNews';
+import BlogForm from '../Blog/components/BlogForm';
 function SingleBlog() {
   return (
     <div className='container py-5 single-blog'>
@@ -53,7 +54,8 @@ function SingleBlog() {
                           <WhatsApp className="Wa ico"  />
                           <Share className="Sh ico" />
                       </i>
-              </div>
+      </div>
+      <BlogForm/>
       <TrendingNews/>
     </div>
   )
