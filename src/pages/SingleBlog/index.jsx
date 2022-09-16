@@ -3,6 +3,7 @@ import {Facebook,Twitter,WhatsApp,Share} from '@material-ui/icons';
 import Slider from './components/Slider';
 import TrendingNews from '../../components/TrendingNews';
 import BlogForm from '../Blog/components/BlogForm';
+import Comments from '../Blog/components/Comments';
 function SingleBlog() {
   return (
     <div className='container py-5 single-blog'>
@@ -55,7 +56,10 @@ function SingleBlog() {
                           <Share className="Sh ico" />
                       </i>
       </div>
-      <BlogForm/>
+      <div className="commentBlog">
+        <BlogForm />
+        <Comments />
+      </div>
       <TrendingNews/>
     </div>
   )

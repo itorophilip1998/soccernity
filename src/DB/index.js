@@ -165,3 +165,302 @@ export const trendingDB = [
 
     }
 ]
+
+export const comments = [
+    {
+        name: "Alexis5",
+        img: 1,
+        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+        time: Date.now(),
+        reply: [
+            {
+                name: "Amadi3",
+                img: 2,
+                comment: "dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                time: Date.now(),
+
+                reply: [
+                    {
+                        name: "Amadi3",
+                        img: 2,
+                        comment: "dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                        time: Date.now(),
+
+                    },
+                    {
+                        name: "Itoro",
+                        img: 3,
+                        comment: "consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                        time: Date.now(),
+
+                    },
+                    {
+                        name: "Emma",
+                        img: 4,
+                        comment: " Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                        time: Date.now(),
+
+                    },
+                ],
+
+            },
+            {
+                name: "Itoro",
+                img: 3,
+                comment: "consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                time: Date.now(),
+
+                reply: [
+                    {
+                        name: "Amadi3",
+                        img: 2,
+                        comment: "dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                        time: Date.now(),
+
+                    },
+                    {
+                        name: "Itoro",
+                        img: 3,
+                        comment: "consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                        time: Date.now(),
+
+                    },
+                    {
+                        name: "Emma",
+                        img: 4,
+                        comment: " Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                        time: Date.now(),
+
+                    },
+                ]
+            },
+            {
+                name: "Emma",
+                img: 4,
+                comment: " Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                reply: [
+                    {
+                        name: "Amadi3",
+                        img: 2,
+                        comment: "dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                        time: Date.now(),
+
+                    },
+                    {
+                        name: "Itoro",
+                        img: 3,
+                        comment: "consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                        time: Date.now(),
+
+                    },
+                    {
+                        name: "Emma",
+                        img: 4,
+                        comment: " Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                        time: Date.now(),
+
+                    },
+                ]
+            },
+        ]
+
+    },
+    {
+        name: "Power",
+        img: 5,
+        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+        time: Date.now(),
+        reply: [
+            {
+                name: "Amadi3",
+                img: 2,
+                comment: "dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                time: Date.now(),
+
+                reply: [
+                    {
+                        name: "Amadi3",
+                        img: 2,
+                        comment: "dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                        time: Date.now(),
+
+                    },
+                    {
+                        name: "Itoro",
+                        img: 3,
+                        comment: "consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                        time: Date.now(),
+
+                    },
+                    {
+                        name: "Emma",
+                        img: 4,
+                        comment: " Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                        time: Date.now(),
+
+                    },
+                ]
+            },
+            {
+                name: "Itoro",
+                img: 3,
+                comment: "consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                time: Date.now(),
+                reply: [
+                    {
+                        name: "Amadi3",
+                        img: 2,
+                        comment: "dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                        time: Date.now(),
+
+                    },
+                    {
+                        name: "Itoro",
+                        img: 3,
+                        comment: "consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                        time: Date.now(),
+
+                    },
+                    {
+                        name: "Emma",
+                        img: 4,
+                        comment: " Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                        time: Date.now(),
+
+                    },
+                ]
+            },
+            {
+                name: "Emma",
+                img: 5,
+                comment: " Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                time: Date.now(),
+
+                reply: [
+                    {
+                        name: "Amadi3",
+                        img: 2,
+                        comment: "dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                        time: Date.now(),
+
+                    },
+                    {
+                        name: "Itoro",
+                        img: 3,
+                        comment: "consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                        time: Date.now(),
+
+                    },
+                    {
+                        name: "Emma",
+                        img: 4,
+                        comment: " Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                        time: Date.now(),
+
+                    },
+                ]
+            },
+        ]
+
+    },
+    {
+        name: "Alexis5",
+        img: 6,
+        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+        time: Date.now(),
+
+        reply: [
+            {
+                name: "Amadi3",
+                img: 2,
+                comment: "dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                time: Date.now(),
+
+                reply: [
+                    {
+                        name: "Amadi3",
+                        img: 2,
+                        comment: "dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                        time: Date.now(),
+
+                    },
+                    {
+                        name: "Itoro",
+                        img: 3,
+                        comment: "consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                        time: Date.now(),
+
+                    },
+                    {
+                        name: "Emma",
+                        img: 4,
+                        comment: " Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                        time: Date.now(),
+
+                    },
+                ]
+            },
+            {
+                name: "Itoro",
+                img: 3,
+                comment: "consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                time: Date.now(),
+
+                reply: [
+                    {
+                        name: "Amadi3",
+                        img: 2,
+                        comment: "dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                        time: Date.now(),
+
+                    },
+                    {
+                        name: "Itoro",
+                        img: 3,
+                        comment: "consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                        time: Date.now(),
+
+                    },
+                    {
+                        name: "Emma",
+                        img: 4,
+                        comment: " Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                        time: Date.now(),
+
+                    },
+                ]
+            },
+            {
+                name: "Emma",
+                img: 4,
+                comment: " Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                time: Date.now(),
+
+                reply: [
+                    {
+                        name: "Amadi3",
+                        img: 2,
+                        comment: "dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                        time: Date.now(),
+
+                    },
+                    {
+                        name: "Itoro",
+                        img: 3,
+                        comment: "consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                        time: Date.now(),
+
+                    },
+                    {
+                        name: "Emma",
+                        img: 4,
+                        comment: " Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
+                        time: Date.now(),
+
+                    },
+                ]
+            },
+        ]
+
+    }
+]

@@ -29,7 +29,7 @@ function Contact() {
               </div>
               
               <div class="form-group">  
-                  <textarea name="" id="" cols="30" rows="10" className='form-control' placeholder='Enter your message here'></textarea>
+                  <textarea name="" id="" cols="30" rows="5" className='form-control' placeholder='Enter your message here'></textarea>
                 {/* <small id="emailHelpId" class="form-text text-muted">Help text</small> */}
               </div>
               <div className="form-group mb-0  text-center">
