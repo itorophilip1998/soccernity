@@ -7,7 +7,8 @@ function Comments() {
     <div className="commentBox">
       <div className="row m-0">
               <div className="col-3">
-                  <img src={`/images/${item.img}.png`} alt="" className="commentProfileLogo" /> 
+                  <img src={`/images/comments/${item.img}.png`} alt="" className="commentProfileLogo" /> 
+           
         </div>
               <div className="col-9">
                   <h5>
