@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import AuthBtn from '../../components/Button/AuthBtn'
-import AuthCheckBox from '../../components/input/AuthCheckBox'
+import AuthBtn from '../../components/Button/AuthBtn' 
 import AuthInput from '../../components/input/AuthInput'
 import {input} from "../../DB"
 function SignUp() {
