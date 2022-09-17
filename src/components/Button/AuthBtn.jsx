@@ -4,7 +4,7 @@ const AuthBtn = ({name}) => {
     console.log(name)
   return (
      <div className="form-group authButton"> 
-          <button className="btn">{name}</button>
+          <button className="btn form-control">{name}</button>
          </div>
   )
 }

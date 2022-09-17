@@ -22,8 +22,66 @@
     -o-transition: 0.7s;
 }
 
-.btn:focus,.btn:hover {
+.btn:focus,
+.btn:hover {
     outline: none !important;
     border: 1px solid $primary  !important;
     box-shadow: none !important;
+}
+
+.authButton {
+    .btn {
+        /* Auto layout */
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+        gap: 10px;
+
+        height: 69px;
+
+        /* Primary */
+
+        background: #323080;
+        box-shadow: 0px 30px 60px rgba(79, 70, 229, 0.15);
+        border-radius: 6px;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 3;
+        align-self: stretch;
+        flex-grow: 0;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+
+        color: #FFFFFF;
+
+        &:hover {
+            background: $primary;
+        }
+    }
+}
+
+.extra {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 2rem;
+    text-align: center;
+
+    /* Muted */
+
+    color: #4B5563;
+
+    a {
+        color: $link;
+    }
 }
