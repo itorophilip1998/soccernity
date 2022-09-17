@@ -488,3 +488,18 @@ export const reactions = [
         url: "https://www.pngitem.com/pimgs/m/4-44435_loudly-crying-emoji-png-iphone-crying-emoji-transparent.png"
     }
 ]
+
+export const input = {
+    email: {
+        name: "email",
+        type: "email",
+        preText:"example@website.com",
+        
+    },
+    password: {
+        name: "password",
+        type: "password",
+        preText: "example@website.com",
+    }
+
+}

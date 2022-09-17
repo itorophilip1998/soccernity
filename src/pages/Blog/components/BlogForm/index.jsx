@@ -6,10 +6,10 @@ function BlogForm() {
           <h4>Join the discussion</h4>
           <hr />
           <form >
-              <div class="form-group"> 
+              <div className="form-group"> 
                   <div className="row m-0">
                       <div className="col-8 p-0">
-                             <input type="email"  class="form-control" name="" id="" aria-describedby="emailHelpId" placeholder="Email"/>
+                             <input type="email"  className="form-control" name="" id="" aria-describedby="emailHelpId" placeholder="Email"/>
                           
                       </div>
                       <div className="col-4">
@@ -21,13 +21,13 @@ function BlogForm() {
                       </div>
               </div>
                   </div>
-                {/* <small id="emailHelpId" class="form-text text-muted">Help text</small> */}
+                {/* <small id="emailHelpId" className="form-text text-muted">Help text</small> */}
               </div> 
-                  <div class="form-group">  
+                  <div className="form-group">  
                     <textarea name="" id="" cols="30" rows="10" className='form-control' placeholder='Enter your message here'></textarea>
-                {/* <small id="emailHelpId" class="form-text text-muted">Help text</small> */}
+                {/* <small id="emailHelpId" className="form-text text-muted">Help text</small> */}
               </div>
-              <div class="form-group">  
+              <div className="form-group">  
                 <button className="btn">Comment</button>
              </div>
           </form>

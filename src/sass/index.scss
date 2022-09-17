@@ -11,6 +11,7 @@
 @import './layouts/footer';
 @import './layouts/header';
 @import './layouts/sidebar';
+@import './layouts/authLayout';
 
 // pages
 @import './pages/blog';
@@ -35,6 +36,10 @@ body {
     a {
         text-decoration: none !important;
 
+    }
+
+    .link {
+        cursor: pointer;
     }
 }
 

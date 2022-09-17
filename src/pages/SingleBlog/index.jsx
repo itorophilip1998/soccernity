@@ -59,6 +59,8 @@ function SingleBlog() {
       <div className="commentBlog">
         <BlogForm />
         <Comments />
+        <Comments />
+        <Comments />
       </div>
       <TrendingNews/>
     </div>

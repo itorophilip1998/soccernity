@@ -1,0 +1,13 @@
+
+.AuthLayout{
+    .img_bg {
+        background-image: url("../../../public/images/rightBg.png");
+        min-height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .contentBox{
+        padding: 5% 10% !important;
+    }
+}

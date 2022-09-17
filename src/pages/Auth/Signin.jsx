@@ -1,0 +1,26 @@
+import React from 'react'
+import AuthBtn from '../../components/Button/AuthBtn'
+import AuthCheckBox from '../../components/input/AuthCheckBox'
+import AuthInput from '../../components/input/AuthInput'
+import {input} from "../../DB"
+function Signin() {
+  return (
+    <div className='auth signin'>
+          <header>
+              <h1>Welcome Back</h1>
+              <p>Enter your eMail address and password to log in to Soccernity.</p>
+          </header>
+          
+
+          <form>
+          <AuthInput input={input.email} error={false}/>
+          <AuthInput input={input.password} error={false}/>
+          <AuthCheckBox />
+          <AuthBtn/> 
+          </form>
+
+    </div>
+  )
+}
+
+export default Signin

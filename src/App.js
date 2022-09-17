@@ -10,9 +10,14 @@ import Header from "./layouts/Header";
 import Footer from "./layouts/Footer/Footer";
 import SingleBlog from "./pages/SingleBlog";
 import Contact from "./pages/Contact";
+import Signin from "./pages/Auth/Signin";
+import Signup from "./pages/Auth/Signup";
+import ForgotPassword from "./pages/Auth/ForgotPassword";
+import ResetPassword from "./pages/Auth/ResetPassword";
+import AuthLayout from "./layouts/AuthLayout";
+import BlogLayout from "./layouts/BlogLayout";
 
 function App() {
-  const dispatch = useDispatch();
   useEffect(() => {
     AOS.init();
     AOS.refresh();
@@ -25,21 +30,31 @@ function App() {
 
   return (
     <Router>
-      <Header className="container" />
-      <main >
-        <Routes>
-          {/* Private Route start*/}
 
-          {/* Private Route end*/}
+      <Routes>
+        {/* Private Route start*/}
 
-          {/* Public Route start*/}
+        {/* Private Route end*/}
+
+
+
+        {/* Public Route start*/}
+        <Route path="/" element={<BlogLayout/>}>
           <Route path="/" element={<Blog />} />
           <Route path="/blog/:id" element={<SingleBlog />} />
           <Route path="/contact" element={<Contact />} />
-          {/* Public Route end*/}
-        </Routes>
-      </main>
-      <Footer className="container" />
+        </Route>
+        {/* Public Route end*/}
+
+        {/* Auth Start */}
+        <Route path="/auth" element={<AuthLayout />}>
+          <Route path="signin" element={<Signin />} />
+          <Route path="signup" element={<Signup />} />
+          <Route path="forgot-password" element={<ForgotPassword />} />
+          <Route path="reset-password" element={<ResetPassword />} />
+        </Route>
+        {/* Auth end */}
+      </Routes>
     </Router>
   );
 }
