@@ -1,9 +1,31 @@
-import React from 'react'
-
+ import React from 'react'
+import { Link } from 'react-router-dom'
+import AuthBtn from '../../components/Button/AuthBtn'
+import AuthCheckBox from '../../components/input/AuthCheckBox'
+import AuthInput from '../../components/input/AuthInput'
+import {input} from "../../DB"
 function ForgotPassword() {
   return (
-    <div>
+    <div className='auth signin'>
+          <header>
+              <h1>Welcome Back</h1>
+              <p>Enter your eMail address and password to log in to Soccernity.</p>
+          </header>
+          
+
+          <form>
+          <AuthInput input={input.email} error={false}/>
+        <AuthInput input={input.password} error={false} />
+       
+
+           <AuthCheckBox /> 
+          <AuthBtn name={"Log in"}/> 
+      </form>
       
+       <div className="extra text-center">
+          Don’t have an account? <Link to="/auth/signup">Create one here.</Link>
+        </div>
+
     </div>
   )
 }

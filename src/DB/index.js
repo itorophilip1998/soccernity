@@ -490,6 +490,20 @@ export const reactions = [
 ]
 
 export const input = {
+    firstName: {
+        name: "firstname",
+        type: "text",
+        preText: "First Name",
+        isname:true
+        
+    },
+    lastName: {
+        name: "lastname",
+        type: "text",
+        preText: "Last Name",
+        isname: true 
+        
+    },
     email: {
         name: "email",
         type: "email",

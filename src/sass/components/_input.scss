@@ -41,27 +41,36 @@ textarea {
 
 .checkboxAuth {
     margin-top: 1.5rem;
+
     .checkboxLabel {
         margin: 0 .6rem;
         font-weight: 600;
         font-size: 16px;
         line-height: 19px;
-        color: #000000; 
-    cursor: pointer;
-    }
-    span{
-     position: absolute;
-     margin-left: .7rem;
-     margin-top: .2rem;
-    }
-    input[type="checkbox"]{
-        width: 25px;
-            height: 25px; 
-            background: #F3F4F6;
-            border-radius: 3px;
-            &:focus{
-                background: #000;
-            }
+        color: #000000;
+        cursor: pointer;
     }
 
+    span {
+        position: absolute;
+        margin-left: .7rem;
+        margin-top: .2rem;
+    }
+
+    input[type="checkbox"] {
+        width: 25px;
+        height: 25px;
+        background: #F3F4F6;
+        border-radius: 3px;
+
+        &:focus {
+            background: #000;
+        }
+    }
+
+   
+
 }
+ .m_extra {
+     margin-top: 5px;
+ }

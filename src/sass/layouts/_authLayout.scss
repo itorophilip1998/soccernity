@@ -1,5 +1,4 @@
-
-.AuthLayout{
+.AuthLayout {
     .img_bg {
         background-image: url("../../../public/images/rightBg.png");
         min-height: 100vh;
@@ -7,19 +6,20 @@
         background-size: cover;
         background-position: center;
     }
-    .contentBox{
+
+    .contentBox {
         padding: 5% 10% !important;
     }
 }
 
-.auth{
-  header{
-    h1 {
+.auth {
+    header {
+        h1 {
             font-weight: 600;
-        font-size: 32px;
+            font-size: 32px;
             color: #000000;
         }
-    
+
         p {
             font-family: 'Inter';
             font-style: normal;
@@ -29,12 +29,44 @@
             color: #4B5563;
             max-height: 56px;
         }
-  }
+    }
 }
+
 .passwordItem {
     position: absolute;
     left: 76%;
     margin-top: -2.8rem;
     color: rgb(160, 160, 160);
     cursor: pointer;
+
+    &:hover {
+        color: $primary;
+    }
+}
+
+.extra,
+.extra2 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    margin: 2rem 0;
+    text-align: center;
+
+    color: #4B5563;
+
+    a {
+        color: $link;
+
+        &:hover {
+            color: $primary
+        }
+    }
+}
+
+.extra2 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
 }
