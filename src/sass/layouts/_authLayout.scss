@@ -11,3 +11,23 @@
         padding: 5% 10% !important;
     }
 }
+
+.auth{
+  header{
+    h1 {
+            font-weight: 600;
+        font-size: 32px;
+            color: #000000;
+        }
+    
+        p {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 28px;
+            color: #4B5563;
+            max-height: 56px;
+        }
+  }
+}

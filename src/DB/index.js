@@ -499,7 +499,7 @@ export const input = {
     password: {
         name: "password",
         type: "password",
-        preText: "example@website.com",
+        preText: "Enter Password",
     }
 
 }

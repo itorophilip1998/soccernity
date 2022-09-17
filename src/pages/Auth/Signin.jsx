@@ -16,7 +16,7 @@ function Signin() {
           <AuthInput input={input.email} error={false}/>
           <AuthInput input={input.password} error={false}/>
           <AuthCheckBox />
-          <AuthBtn/> 
+          <AuthBtn name={"Log in"}/> 
           </form>
 
     </div>
