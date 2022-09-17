@@ -2,12 +2,13 @@ import React from 'react'
 
 function Slider() {
   return (
-    <div>
+    <div className="img-Slider">
       <div id="imgSlider" className="carousel slide" data-ride="carousel">
   <ol className="carousel-indicators">
     <li data-target="#imgSlider" data-slide-to="0" className="active"></li>
     <li data-target="#imgSlider" data-slide-to="1"></li>
     <li data-target="#imgSlider" data-slide-to="2"></li>
+    
   </ol>
   <div className="carousel-inner">
     <div className="carousel-item active">

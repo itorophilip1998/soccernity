@@ -464,3 +464,27 @@ export const comments = [
 
     }
 ]
+
+export const reactions = [
+    {
+        name: "Haha",
+        ico: "🤣",
+        url: "https://cdn.mos.cms.futurecdn.net/i26qpaxZhVC28XRTJWafQS-970-80.jpeg.webp"
+    },
+    {
+        name: "Like",
+        ico: "👍",
+        url: "https://cdn.shopify.com/s/files/1/1061/1924/products/Thumbs_Up_Sign_Emoji_Icon_ios10_large.png?v=1571606114"
+    },
+    {
+        name: "Angry",
+        ico: "😠",
+        url: "https://www.pngitem.com/pimgs/m/19-193672_pin-by-pngheart-on-transparent-background-mad-angry.png"
+    }
+    ,
+    {
+        name: "Cry",
+        ico: "😭",
+        url: "https://www.pngitem.com/pimgs/m/4-44435_loudly-crying-emoji-png-iphone-crying-emoji-transparent.png"
+    }
+]
