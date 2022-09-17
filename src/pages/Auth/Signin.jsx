@@ -14,11 +14,11 @@ function Signin() {
           
 
           <form>
-          <AuthInput input={input.email} error={false}/>
+        <AuthInput input={input.email} error={false} />
+        <Link to="/auth/forgot-password" className='forgotPLink'>Forgot Password?</Link>
         <AuthInput input={input.password} error={false} />
        
-
-           <AuthCheckBox /> 
+        <AuthCheckBox /> 
           <AuthBtn name={"Log in"}/> 
       </form>
       

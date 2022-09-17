@@ -28,8 +28,13 @@ function SignUp() {
           <div className="extra extra2 text-left ">
         By creating an account, you agree to our <Link to="/terms">Terms</Link>  and have read and acknowledge the <Link to="/policy">Privacy Policy</Link>.
         </div>
-          <AuthBtn name={"Register"}/> 
+        <AuthBtn name={"Register"} /> 
+        
       </form>
+
+      <div className="extra text-center">
+         Already have an account? <Link to="/auth/signin">Signin</Link>
+        </div>
       
      
 

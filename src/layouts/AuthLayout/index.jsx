@@ -6,7 +6,7 @@ const AuthLayout = () => {
     <div className='AuthLayout'>
           <div className="row m-0">
               <div className="col-md-6 contentBox"> 
-                    <Link className="navbar-brand ml-0" to="#">
+                    <Link className="navbar-brand ml-0" to="/">
                     <img src="/logo.png" alt="" className='logoImg' />
                     <span className='logoName'>Soccernity</span>
                     </Link> 

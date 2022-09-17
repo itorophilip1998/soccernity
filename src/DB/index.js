@@ -494,24 +494,29 @@ export const input = {
         name: "firstname",
         type: "text",
         preText: "First Name",
-        isname:true
-        
+        isname: true
+
     },
     lastName: {
         name: "lastname",
         type: "text",
         preText: "Last Name",
-        isname: true 
-        
+        isname: true
+
     },
     email: {
         name: "email",
         type: "email",
-        preText:"example@website.com",
-        
+        preText: "example@website.com",
+
     },
     password: {
         name: "password",
+        type: "password",
+        preText: "Enter Password",
+    },
+    confirmPassword: {
+        name: "Confirm Password",
         type: "password",
         preText: "Enter Password",
     }
