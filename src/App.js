@@ -5,9 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Blog from "./pages/Blog";
 import { useDispatch } from "react-redux";
-import WebFont from 'webfontloader';
-import Header from "./layouts/Header";
-import Footer from "./layouts/Footer/Footer";
+import WebFont from 'webfontloader'; 
 import SingleBlog from "./pages/SingleBlog";
 import Contact from "./pages/Contact";
 import Signin from "./pages/Auth/Signin";
@@ -16,6 +14,8 @@ import ForgotPassword from "./pages/Auth/ForgotPassword";
 import ResetPassword from "./pages/Auth/ResetPassword";
 import AuthLayout from "./layouts/AuthLayout";
 import BlogLayout from "./layouts/BlogLayout";
+import Terms from "./pages/TermsAndPolicy/Terms";
+import Policy from "./pages/TermsAndPolicy/Policy";
 
 function App() {
   useEffect(() => {
@@ -43,6 +43,8 @@ function App() {
           <Route path="/" element={<Blog />} />
           <Route path="/blog/:id" element={<SingleBlog />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/policy" element={<Policy />} />
         </Route>
         {/* Public Route end*/}
 

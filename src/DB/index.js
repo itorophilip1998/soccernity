@@ -124,11 +124,11 @@ export const blog = [
 export const footer = [
     {
         name: "Terms of Service",
-        link: "/terms-condition"
+        link: "/terms"
     },
     {
         name: "Privacy Policy",
-        link: "/privacy-policy"
+        link: "/policy"
     },
     {
         name: "About Us",
@@ -177,8 +177,7 @@ export const comments = [
                 name: "Amadi3",
                 img: 2,
                 comment: "dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
-                time: Date.now(),
-
+                time: Date.now(), 
                 reply: [
                     {
                         name: "Amadi3",
