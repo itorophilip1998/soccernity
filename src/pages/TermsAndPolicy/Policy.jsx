@@ -1,8 +1,10 @@
 import React from 'react'
+import Hero from '../Blog/components/Hero'
 
 function Policy() {
     return (
         <div className="policy container">
+            <Hero  />
             <h1>Privacy Policy for Soccernity
             </h1>
             <div className="welcome">

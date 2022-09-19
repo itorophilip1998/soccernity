@@ -4,11 +4,14 @@ import HeroInput from '../HeroInput'
 
 function Hero() {
   const location = useLocation()
-  const isCurrent = location.pathname; 
+  const isCurrent = location.pathname;
   return (
     <section id="hero" className='container'>
-          <h1>Feel The Passion, Enjoy the Game.</h1>
-         {isCurrent!=='/contact' && <HeroInput/>}
+      <h1>Feel The Passion, Enjoy the Game.</h1>
+      {(isCurrent !== '/contact' &&
+        isCurrent !== '/terms' &&
+        isCurrent !== '/policy'
+      ) && <HeroInput />}
     </section>
   )
 }

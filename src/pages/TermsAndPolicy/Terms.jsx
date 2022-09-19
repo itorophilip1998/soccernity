@@ -1,9 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Hero from '../Blog/components/Hero'
 
 const Terms = () => {
     return (
         <div className='terms container'>
+            <Hero />
+
             <h1>Terms of Service</h1>
 
             <div className="welcome">
