@@ -68,9 +68,15 @@ textarea {
         }
     }
 
-   
+
 
 }
- .m_extra {
-     margin-top: 5px;
- }
+
+.m_extra {
+    margin-top: 5px;
+}
+
+.contactInput {
+    height: 400px !important;
+    resize: none;
+}
