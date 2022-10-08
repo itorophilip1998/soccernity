@@ -8,7 +8,7 @@ export const nav = [
         link: "/community",
     },
     {
-        name: "Score",
+        name: "Scores",
         link: "/",
     },
     {

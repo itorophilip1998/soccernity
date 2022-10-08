@@ -13,8 +13,7 @@ function Signin() {
           </header>
           
 
-          <form>
-            m
+          <form> 
         <AuthInput input={input.email} error={false} />
         <Link to="/auth/forgot-password" className='forgotPLink'>Forgot Password?</Link>
         <AuthInput input={input.password} error={false} />
