@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { nav } from "../../DB"
-
+/*eslint-disable*/
 const LiveScoreHeader = () => {
     const [isHover, setisHover] = useState(0)
     const handleLink = (key) => setisHover(key)
@@ -21,12 +20,12 @@ const LiveScoreHeader = () => {
                     <div className="collapse navbar-collapse" id="collapsibleNavId">
                         <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
 
-                            <li className="nav-item"  >
+                            <li className="nav-item scores-link"  >
                                 <Link to="/" className={`nav-link `} >
                                     Scores
                                 </Link>
                             </li>
-                            <li className="nav-item"  >
+                            <li className="nav-item blog-link"  >
                                 <Link to="/blog" className={`nav-link `} >
                                     Blog <img src="/images/link.png" alt="" />
                                 </Link>
@@ -35,14 +34,15 @@ const LiveScoreHeader = () => {
                         </ul>
                         <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
 
-                            <li className="nav-item"  >
+                            <li className="nav-item login-link"  >
                                 <Link to="/auth/signin" className={`nav-link `} >
                                     Login
                                 </Link>
                             </li>
-                            <li className="nav-item"  >
-
-                                <img src="/images/theme.png" alt="" />
+                            <li className="nav-item  theme-link"  >
+                                <a href="#" className='nav-link'>
+                                    <img src="/images/theme.png" alt="" />
+                                </a>
 
                             </li>
 

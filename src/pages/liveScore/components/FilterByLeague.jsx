@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 
 const FilterByLeague = () => {
@@ -14,10 +15,12 @@ const FilterByLeague = () => {
             <ul>
                 {data.map((item, key) =>
                     <li key={key}>
-                        <div className="img-liner">
-                            <img src={item?.league?.logo} alt="" />
-                        </div>
-                        <span>{item?.league?.name}</span>
+                        <Link to="#">
+                            <div className="img-liner">
+                                <img src={item?.league?.logo} alt="" />
+                            </div>
+                            <span>{item?.league?.name}</span>
+                        </Link>
                     </li>
                 )}
             </ul>

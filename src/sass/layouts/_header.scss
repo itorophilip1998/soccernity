@@ -20,12 +20,12 @@ header {
 
 
     }
- 
+
 }
 
-.underlinImg { 
-    margin-left: 2px ;
-    margin-top: 2px ;
+.underlinImg {
+    margin-left: 2px;
+    margin-top: 2px;
     display: flex;
 }
 
@@ -51,7 +51,57 @@ header {
     font-weight: bolder;
     margin-left: 0.6rem;
     font-weight: 600;
-        font-size: 27.7644px;
-        line-height: 34px;
+    font-size: 27.7644px;
+    line-height: 34px;
     color: $primary
+}
+
+.livescoreHeader {
+    a {
+
+        font-weight: 600;
+        width: 101.64px;
+        text-align: center;
+    }
+
+    .scores-link {
+        box-shadow: 6px 6px 23px rgba(193, 193, 193, 0.25);
+        background-image: url("../../../public/images/linkShadow.png");
+        background-size: cover;
+
+        a {
+            color: $primary  !important;
+        }
+    }
+
+    .blog-link {
+        a {
+            color: #223C00 !important;
+        }
+
+        img {
+            padding-left: 2px;
+        }
+
+    }
+
+    .login-link {
+        a {
+            background: #282E65;
+            color: #fff !important;
+
+            &:hover {
+                color: $primary  !important;
+            }
+        }
+    }
+
+    .theme-link {
+        a {
+            width: 60.64px;
+            img{
+            margin-top: -4px;
+            }
+        }
+    }
 }
