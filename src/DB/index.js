@@ -9,7 +9,7 @@ export const nav = [
     },
     {
         name: "Livescores",
-        link: "/live",
+        link: "/livescore",
     },
     {
         name: "Contact Us",
@@ -177,7 +177,7 @@ export const comments = [
                 name: "Amadi3",
                 img: 2,
                 comment: "dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.Sed dignissim",
-                time: Date.now(), 
+                time: Date.now(),
                 reply: [
                     {
                         name: "Amadi3",
@@ -521,3 +521,718 @@ export const input = {
     }
 
 }
+
+export const FilterByLeague = [
+    {
+        name: "Premier League",
+        img: '/images/flag/england.png'
+    },
+    {
+        name: "Ligue 1",
+        img: '/images/flag/france.png'
+    },
+    {
+        name: "Bundesliga",
+        img: '/images/flag/germany.png'
+    },
+    {
+        name: "Serie A",
+        img: '/images/flag/italy.png'
+    },
+    {
+        name: "NPFL",
+        img: '/images/flag/german.png'
+    },
+    {
+        name: "LaLiga",
+        img: '/images/flag/france.png'
+    },
+    {
+        name: "UEFA Champions League",
+        img: '/images/flag/england.png'
+    },
+    {
+        name: "Europa League",
+        img: '/images/flag/italy.png'
+    },
+    {
+        name: "World Cup",
+        img: '/images/flag/england.png'
+    },
+]
+
+
+export const fixtures = [
+    {
+        date: Date.now(),
+        status: "live",
+        matches: [
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 3,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "52",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 3,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "HT",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 0,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "32",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 2,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "52",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 3,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "52",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 3,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "3",
+                time: Date.now(),
+            },
+        ]
+    },
+    {
+        date: Date.now(),
+        status: "Today",
+        matches: [
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 3,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "52",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 3,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "HT",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 0,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "32",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 2,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "52",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 3,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "52",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 3,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "3",
+                time: Date.now(),
+            },
+        ]
+    },
+    {
+        date: Date.now(),
+        status: "Tomorrow",
+        matches: [
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 3,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "52",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 3,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "HT",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 0,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "32",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 2,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "52",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 3,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "52",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 3,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "3",
+                time: Date.now(),
+            },
+        ]
+    },
+    {
+        date: Date.now(),
+        status: "Monday",
+        matches: [
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 3,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "52",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 3,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "HT",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 0,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "32",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 2,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "52",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 3,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "52",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 3,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "3",
+                time: Date.now(),
+            },
+        ]
+    },
+    {
+        date: Date.now(),
+        status: "Tuesday",
+        matches: [
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 3,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "52",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 3,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "HT",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 0,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "32",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 2,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "52",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 3,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "52",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 3,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "3",
+                time: Date.now(),
+            },
+        ]
+    },
+    {
+        date: Date.now(),
+        status: "Wednessday",
+        matches: [
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 3,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "52",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 3,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "HT",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 0,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "32",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 2,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "52",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 3,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "52",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 3,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "3",
+                time: Date.now(),
+            },
+        ]
+    },
+    {
+        date: Date.now(),
+        status: "Saturday",
+        matches: [
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 3,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "52",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 3,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "HT",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 0,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "32",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 2,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "52",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 3,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "52",
+                time: Date.now(),
+            },
+            {
+                date: Date.now(),
+                home: {
+                    name: "Liverpool",
+                    goal: 1,
+                    logo: "/images/flag/liverpool.png"
+                },
+                away: {
+                    name: "Chelsea",
+                    goal: 3,
+                    logo: "/images/flag/chelsea.png"
+                },
+                status: "3",
+                time: Date.now(),
+            },
+        ]
+    }
+]

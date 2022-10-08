@@ -16,6 +16,7 @@ import AuthLayout from "./layouts/AuthLayout";
 import BlogLayout from "./layouts/BlogLayout";
 import Terms from "./pages/TermsAndPolicy/Terms";
 import Policy from "./pages/TermsAndPolicy/Policy";
+import LiveScore from "./pages/liveScore";
 
 function App() {
   useEffect(() => {
@@ -45,6 +46,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/policy" element={<Policy />} />
+          <Route path="/livescore" element={<LiveScore />} />
         </Route>
         {/* Public Route end*/}
 
