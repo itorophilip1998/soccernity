@@ -1,15 +1,15 @@
 export const nav = [
     {
         name: "Home",
-        link: "/",
+        link: "/blog",
     },
     {
         name: "Community",
         link: "/community",
     },
     {
-        name: "Blog",
-        link: "/blog",
+        name: "Score",
+        link: "/",
     },
     {
         name: "Contact Us",
