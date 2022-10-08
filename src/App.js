@@ -5,7 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Blog from "./pages/Blog";
 import { useDispatch } from "react-redux";
-import WebFont from 'webfontloader'; 
+import WebFont from 'webfontloader';
 import SingleBlog from "./pages/SingleBlog";
 import Contact from "./pages/Contact";
 import Signin from "./pages/Auth/Signin";
@@ -17,11 +17,15 @@ import BlogLayout from "./layouts/BlogLayout";
 import Terms from "./pages/TermsAndPolicy/Terms";
 import Policy from "./pages/TermsAndPolicy/Policy";
 import LiveScore from "./pages/liveScore";
+import { getLegues } from "./store/LiveScores";
 
 function App() {
+  const dispatch = useDispatch()
+
   useEffect(() => {
     AOS.init();
     AOS.refresh();
+    dispatch(getLegues())
     WebFont.load({
       google: {
         families: ['Droid Sans', 'Chilanka']
@@ -40,13 +44,13 @@ function App() {
 
 
         {/* Public Route start*/}
-        <Route path="/" element={<BlogLayout/>}>
-          <Route path="/" element={<Blog />} />
+        <Route path="/" element={<BlogLayout />}>
+          <Route path="/" element={<LiveScore />} /> 
+          <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<SingleBlog />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/policy" element={<Policy />} />
-          <Route path="/livescore" element={<LiveScore />} />
         </Route>
         {/* Public Route end*/}
 

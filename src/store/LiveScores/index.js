@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import * as config from "../../utils/config";
+import {config} from "../../utils/config";
 
 const header = {
     headers: {
@@ -13,11 +13,10 @@ export const getLegues = createAsyncThunk(
     'user/getLegues',
     async () => {
         const res = await axios.get(`${config.BaseApi}/leagues`, header)
-         console.log(res)
-        return res.data.data;
+        return res.data.response;
     }
 )
-export const Livescores = createSlice(
+export const livescores = createSlice(
     {
         name: "user",
         initialState: {
@@ -37,4 +36,4 @@ export const Livescores = createSlice(
 
 // export const {  } = Livescores.actions;
 
-export default Livescores.reducer;
+export default livescores.reducer;

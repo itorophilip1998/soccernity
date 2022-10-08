@@ -18,6 +18,7 @@
 @import './pages/contact';
 @import './pages/singleblog'; 
 @import './pages/termsPolicy'; 
+@import './pages/livescore'; 
 
 // components
 @import './components/input';
@@ -33,6 +34,7 @@
 body {
     font-family: 'Montserrat' !important;
     font-style: normal;
+    overflow-x: hidden;
 
     a {
         text-decoration: none !important;

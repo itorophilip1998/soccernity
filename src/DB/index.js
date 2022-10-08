@@ -8,8 +8,8 @@ export const nav = [
         link: "/community",
     },
     {
-        name: "Livescores",
-        link: "/livescore",
+        name: "Blog",
+        link: "/blog",
     },
     {
         name: "Contact Us",

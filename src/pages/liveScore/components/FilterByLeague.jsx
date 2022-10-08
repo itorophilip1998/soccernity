@@ -1,18 +1,23 @@
 import React from 'react'
-import { FilterByLeague as data } from "../../../DB";
+import { useSelector } from 'react-redux';
 
 
 const FilterByLeague = () => {
+    const data = useSelector((state) => state.livescores?.leagues)
+
     return (
         <div className='FilterByLeague'>
+
             <h4>
                 Filter By League
             </h4>
             <ul>
                 {data.map((item, key) =>
                     <li key={key}>
-                        <img src={item.img} alt="" />
-                        <span>{item.name}</span>
+                        <div className="img-liner">
+                            <img src={item?.league?.logo} alt="" />
+                        </div>
+                        <span>{item?.league?.name}</span>
                     </li>
                 )}
             </ul>
