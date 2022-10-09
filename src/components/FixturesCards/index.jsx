@@ -15,7 +15,7 @@ const FixturesCards = ({ item }) => {
                 <div className="scores ">
                     
                     <span className="goals">{item?.goals?.home}</span>
-                    {"-"}
+                    <span>{"-"}</span>
                     <span className="goals">{item?.goals?.away}</span>
 
                 </div>

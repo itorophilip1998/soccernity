@@ -73,7 +73,7 @@
 
 
         button {
-            width: 94px;
+            min-width: 94px;
             height: 43px;
             border-radius: 5px;
             font-weight: 600;
@@ -105,6 +105,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 
     div {
         display: inline-block;
@@ -130,14 +131,39 @@
         img {
             max-width: 42px;
             max-height: 42px;
-        }
-        .scores{
-            
+            margin: 0 .4rem;
         }
 
+
         .away,
-        .home { 
+        .home {
             min-width: 200px !important;
+
+            width: 77px;
+            height: 20px;
+
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            /* identical to box height */
+
+            color: #282E65;
+        }
+
+        .scores {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            color: #282E65;
+            margin: 0 1rem;
+
+            span {
+                margin: 0 .4rem;
+            }
         }
     }
 }

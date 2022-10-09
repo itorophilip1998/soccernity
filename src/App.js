@@ -17,7 +17,7 @@ import BlogLayout from "./layouts/BlogLayout";
 import Terms from "./pages/TermsAndPolicy/Terms";
 import Policy from "./pages/TermsAndPolicy/Policy";
 import LiveScore from "./pages/liveScore";
-import { getFixturesLive, getLegues } from "./store/LiveScores";
+import { getFixturesDay1, getFixturesDay2, getFixturesDay3, getFixturesLive, getFixturesToday, getLegues } from "./store/LiveScores";
 
 function App() {
   const dispatch = useDispatch()
@@ -27,6 +27,10 @@ function App() {
     AOS.refresh();
     dispatch(getLegues())
     dispatch(getFixturesLive())
+    dispatch(getFixturesToday())
+    dispatch(getFixturesDay1())
+    dispatch(getFixturesDay2())
+    dispatch(getFixturesDay3()) 
     WebFont.load({
       google: {
         families: ['Droid Sans', 'Chilanka']
