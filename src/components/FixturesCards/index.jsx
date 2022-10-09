@@ -7,17 +7,21 @@ const FixturesCards = ({ item }) => {
                 {"‘"}{(item?.fixture?.status.short === "HT") ? "HT" : item?.fixture?.status?.elapsed}
             </div>
             <div className="matches">
-                <div className="home">
-                    <span className="name">{item?.teams?.home?.name}</span>
+                <div className="home text-right">
+                    <span className="name">{item?.teams?.home?.name.slice(0, 12)}</span>
                     <img src={item?.teams?.home?.logo} alt="" />
-                    <span className="goals">{item?.goals?.home}</span>
 
                 </div>
-                <div className="vs">{"-"}</div>
-                <div className="away">
+                <div className="scores ">
+                    
+                    <span className="goals">{item?.goals?.home}</span>
+                    {"-"}
                     <span className="goals">{item?.goals?.away}</span>
+
+                </div>
+                <div className="away ">
                     <img src={item?.teams?.away?.logo} alt="" />
-                    <span className="name">{item?.teams?.away?.name}</span>
+                    <span className="name">{item?.teams?.away?.name.slice(0,12)}</span>
                 </div>
             </div>
         </div>
