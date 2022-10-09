@@ -17,7 +17,7 @@ import BlogLayout from "./layouts/BlogLayout";
 import Terms from "./pages/TermsAndPolicy/Terms";
 import Policy from "./pages/TermsAndPolicy/Policy";
 import LiveScore from "./pages/liveScore";
-import { getLegues } from "./store/LiveScores";
+import { getFixturesLive, getLegues } from "./store/LiveScores";
 
 function App() {
   const dispatch = useDispatch()
@@ -26,6 +26,7 @@ function App() {
     AOS.init();
     AOS.refresh();
     dispatch(getLegues())
+    dispatch(getFixturesLive())
     WebFont.load({
       google: {
         families: ['Droid Sans', 'Chilanka']
@@ -61,6 +62,8 @@ function App() {
           <Route path="forgot-password" element={<ForgotPassword />} />
           <Route path="reset-password" element={<ResetPassword />} />
         </Route>
+        <Route path="verified" element={<ResetPassword />} />
+
         {/* Auth end */}
       </Routes>
     </Router>
