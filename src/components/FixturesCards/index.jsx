@@ -1,10 +1,15 @@
 import React from 'react'
-
+import moment from "moment"
 const FixturesCards = ({ item }) => {
     return (
         <div className='fixturesCards'>
             <div className="elapse">
-                {"‘"}{(item?.fixture?.status.short === "HT") ? "HT" : item?.fixture?.status?.elapsed}
+               { item?.fixture?.status?.elapsed  ? <span>
+                    {"‘"}{(item?.fixture?.status.short === "HT") ? "HT" : item?.fixture?.status?.elapsed}
+                </span> :
+                   moment(item?.fixture?.date).format("HH:MM")
+                
+            }
             </div>
             <div className="matches">
                 <div className="home text-right">
@@ -13,15 +18,15 @@ const FixturesCards = ({ item }) => {
 
                 </div>
                 <div className="scores ">
-                    
-                    <span className="goals">{item?.goals?.home}</span>
+
+                    <span className="goals">{item?.goals?.home ? item?.goals?.home : 0}</span>
                     <span>{"-"}</span>
-                    <span className="goals">{item?.goals?.away}</span>
+                    <span className="goals">{item?.goals?.away ? item?.goals?.away : 0}</span>
 
                 </div>
                 <div className="away ">
                     <img src={item?.teams?.away?.logo} alt="" />
-                    <span className="name">{item?.teams?.away?.name.slice(0,12)}</span>
+                    <span className="name">{item?.teams?.away?.name.slice(0, 12)}</span>
                 </div>
             </div>
         </div>

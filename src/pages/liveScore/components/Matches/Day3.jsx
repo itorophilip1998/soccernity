@@ -1,10 +1,14 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
+import FixturesCards from '../../../../components/FixturesCards'
 
 const Day3 = () => {
+  const data = useSelector((state) => state.livescores?.day3)
   return (
     <div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae placeat cumque possimus iusto maxime praesentium, voluptatibus enim itaque eum dolor quisquam assumenda asperiores sapiente, doloremque perspiciatis voluptates molestiae soluta animi?
-
+      {data && data.map((item, key) =>
+        <FixturesCards item={item} key={key} />
+      )}
     </div>
   )
 }
