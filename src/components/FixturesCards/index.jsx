@@ -11,7 +11,7 @@ const FixturesCards = ({ item }) => {
                 
             }
             </div>
-            <div className="matches">
+            <div className="matches pl-4">
                 <div className="home text-right">
                     <span className="name">{item?.teams?.home?.name.slice(0, 12)}</span>
                     <img src={item?.teams?.home?.logo} alt="" />

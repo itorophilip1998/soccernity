@@ -51,6 +51,7 @@ function App() {
         {/* Public Route start*/}
         <Route path="/" element={<BlogLayout />}>
           <Route path="/" element={<LiveScore />} /> 
+          <Route path="/match-details/:id" element={<LiveScore />} /> 
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<SingleBlog />} />
           <Route path="/contact" element={<Contact />} />
