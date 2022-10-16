@@ -1,11 +1,11 @@
 import React from 'react'
 
-function MatchDetails() {
+const Match = () => {
   return (
     <div>
-      
+      Match
     </div>
   )
 }
 
-export default MatchDetails
+export default Match

@@ -9,7 +9,7 @@ const BlogLayout = () => {
   console.log(isindex)
   return (
       <div>
-      {isindex==='/' ?
+      {!isindex.match('/blog') ?
         <LiveScoreHeader className="container" />:
         <Header className="container" />
       

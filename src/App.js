@@ -18,6 +18,7 @@ import Terms from "./pages/TermsAndPolicy/Terms";
 import Policy from "./pages/TermsAndPolicy/Policy";
 import LiveScore from "./pages/liveScore";
 import { getFixturesDay1, getFixturesDay2, getFixturesDay3, getFixturesLive, getFixturesToday, getLegues } from "./store/LiveScores";
+import MatchDetails from "./pages/liveScore/components/MatchDetails/index";
 
 function App() {
   const dispatch = useDispatch()
@@ -50,14 +51,14 @@ function App() {
 
         {/* Public Route start*/}
         <Route path="/" element={<BlogLayout />}>
-          <Route path="/" element={<LiveScore />} /> 
-          <Route path="/match-details/:id" element={<LiveScore />} /> 
+          <Route path="/" element={<LiveScore />} />  
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<SingleBlog />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/policy" element={<Policy />} />
         </Route>
+        <Route path="/match-details" element={<MatchDetails />} /> 
         {/* Public Route end*/}
 
         {/* Auth Start */}

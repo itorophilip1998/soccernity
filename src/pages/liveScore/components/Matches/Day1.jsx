@@ -7,7 +7,7 @@ const Day1 = () => {
   return (
     <div>
       {data && data.map((item, key) =>
-        <FixturesCards item={item} key={key} />
+        <FixturesCards item={item} key={key} array="day1" />
       )}
     </div>
   )
