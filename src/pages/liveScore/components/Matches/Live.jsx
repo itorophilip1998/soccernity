@@ -7,7 +7,7 @@ const Live = () => {
     return (
         <div>
             {data && data.map((item, key) =>
-                <FixturesCards item={item} key={key} array="live" />
+                <FixturesCards item={item} key={key} array="today" />
             )}
         </div>
     )
