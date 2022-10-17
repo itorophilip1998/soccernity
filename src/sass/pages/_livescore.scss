@@ -224,7 +224,7 @@
         }
 
         .time {
-            width: 2.4rem;
+            max-width: 4rem;
             display: inline-block;
             font-weight: 600;
             font-size: 16px;
@@ -257,10 +257,19 @@
         background: rgba(123, 185, 41, 0.06);
         border-radius: 10px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         margin-top: 4rem;
         margin-bottom: 2rem;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: #000000;
+
+        .goals {
+            color: #7BB929;
+            margin-left: 1.2rem;
+        }
     }
 }

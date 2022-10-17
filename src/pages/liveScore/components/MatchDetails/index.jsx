@@ -55,7 +55,7 @@ function MatchDetails() {
           </div>
 
           <div className="scores col-4">
-            <h6 className='textTop'> {moment(data?.fixture?.date).format("DD - MM - YY")}<span className='ml-3'> {moment(data?.fixture?.date).format("HH:MM")}</span></h6>
+            <h6 className='textTop'> {moment(data?.fixture?.date).format("DD - MM - YY")}<span className='ml-3'> {moment(data?.fixture?.date).format("hh:mm")}</span></h6>
             <h1>
               {data?.goals?.home ? data?.goals?.home : 0}
               -

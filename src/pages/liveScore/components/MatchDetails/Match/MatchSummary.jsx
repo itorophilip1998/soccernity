@@ -1,3 +1,4 @@
+import moment from 'moment';
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { getEvents } from '../../../../../store/LiveScores/Matches';
@@ -14,6 +15,8 @@ function MatchSummary() {
     }, [])
     const scores = useSelector((state) => state.livescores?.[array]);
     const match_summary = scores?.find((data) => data?.fixture?.id === parseInt(id))
+    const firsthalf = moment(match_summary?.fixture?.periods?.first).format("mm")
+    const secondhalf = moment(match_summary?.fixture?.periods?.second).format("mm")
     console.log(match_summary)
     // const timeEllapse = (time) => {
     //     if (time < 45) {
@@ -30,37 +33,70 @@ function MatchSummary() {
     return (
         <div className='match_summary '>
 
-            <div className="plank">
-                {match_summary?.goals?.home + " - " + match_summary?.goals?.away}
-            </div>
-            {
-                match_summary?.events?.map((item, key) =>
-                    <div className={`event`} key={key}>
+            <div className="first_half">
+                <div className="plank">
+                    First Half <span className="goals">{match_summary?.score?.halftime?.home ?? 0}  -   {match_summary?.score?.halftime?.away ?? 0}</span>
+                </div>
+                {
+                    match_summary?.events?.map((item, key) =>
+                        <div className={`event ${item?.time?.elapsed > parseInt(firsthalf) && 'd-none'}`} key={key}  >
+                            {item?.team?.id !== parseInt(away_id) && <div className="home  ">
+                                <span className="time ">{item?.time?.elapsed}’ {item?.time?.extra ? ` + ${item?.time?.extra}` : ""}</span>
+                                {item?.type !== 'Card' && <img src={`/images/${item?.type}.png`} alt="" />}
+                                {(item?.detail === 'Yellow Card') && <img src={`/images/yellowcard.png`} alt="" />}
+                                {(item?.detail === 'Red Card') && <img src={`/images/redcard.png`} alt="" />}
+                                {item?.type === 'Goals' && <span className="goals"></span>}
+                                <span className="players_name">{item?.player?.name}</span>
+                                {item?.assist?.name && <span className="assist">({item?.assist?.name})</span>}
+                            </div>
+                            }
+                            {item?.team?.id === parseInt(away_id) && <div className="away text-right">
+                                {item?.assist?.name && <span className="assist">({item?.assist?.name})</span>}
+                                <span className="players_name">{item?.player?.name}</span>
+                                {item?.type !== 'Card' && <img src={`/images/${item?.type}.png`} alt="" />}
+                                {(item?.detail === 'Yellow Card') && <img src={`/images/yellowcard.png`} alt="" />}
+                                {(item?.detail === 'Red Card') && <img src={`/images/redcard.png`} alt="" />}
+                                {item?.type === 'Goals' && <span className="goals"></span>}
+                                <span className="time ">{item?.time?.elapsed}’</span>
 
-
-                        {item?.team?.id !== parseInt(away_id) && <div className="home  ">
-                            <span className="time ">{item?.time?.elapsed}’</span>
-                            {item?.type !== 'Card' && <img src={`/images/${item?.type}.png`} alt="" />}
-                            {(item?.detail === 'Yellow Card') && <img src={`/images/yellowcard.png`} alt="" />}
-                            {(item?.detail === 'Red Card') && <img src={`/images/redcard.png`} alt="" />}
-                            {item?.type === 'Goals' && <span className="goals"></span>}
-                            <span className="players_name">{item?.player?.name}</span>
-                            {item?.assist?.name && <span className="assist">({item?.assist?.name})</span>}
+                            </div>}
                         </div>
-                        }
-                        {item?.team?.id === parseInt(away_id) && <div className="away text-right">
-                            {item?.assist?.name && <span className="assist">({item?.assist?.name})</span>}
-                            <span className="players_name">{item?.player?.name}</span>
-                            {item?.type !== 'Card' && <img src={`/images/${item?.type}.png`} alt="" />}
-                            {(item?.detail === 'Yellow Card') && <img src={`/images/yellowcard.png`} alt="" />}
-                            {(item?.detail === 'Red Card') && <img src={`/images/redcard.png`} alt="" />}
-                            {item?.type === 'Goals' && <span className="goals"></span>}
-                            <span className="time ">{item?.time?.elapsed}’</span>
+                    )
+                }
+            </div>
+            <div className="fsecond_half">
+                <div className="plank">
+                    Second Half <span className="goals">{match_summary?.score?.fulltime?.home ?? 0} - {match_summary?.score?.fulltime?.away ?? 0}</span>
+                </div>
+                {
+                    match_summary?.events?.map((item, key) =>
+                        <div className={`event ${item?.time?.elapsed < parseInt(secondhalf) && 'd-none'}`} key={key}  >
 
-                        </div>}
-                    </div>
-                )
-            }
+                            {item?.team?.id !== parseInt(away_id) && <div className="home  ">
+
+                                <span className="time ">{item?.time?.elapsed}’</span>
+                                {item?.type !== 'Card' && <img src={`/images/${item?.type}.png`} alt="" />}
+                                {(item?.detail === 'Yellow Card') && <img src={`/images/yellowcard.png`} alt="" />}
+                                {(item?.detail === 'Red Card') && <img src={`/images/redcard.png`} alt="" />}
+                                {item?.type === 'Goals' && <span className="goals"></span>}
+                                <span className="players_name">{item?.player?.name}</span>
+                                {item?.assist?.name && <span className="assist">({item?.assist?.name})</span>}
+                            </div>
+                            }
+                            {item?.team?.id === parseInt(away_id) && <div className="away text-right">
+                                {item?.assist?.name && <span className="assist">({item?.assist?.name})</span>}
+                                <span className="players_name">{item?.player?.name}</span>
+                                {item?.type !== 'Card' && <img src={`/images/${item?.type}.png`} alt="" />}
+                                {(item?.detail === 'Yellow Card') && <img src={`/images/yellowcard.png`} alt="" />}
+                                {(item?.detail === 'Red Card') && <img src={`/images/redcard.png`} alt="" />}
+                                {item?.type === 'Goals' && <span className="goals"></span>}
+                                <span className="time ">{item?.time?.elapsed}’</span>
+
+                            </div>}
+                        </div>
+                    )
+                }
+            </div>
         </div>
     )
 }
