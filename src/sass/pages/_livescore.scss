@@ -167,19 +167,100 @@
         }
     }
 }
- .match_details_summarry{
-    
- 
-    .nav{
-    height: 80px !important;
-    border-radius: 0px !important;
-    width: 478px;
+
+.match_details_summarry {
+
+
+    .nav {
+        height: 80px !important;
+        border-radius: 0px !important;
+        width: 478px;
         margin: 3rem auto;
         background: #FFFFFF;
         box-shadow: 10px 15px 75px rgba(88, 88, 88, 0.12);
     }
 }
-.close_windows{
+
+.close_windows {
     // position: absolute;
-    margin-top: .4rem;  
+    margin-top: .4rem;
+}
+
+.match_title {
+    background: transparent !important;
+
+    .nav {
+        background: transparent !important;
+        border-bottom: 0.898256px solid #7BB929;
+        height: 44px !important;
+        width: 350px;
+
+        .nav-link.active {
+            color: rgba(123, 185, 41, 0.54);
+            background: transparent !important;
+            border-bottom: 2.69477px solid #7BB929;
+        }
+
+        .nav-link {
+            color: #000;
+            border-radius: 0px !important;
+            font-weight: 600;
+            font-size: 14.3721px;
+            line-height: 18px;
+            color: #2A4900;
+
+        }
+    }
+}
+
+.match_summary {
+    .event {
+        margin: 1.7rem 0;
+
+        img {
+            margin: 0 1.5rem;
+            max-width: 19px;
+            max-height: px;
+        }
+
+        .time {
+            width: 2.4rem;
+            display: inline-block;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            color: #000000;
+        }
+
+        .players_name {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            color: #000000;
+        }
+
+        .assist {
+            margin-left: .7rem;
+            color: #969696;
+        }
+
+        .goals {
+            color: #7BB929;
+        }
+
+
+    }
+
+    .plank {
+        width: 100%;
+        height: 56px;
+        background: rgba(123, 185, 41, 0.06);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+    }
 }

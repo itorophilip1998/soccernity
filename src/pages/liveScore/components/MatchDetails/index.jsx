@@ -11,13 +11,14 @@ const query = new URLSearchParams(window.location.search);
 const array = query.get("array");
 const id = query.get("id");
 function MatchDetails() {
-const navigate=useNavigate()
+  const navigate = useNavigate()
   const scores = useSelector((state) => state.livescores?.[array]);
   const data = scores?.find((data) => data?.fixture?.id === parseInt(id))
+  window.localStorage.setItem("away", data?.teams?.away?.id)
   const checkTime = (time) => {
     switch (time) {
       case "HT":
-        time="HALH TIME"
+        time = "HALH TIME"
         break;
       case "FT":
         time = "FULL TIME"
@@ -26,22 +27,23 @@ const navigate=useNavigate()
       case "1H":
         time = "FIRST HALH"
 
-        break; 
+        break;
       case "2H":
-        time = "SECOND HALH" 
-        break; 
+        time = "SECOND HALH"
+        break;
       default:
+        time = "UP COMING"
         break;
     }
-     
+
     return time;
   }
   return (
     <div className='match_details ' >
       <div className="container">
         <div className=" text-right pt-2">
-          <button className="close_windows btn btn-light" onClick={() => navigate(-1)}>Close Window</button>
-</div>
+          <button className="close_windows btn btn-light" onClick={() => navigate('/')}>Close Window</button>
+        </div>
 
         <div className="title row text-center ">
 
@@ -57,7 +59,7 @@ const navigate=useNavigate()
             <h1>
               {data?.goals?.home ? data?.goals?.home : 0}
               -
-              {data?.goals?.away ? data?.goals?.away : 0} 
+              {data?.goals?.away ? data?.goals?.away : 0}
             </h1>
             <h6 className='fullTime'>
               {checkTime(data?.fixture?.status.short)}
@@ -90,23 +92,23 @@ const navigate=useNavigate()
           </li>
           <li className="nav-item" role="presentation">
             <button className="nav-link" id="pills-video-tab" data-toggle="pill" data-target="#pills-video" type="button" role="tab" aria-controls="pills-video" aria-selected="false">{"Video"}</button>
-          </li> 
+          </li>
         </ul>
 
         <div className="tab-content container" id="pills-tabContent">
           <div className="tab-pane fade show active" id="pills-match" role="tabpanel" aria-labelledby="pills-match-tab">
-           <Match/>
+            <Match />
           </div>
           <div className="tab-pane fade" id="pills-h2h" role="tabpanel" aria-labelledby="pills-h2h-tab">
             <H2H />
 
           </div>
           <div className="tab-pane fade" id="pills-standing" role="tabpanel" aria-labelledby="pills-standing-tab">
-           <Standings/>
+            <Standings />
           </div>
           <div className="tab-pane fade" id="pills-video" role="tabpanel" aria-labelledby="pills-video-tab">
-           <Videos/>
-          </div> 
+            <Videos />
+          </div>
         </div>
       </div>
 

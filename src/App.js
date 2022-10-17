@@ -17,7 +17,7 @@ import BlogLayout from "./layouts/BlogLayout";
 import Terms from "./pages/TermsAndPolicy/Terms";
 import Policy from "./pages/TermsAndPolicy/Policy";
 import LiveScore from "./pages/liveScore";
-import { getFixturesDay1, getFixturesDay2, getFixturesDay3, getFixturesLive, getFixturesToday, getLegues } from "./store/LiveScores";
+import { getFixturesDay1, getFixturesDay2, getFixturesDay3, getFixturesLive, getFixturesToday, getLegues } from "./store/LiveScores/Fixtures";
 import MatchDetails from "./pages/liveScore/components/MatchDetails/index";
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
     dispatch(getFixturesToday())
     dispatch(getFixturesDay1())
     dispatch(getFixturesDay2())
-    dispatch(getFixturesDay3()) 
+    dispatch(getFixturesDay3())
     WebFont.load({
       google: {
         families: ['Droid Sans', 'Chilanka']
@@ -51,14 +51,14 @@ function App() {
 
         {/* Public Route start*/}
         <Route path="/" element={<BlogLayout />}>
-          <Route path="/" element={<LiveScore />} />  
+          <Route path="/" element={<LiveScore />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<SingleBlog />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/policy" element={<Policy />} />
         </Route>
-        <Route path="/match-details" element={<MatchDetails />} /> 
+        <Route path="/match-details" element={<MatchDetails />} />
         {/* Public Route end*/}
 
         {/* Auth Start */}

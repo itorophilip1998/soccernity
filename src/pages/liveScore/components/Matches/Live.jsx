@@ -3,11 +3,11 @@ import { useSelector } from 'react-redux'
 import FixturesCards from '../../../../components/FixturesCards'
 
 const Live = () => {
-    const data = useSelector((state) => state.livescores?.live) 
+    const data = useSelector((state) => state.livescores?.live)
     return (
         <div>
             {data && data.map((item, key) =>
-                <FixturesCards item={item} key={key} array="today"  />
+                <FixturesCards item={item} key={key} array="live" />
             )}
         </div>
     )

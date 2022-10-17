@@ -1,61 +1,11 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
-import moment from "moment";
-import { config } from "../../utils/config";
+import { createSlice } from "@reduxjs/toolkit";
+// import { config } from "../../utils/config";
+import { getLegues, getFixturesLive, getFixturesToday, getFixturesDay1, getFixturesDay2, getFixturesDay3 } from "./Fixtures";
+import { getEvents } from "./Matches";
+ 
+ 
 
-const header = {
-    headers: {
-        "X-RapidAPI-Key": `${config.RapidAPIKey}`,
-        "X-RapidAPI-Host": `${config.RapidAPIHost}`
-    }
-};
 
-export const getLegues = createAsyncThunk(
-    'user/getLegues',
-    async () => {
-        const res = await axios.get(`${config.BaseApi}/leagues`, header)
-        return res.data.response;
-    }
-)
-export const getFixturesLive = createAsyncThunk(
-    'user/getFixturesLive',
-    async () => { 
-        const res = await axios.get(`${config.BaseApi}/fixtures?live=all`, header) 
-        return res.data.response;
-    }
-)
-export const getFixturesToday = createAsyncThunk(
-    'user/getFixturesToday',
-    async () => {
-        const date = moment().add('days').format("YYYY-MM-DD") 
-        const res = await axios.get(`${config.BaseApi}/fixtures?date=${date}`, header)
-        return res.data.response;
-    }
-)
-export const getFixturesDay1 = createAsyncThunk(
-    'user/getFixturesDay1',
-    async () => {
-        const date = moment().add(1,'days').format("YYYY-MM-DD") 
-        const res = await axios.get(`${config.BaseApi}/fixtures?date=${date}`, header)
-        return res.data.response;
-    }
-)
-export const getFixturesDay2 = createAsyncThunk(
-    'user/getFixturesDay2',
-    async () => {
-        const date = moment().add(2,'days').format("YYYY-MM-DD") 
-        const res = await axios.get(`${config.BaseApi}/fixtures?date=${date}`, header)
-        return res.data.response;
-    }
-)
-export const getFixturesDay3 = createAsyncThunk(
-    'user/getFixturesDay3',
-    async () => {
-        const date = moment().add(3,'days').format("YYYY-MM-DD") 
-        const res = await axios.get(`${config.BaseApi}/fixtures?date=${date}`, header)
-        return res.data.response;
-    }
-)
 export const livescores = createSlice(
     {
         name: "livescores",
@@ -66,6 +16,7 @@ export const livescores = createSlice(
             day1: [],
             day2: [],
             day3: [],
+            match_summary:[]
         },
         reducers: {
 
@@ -89,6 +40,9 @@ export const livescores = createSlice(
             })
             builder.addCase(getFixturesDay3.fulfilled, (state, action) => {
                 state.day3 = action.payload
+            })
+            builder.addCase(getEvents.fulfilled, (state, action) => {
+                state.match_summary = action.payload
             })
 
         },
