@@ -17,25 +17,13 @@ function MatchSummary() {
     const summarry = scores?.find((data) => data?.fixture?.id === parseInt(id))
     const firsthalf = moment(summarry?.fixture?.periods?.first).format("mm")
     const secondhalf = moment(summarry?.fixture?.periods?.second).format("mm")
-    // console.log(match_summary)
-    // // const timeEllapse = (time) => {
-    // //     if (time < 45) {
-    // //         time = "FIRST HALF"
-    // //     }
-    // //     else if (time > 45) {
-    // //         time = "SECOND HALF"
-    // //     }
-
-    // //     return time;
-    // // }
-
 
     return (
         <div className='match_summary '>
 
             <div className="first_half">
                 <div className="plank">
-                    First Half <span className="goals">{match_summary?.score?.halftime?.home ?? 0}  -   {match_summary?.score?.halftime?.away ?? 0}</span>
+                    FIRST HALF <span className="goals">{summarry?.score?.halftime?.home}  -   {summarry?.score?.halftime?.away}</span>
                 </div>
                 {
                     match_summary?.map((item, key) =>
@@ -66,7 +54,7 @@ function MatchSummary() {
             </div>
             <div className="fsecond_half">
                 <div className="plank">
-                    Second Half <span className="goals">{match_summary?.score?.fulltime?.home ?? 0} - {match_summary?.score?.fulltime?.away ?? 0}</span>
+                    SECOND HALF <span className="goals">{summarry?.score?.fulltime?.home} - {summarry?.score?.fulltime?.away}</span>
                 </div>
                 {
                     match_summary?.map((item, key) =>
@@ -96,6 +84,30 @@ function MatchSummary() {
                         </div>
                     )
                 }
+            </div>
+            <div className="match_information pb-4">
+                <div className="plank">
+                    MATCH INFORMATION
+                </div>
+                <div className="referee">
+                    <img src="/images/refree.png" alt="" />
+
+                    <span className="mx-3 name">REFEREE</span>
+
+                    <span className="float-right ">
+                        {summarry?.fixture?.referee}
+                    </span>
+                </div>
+                <div className="referee my-3">
+                    <img src="/images/stadium.png" alt="" />
+
+                    <span className="mx-3 name">VENUE</span>
+
+                    <span className="float-right ">
+                        {summarry?.fixture?.venue?.name}
+                    </span>
+                </div>
+
             </div>
         </div>
     )

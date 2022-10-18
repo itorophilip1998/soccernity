@@ -2,8 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 // import { config } from "../../utils/config";
 import { getLegues, getFixturesLive, getFixturesToday, getFixturesDay1, getFixturesDay2, getFixturesDay3 } from "./Fixtures";
 import { getEvents } from "./Matches";
- 
- 
+
+
 
 
 export const livescores = createSlice(
@@ -16,7 +16,7 @@ export const livescores = createSlice(
             day1: [],
             day2: [],
             day3: [],
-            match_summary:[]
+            match_summary: []
         },
         reducers: {
 
