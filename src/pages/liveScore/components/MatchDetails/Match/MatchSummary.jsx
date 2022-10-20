@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { getEvents } from '../../../../../store/LiveScores/Matches';
 
+/* eslint-disable  */
 function MatchSummary() {
     const query = new URLSearchParams(window.location.search);
     const id = query.get("id");
