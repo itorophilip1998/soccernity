@@ -1,14 +1,15 @@
 import React from 'react'
 
-function ListStat({item}) {
+function ListStat({ away,home }) {
+    console.log(away,home)
     return (
         <div div className="list_of_stat" >
             {/* Ball Possession */}
 
             <div className="top">
-                <span className="home_per">44%</span>
-                <span className="name text-center">BALL POSSESSION</span>
-                <span className="away_per text-right">56%</span>
+                <span className="home_per">{home?.value ?? 0}</span>
+                <span className="name text-center">{home?.type}</span>
+                <span className="away_per text-right">{away?.value ?? 0}</span>
             </div>
 
             <div className="progressBars row m-0 mt-3">

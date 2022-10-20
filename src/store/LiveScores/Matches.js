@@ -20,8 +20,7 @@ export const getEvents = createAsyncThunk(
 export const getStatistics = createAsyncThunk(
     'user/getStatistics',
     async (fixture) => {
-        const res = await axios.get(`${config.BaseApi}/fixtures/statistics?fixture=${fixture}`, header)
-        console.log(res)
+        const res = await axios.get(`${config.BaseApi}/fixtures/statistics?fixture=${fixture}`, header) 
         return res.data.response;
     }
 
