@@ -42,7 +42,6 @@ function Statistics() {
       <ListStat home={statistics[0]?.statistics} away={statistics[1]?.statistics} />
       {/*  Shots on Goal*/}
       <ListStat home={statistics[0]?.statistics} away={statistics[1]?.statistics} />
-      {/*  Shots on Goal*/}
       <ListStat home={statistics[0]?.statistics} away={statistics[1]?.statistics} />
 
     </div>
