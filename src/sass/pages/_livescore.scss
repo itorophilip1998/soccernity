@@ -357,3 +357,12 @@
 .bg-away {
     background: #282E65;
 }
+
+.field {
+    background-image: url("~/public/images/field.png");
+    height: 750px;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 0;
+}
