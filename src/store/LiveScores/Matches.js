@@ -25,3 +25,11 @@ export const getStatistics = createAsyncThunk(
     }
 
 )
+export const getLineUps = createAsyncThunk(
+    'user/getLineUps',
+    async (fixture) => {
+        const res = await axios.get(`${config.BaseApi}/fixtures/lineups?fixture=${fixture}`, header) 
+        return res.data.response;
+    }
+
+)

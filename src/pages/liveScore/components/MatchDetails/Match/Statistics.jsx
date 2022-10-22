@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import ListStat from '../../../../../components/Matches/ListStat'
 import { getStatistics } from '../../../../../store/LiveScores/Matches';
-
+/*eslint-disable*/
 function Statistics() {
   const query = new URLSearchParams(window.location.search);
   const id = query.get("id");

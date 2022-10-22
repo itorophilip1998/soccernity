@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 // import { config } from "../../utils/config";
 import { getLegues, getFixturesLive, getFixturesToday, getFixturesDay1, getFixturesDay2, getFixturesDay3 } from "./Fixtures";
-import { getEvents, getStatistics } from "./Matches";
+import { getEvents, getLineUps, getStatistics } from "./Matches";
 
 
 
@@ -18,6 +18,7 @@ export const livescores = createSlice(
             day3: [],
             match_summary: [],
             statistics: [],
+            lineups: [],
         },
         reducers: {},
         extraReducers: (builder) => {
@@ -44,6 +45,9 @@ export const livescores = createSlice(
             })
             builder.addCase(getStatistics.fulfilled, (state, action) => {
                 state.statistics = action.payload
+            })
+            builder.addCase(getLineUps.fulfilled, (state, action) => {
+                state.lineups = action.payload
             })
 
         },
