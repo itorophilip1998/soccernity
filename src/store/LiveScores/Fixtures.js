@@ -5,8 +5,7 @@ import { config } from "../../utils/config";
 
 const header = {
     headers: {
-        "X-RapidAPI-Key": `${config.RapidAPIKey}`,
-        "X-RapidAPI-Host": `${config.RapidAPIHost}`
+        "X-RapidAPI-Key": `${config.RapidAPIKey}`, 
     }
 };
 

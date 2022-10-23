@@ -1,9 +1,13 @@
 import React from 'react'
+import HeadToHead from './HeadToHead'
+import LastMatch from './LastMatch'
 
 const H2H = () => {
   return (
     <div>
-          H2H
+        <LastMatch/>
+        <LastMatch/>
+        <HeadToHead/>
     </div>
   )
 }

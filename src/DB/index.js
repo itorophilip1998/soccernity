@@ -1236,3 +1236,125 @@ export const fixtures = [
         ]
     }
 ]
+
+
+const H2H = [
+    {
+        "fixture": {
+            "id": 157201,
+            "referee": "Kevin Friend, England",
+            "timezone": "UTC",
+            "date": "2019-12-26T17:30:00+00:00",
+            "timestamp": 1577381400,
+            "periods": {},
+            "venue": {},
+            "status": {}
+        },
+        "league": {
+            "id": 39,
+            "name": "Premier League",
+            "country": "England",
+            "logo": "https://media.api-sports.io/football/leagues/2.png",
+            "flag": "https://media.api-sports.io/flags/gb.svg",
+            "season": 2019,
+            "round": "Regular Season - 19"
+        },
+        "teams": {
+            "home": {
+                "id": 33,
+                "name": "Manchester United",
+                "logo": "https://media.api-sports.io/football/teams/33.png",
+                "winner": true
+            },
+            "away": {
+                "id": 34,
+                "name": "Newcastle",
+                "logo": "https://media.api-sports.io/football/teams/34.png",
+                "winner": false
+            }
+        },
+        "goals": {
+            "home": 4,
+            "away": 1
+        },
+        "score": {}
+    }, {
+        "fixture": {
+            "id": 157201,
+            "referee": "Kevin Friend, England",
+            "timezone": "UTC",
+            "date": "2019-12-26T17:30:00+00:00",
+            "timestamp": 1577381400,
+            "periods": {},
+            "venue": {},
+            "status": {}
+        },
+        "league": {
+            "id": 39,
+            "name": "Premier League",
+            "country": "England",
+            "logo": "https://media.api-sports.io/football/leagues/2.png",
+            "flag": "https://media.api-sports.io/flags/gb.svg",
+            "season": 2019,
+            "round": "Regular Season - 19"
+        },
+        "teams": {
+            "home": {
+                "id": 33,
+                "name": "Manchester United",
+                "logo": "https://media.api-sports.io/football/teams/33.png",
+                "winner": true
+            },
+            "away": {
+                "id": 34,
+                "name": "Newcastle",
+                "logo": "https://media.api-sports.io/football/teams/34.png",
+                "winner": false
+            }
+        },
+        "goals": {
+            "home": 4,
+            "away": 1
+        },
+        "score": {}
+    }, {
+        "fixture": {
+            "id": 157201,
+            "referee": "Kevin Friend, England",
+            "timezone": "UTC",
+            "date": "2019-12-26T17:30:00+00:00",
+            "timestamp": 1577381400,
+            "periods": {},
+            "venue": {},
+            "status": {}
+        },
+        "league": {
+            "id": 39,
+            "name": "Premier League",
+            "country": "England",
+            "logo": "https://media.api-sports.io/football/leagues/2.png",
+            "flag": "https://media.api-sports.io/flags/gb.svg",
+            "season": 2019,
+            "round": "Regular Season - 19"
+        },
+        "teams": {
+            "home": {
+                "id": 33,
+                "name": "Manchester United",
+                "logo": "https://media.api-sports.io/football/teams/33.png",
+                "winner": true
+            },
+            "away": {
+                "id": 34,
+                "name": "Newcastle",
+                "logo": "https://media.api-sports.io/football/teams/34.png",
+                "winner": false
+            }
+        },
+        "goals": {
+            "home": 4,
+            "away": 1
+        },
+        "score": {}
+    }
+]

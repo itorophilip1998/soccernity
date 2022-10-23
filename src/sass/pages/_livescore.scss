@@ -376,7 +376,49 @@
     .plank {
         font-weight: 600;
         font-size: 16px;
-        line-height: 20px; 
+        line-height: 20px;
         color: rgba(0, 0, 0, 0.35);
+    }
+}
+
+.lineup_players {
+
+    padding: 0;
+
+    li {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: #000000;
+        list-style: none !important;
+        height: 70px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        cursor: pointer;
+
+        &:nth-child(even) {
+            background: rgba(123, 185, 41, 0.06);
+        }
+
+        &:hover {
+            background: rgba(180, 180, 180, 0.06);
+            justify-content: center;
+        }
+    }
+
+    .away {
+        justify-content: flex-end
+    }
+
+    .number {
+        display: inline-block;
+        width: 40px;
+        text-align: center;
+    }
+
+    .name {
+        margin: 0 1rem;
     }
 }

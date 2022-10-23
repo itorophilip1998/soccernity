@@ -5,7 +5,6 @@ import { config } from "../../utils/config";
 const header = {
     headers: {
         "X-RapidAPI-Key": `${config.RapidAPIKey}`,
-        "X-RapidAPI-Host": `${config.RapidAPIHost}`
     }
 };
 
@@ -20,7 +19,7 @@ export const getEvents = createAsyncThunk(
 export const getStatistics = createAsyncThunk(
     'user/getStatistics',
     async (fixture) => {
-        const res = await axios.get(`${config.BaseApi}/fixtures/statistics?fixture=${fixture}`, header) 
+        const res = await axios.get(`${config.BaseApi}/fixtures/statistics?fixture=${fixture}`, header)
         return res.data.response;
     }
 
@@ -28,7 +27,7 @@ export const getStatistics = createAsyncThunk(
 export const getLineUps = createAsyncThunk(
     'user/getLineUps',
     async (fixture) => {
-        const res = await axios.get(`${config.BaseApi}/fixtures/lineups?fixture=${fixture}`, header) 
+        const res = await axios.get(`${config.BaseApi}/fixtures/lineups?fixture=${fixture}`, header)
         return res.data.response;
     }
 
