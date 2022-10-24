@@ -32,3 +32,27 @@ export const getLineUps = createAsyncThunk(
     }
 
 )
+export const getPlayer = createAsyncThunk(
+    'user/getPlayer',
+    async ({ id, season }) => {
+        const res = await axios.get(`${config.BaseApi}/players?id=${id}&season=${season}`, header)
+        return res.data.response[0];
+    }
+
+)
+export const getCoach = createAsyncThunk(
+    'user/getCoach',
+    async ({ team }) => {
+        const res = await axios.get(`${config.BaseApi}/players?team=${team}`, header)
+        return res.data.response;
+    }
+
+)
+export const getCountry = createAsyncThunk(
+    'user/getCountry',
+    async ({ name }) => {
+        const res = await axios.get(`${config.BaseApi}/countries?name=${name}`, header)
+        return res.data.response;
+    }
+
+)
