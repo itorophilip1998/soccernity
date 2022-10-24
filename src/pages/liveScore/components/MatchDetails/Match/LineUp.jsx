@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Clothe } from '../../../../../components/Svg'
 import { getLineUps } from '../../../../../store/LiveScores/Matches';
-import { AwayPlayers, HomePlayers } from './Players';
+import { AwayCoach, AwayPlayers, HomeCoach, HomePlayers } from './Players';
 /*eslint-disable*/
 
 function LineUp() {
@@ -95,18 +95,13 @@ function LineUp() {
         <div className="row m-0">
           <div className="col-6 p-0">
             <ul className='lineup_players'>
-              <li className='home'>
-                <img src="/images/jaycee.png" alt="" />
-                <span className="name">{lineups[0]?.coach?.name} </span>
-              </li>
+              <HomeCoach item={lineups[0]?.coach} key={lineups[0]?.coach?.id} />
+
             </ul>
           </div>
           <div className="col-6 p-0">
             <ul className='lineup_players'>
-              <li className='away'>
-                <img src="/images/jaycee.png" alt="" />
-                <span className="name">{lineups[1]?.coach?.name} </span>
-              </li>
+              <AwayCoach item={lineups[1]?.coach} key={lineups[0]?.coach?.id} />
             </ul>
           </div>
         </div>

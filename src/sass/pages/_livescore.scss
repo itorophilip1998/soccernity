@@ -404,7 +404,7 @@
 
         &:hover {
             background: rgba(180, 180, 180, 0.06);
-            justify-content: center;
+            transform: scale(1.1);
         }
     }
 
@@ -421,4 +421,9 @@
     .name {
         margin: 0 1rem;
     }
+}
+
+
+.playerInfo .modal-content {
+    margin-top: 45% !important;
 }

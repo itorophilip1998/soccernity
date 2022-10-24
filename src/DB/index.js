@@ -1,3 +1,6 @@
+/*eslint-disable*/
+
+
 export const nav = [
     {
         name: "Home",
