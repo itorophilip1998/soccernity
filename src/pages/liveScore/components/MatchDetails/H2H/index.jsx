@@ -5,9 +5,9 @@ import LastMatch from './LastMatch'
 const H2H = () => {
   return (
     <div>
-        <LastMatch/>
-        <LastMatch/>
-        <HeadToHead/>
+      <LastMatch />
+      <LastMatch />
+      <HeadToHead />
     </div>
   )
 }

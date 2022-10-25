@@ -424,5 +424,24 @@
 
 
 .playerInfo .modal-content {
-    margin-top: 45% !important;
+    margin-top: 45% !important; 
+    .data {
+        display: flex;
+        flex-direction: row;
+
+        .ask {
+            flex: 1;
+            text-align: right;
+            padding: 0 0.5rem;
+            background: rgba(123, 185, 41, 0.06);
+
+        }
+
+        .ans {
+            flex: 1;
+            text-align: left;
+            padding: 0 0.2rem;
+            background: rgba(123, 185, 41, 0.06);
+        }
+    }
 }

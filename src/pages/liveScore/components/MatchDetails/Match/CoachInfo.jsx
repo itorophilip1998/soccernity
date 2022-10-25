@@ -1,16 +1,11 @@
 
-import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux';
-import { getCoach } from '../../../../../store/LiveScores/Matches';
+import React from 'react'
+import { useSelector } from 'react-redux';
+/*eslint-disable*/
 
-const PlayerInfo = ({ item }) => {
-    const dispatch = useDispatch()
-    const player = useSelector((state) => state.livescores.player);
-    // const country = useSelector((state) => state.livescores.country);
-    // const flag = country?.find((name) => player?.player?.nationality === name?.name);
-    useEffect(() => {
-        dispatch(getCoach({ name: player?.player?.nationality }))
-    }, [])
+const CoachInfo = ({ item, isCoach }) => {
+    const coach = useSelector((state) => state.livescores.coach).slice(-1)[0]
+    console.log(coach)
     return (
         <div className="modal-dialog playerInfo" role="document">
             <div className="modal-content shadow">
@@ -19,29 +14,30 @@ const PlayerInfo = ({ item }) => {
                     <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
+
                 </div>
                 <div className="modal-body">
                     <div className="container-fluid  text-center">
+
                         <div className="img">
-                            <img src={player?.player?.photo} alt="" />
+                            <img src={coach?.photo} alt="" />
                         </div>
                         <div className="py-4">
-
                             <div className="data py-2">
                                 <span className="ask">Age : </span>
-                                <span className="ans">{player?.player?.age ?? '-'}</span>
+                                <span className="ans">{coach?.age ?? '-'}</span>
                             </div>
                             <div className="data py-2">
                                 <span className="ask">Height : </span>
-                                <span className="ans">{player?.player?.height ?? '-'}</span>
+                                <span className="ans">{coach?.height ?? '-'}</span>
                             </div>
                             <div className="data py-2">
                                 <span className="ask">Weight : </span>
-                                <span className="ans">{player?.player?.weight ?? '-'}</span>
+                                <span className="ans">{coach?.weight ?? '-'}</span>
                             </div>
                             <div className="data py-2">
                                 <span className="ask">Nationality : </span>
-                                <span className="ans">{player?.player?.nationality ?? '-'}</span>
+                                <span className="ans">{coach?.nationality ?? '-'}</span>
                             </div>
                         </div>
 
@@ -53,4 +49,4 @@ const PlayerInfo = ({ item }) => {
     )
 }
 
-export default PlayerInfo
+export default CoachInfo

@@ -43,7 +43,7 @@ export const getPlayer = createAsyncThunk(
 export const getCoach = createAsyncThunk(
     'user/getCoach',
     async ({ team }) => {
-        const res = await axios.get(`${config.BaseApi}/players?team=${team}`, header)
+        const res = await axios.get(`${config.BaseApi}/coachs?team=${team}`, header)
         return res.data.response;
     }
 

@@ -18,18 +18,18 @@ function MatchDetails() {
   const checkTime = (time) => {
     switch (time) {
       case "HT":
-        time = "HALH TIME"
+        time = "HALF TIME"
         break;
       case "FT":
         time = "FULL TIME"
 
         break;
       case "1H":
-        time = "FIRST HALH"
+        time = "FIRST HALF"
 
         break;
       case "2H":
-        time = "SECOND HALH"
+        time = "SECOND HALF"
         break;
       default:
         time = "UP COMING"
