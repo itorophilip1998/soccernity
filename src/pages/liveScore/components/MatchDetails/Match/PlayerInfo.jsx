@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { getCoach } from '../../../../../store/LiveScores/Matches';
-
+/*eslint-disabl*/
 const PlayerInfo = ({ item }) => {
     const dispatch = useDispatch()
     const player = useSelector((state) => state.livescores.player);
