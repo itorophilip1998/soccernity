@@ -1,0 +1,92 @@
+.AuthLayout {
+    .img_bg {
+        background-image: url("../../../public/images/rightBg.png");
+        min-height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .contentBox {
+        padding: 5% 10% !important;
+    }
+}
+
+.auth {
+    header {
+        h1 {
+            font-weight: 600;
+            font-size: 32px;
+            color: #000000;
+        }
+
+        p {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 28px;
+            color: #4B5563;
+            max-height: 56px;
+        }
+    }
+}
+
+.passwordItem {
+    position: absolute;
+    left: 76%;
+    margin-top: -2.8rem;
+    color: rgb(160, 160, 160);
+    cursor: pointer;
+
+    &:hover {
+        color: $primary;
+    }
+}
+
+.extra,
+.extra2 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    margin: 2rem 0;
+    text-align: center;
+
+    color: #4B5563;
+
+    a {
+        color: $link;
+
+        &:hover {
+            color: $primary
+        }
+    }
+}
+
+.extra2 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.forgotPLink {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #4F46E5;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+    &:hover {
+        color: $primary
+    }
+    position: absolute;
+         right: 20%;
+         margin-top: .9rem;
+
+}

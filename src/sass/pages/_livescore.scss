@@ -1,0 +1,549 @@
+.FilterByLeague {
+    background: rgba(51, 51, 51, 0.04);
+
+    // width: 432px;
+    //    max-height: 100vh;
+    padding: 2rem 0;
+
+    h4 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        color: #000000;
+        padding: 1rem;
+    }
+
+    ul {
+        padding: 0;
+
+
+        li {
+            list-style-type: none;
+
+            a {
+                background: #FFFFFF;
+                height: 77px;
+                margin: 1rem 0;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 0 1.4rem;
+                cursor: pointer;
+
+                .img-liner {
+                    width: 70px;
+                }
+
+                color: #000000;
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 29px;
+
+                img {
+                    max-width: 63.33px;
+                    max-height: 38px;
+                }
+
+                &:hover,
+                &:focus {
+                    color: #fff;
+                    background: $primary;
+                }
+            }
+
+        }
+    }
+}
+
+.fixtures {
+    .nav {
+        height: 86px;
+
+        background: #FFFFFF;
+        box-shadow: 9px 33px 87px rgba(38, 38, 38, 0.08);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+
+
+        button {
+            min-width: 94px;
+            height: 43px;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            border-radius: 5px;
+            border: none;
+            color: #ABA887;
+            background: #fff;
+            text-align: center;
+
+        }
+
+        .active {
+            background: #7BB929 !important;
+            color: #FFFFFF;
+        }
+    }
+}
+
+.fixturesCards {
+    background: #FFFFFF;
+    border: 1px solid rgba(123, 185, 41, 0.35);
+    box-shadow: 0px 8px 20px rgba(95, 95, 95, 0.05);
+    border-radius: 10px;
+    height: 91px;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    div {
+        display: inline-block;
+    }
+
+    .elapse {
+        position: absolute;
+        width: 62px;
+        height: 34px;
+        background: #7BB929;
+        border-radius: 5px;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        left: 4rem;
+        color: #FFFFFF;
+
+    }
+
+    .matches {
+        img {
+            max-width: 42px;
+            max-height: 42px;
+            margin: 0 .4rem;
+        }
+
+
+        .away,
+        .home {
+            min-width: 200px !important;
+
+            width: 77px;
+            height: 20px;
+
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            /* identical to box height */
+
+            color: #282E65;
+        }
+
+        .scores {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            color: #282E65;
+            margin: 0 1rem;
+
+            span {
+                margin: 0 .4rem;
+            }
+        }
+    }
+}
+
+.match_details_summarry {
+
+
+    .nav {
+        height: 80px !important;
+        border-radius: 0px !important;
+        width: 478px;
+        margin: 3rem auto;
+        background: #FFFFFF;
+        box-shadow: 10px 15px 75px rgba(88, 88, 88, 0.12);
+    }
+}
+
+.close_windows {
+    // position: absolute;
+    margin-top: .4rem;
+}
+
+.match_title {
+    background: transparent !important;
+
+    .nav {
+        background: transparent !important;
+        border-bottom: 0.898256px solid #7BB929;
+        height: 44px !important;
+        width: 350px;
+
+        .nav-link.active {
+            color: rgba(123, 185, 41, 0.54);
+            background: transparent !important;
+            border-bottom: 2.69477px solid #7BB929;
+        }
+
+        .nav-link {
+            color: #000;
+            border-radius: 0px !important;
+            font-weight: 600;
+            font-size: 14.3721px;
+            line-height: 18px;
+            color: #2A4900;
+
+        }
+    }
+}
+
+.match_summary {
+    .event {
+        margin: 1rem 0;
+
+        img {
+            margin: 0 1.5rem;
+            max-width: 19px;
+            max-height: px;
+        }
+
+        .time {
+            max-width: 4rem;
+            display: inline-block;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            color: #000000;
+        }
+
+        .players_name {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            color: #000000;
+            margin: 0 .5rem;
+        }
+
+        .assist {
+            margin-left: .7rem;
+            color: #969696;
+        }
+
+        .goals {
+            color: #7BB929;
+        }
+
+
+    }
+
+
+}
+
+.match_information {
+    .name {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: #666666;
+    }
+
+    .float-right {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: #000000;
+    }
+}
+
+.plank {
+    width: 100%;
+    height: 56px;
+    background: rgba(123, 185, 41, 0.06);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+
+    .goals {
+        color: #7BB929;
+        margin-left: 1.2rem;
+    }
+}
+
+.statistics {
+    .plank {
+        a {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            color: rgba(0, 0, 0, 0.35);
+            margin: 0 3rem;
+
+            &:focus {
+                color: #000000 !important;
+                text-decoration: underline !important;
+            }
+        }
+    }
+
+    .list_of_stat {
+        padding: 1.2rem 0;
+
+        .top {
+            display: flex;
+            flex-direction: row;
+
+            span {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 20px;
+                color: #000000;
+                flex: 1;
+
+            }
+
+
+
+
+        }
+    }
+
+    .home .progress {
+        justify-content: flex-end !important;
+    }
+
+
+    .progress {
+        height: 13px;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+    }
+
+    .progress-bar {
+        height: 13px;
+    }
+}
+
+.bg-home {
+    background: #7BB929;
+}
+
+.bg-away {
+    background: #282E65;
+}
+
+.field {
+    background-image: url("~/public/images/field.png");
+    height: 750px;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin-top: 4rem;
+
+
+
+
+}
+
+.lineUp {
+    .plank {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: rgba(0, 0, 0, 0.35);
+    }
+}
+
+.lineup_players {
+
+    padding: 0;
+
+    li {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: #000000;
+        list-style: none !important;
+        height: 70px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        cursor: pointer;
+
+        &:nth-child(even) {
+            background: rgba(123, 185, 41, 0.06);
+        }
+
+        &:hover {
+            background: rgba(180, 180, 180, 0.06);
+        }
+    }
+
+    .away {
+        justify-content: flex-end
+    }
+
+    .number {
+        display: inline-block;
+        width: 40px;
+        text-align: center;
+    }
+
+    .name {
+        margin: 0 1rem;
+    }
+}
+
+
+.playerInfo .modal-content {
+    margin-top: 45% !important;
+
+    .data {
+        display: flex;
+        flex-direction: row;
+
+        .ask {
+            flex: 1;
+            text-align: right;
+            padding: 0 0.5rem;
+            background: rgba(123, 185, 41, 0.06);
+
+        }
+
+        .ans {
+            flex: 1;
+            text-align: left;
+            padding: 0 0.2rem;
+            background: rgba(123, 185, 41, 0.06);
+        }
+    }
+}
+
+.h2h {
+    padding-bottom: 3rem;
+
+    .plank {
+        color: rgba(0, 0, 0, 0.35);
+    }
+
+    .h2h-lineup {
+        border-bottom: 0.5px solid rgba(123, 184, 42, 0.5);
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: #000000;
+        padding: .9rem .4rem;
+
+        img {
+            max-width: 25px;
+            max-height: 30px;
+        }
+
+        .fcol {
+            width: 30%;
+            padding-top: 1.6rem;
+
+        }
+
+        .lastcol {
+            width: 20%;
+            padding-top: 1.6rem;
+
+
+            .textstatus {
+                width: 36px;
+                height: 34px;
+                margin: auto;
+                font-weight: 600;
+                font-size: 16px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: #FFFFFF;
+            }
+
+            .W {
+                background: #396400;
+            }
+
+            .D {
+                background: #b4c44c;
+            }
+
+            .C {
+                background: #FF0909;
+            }
+
+            .L {
+                background: #970909;
+            }
+        }
+
+        .clubH2H {
+            width: 50%;
+
+            .col-12 {
+                padding-bottom: .9rem;
+
+                img {
+                    margin-right: .6rem;
+                }
+
+                .goal {
+                    float: right;
+                }
+
+                .clubname {
+                    padding: .2rem .5rem;
+                    margin-left: .4rem;
+                }
+
+                .home {
+                    background: rgba(123, 185, 42, 0.12);
+                    border-radius: 3px;
+                }
+
+            }
+        } 
+    }
+
+    .seeMore {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        text-decoration-line: underline;
+        color: #000000;
+        text-align: center;
+        padding: 3rem;
+        cursor: pointer;
+    }
+}

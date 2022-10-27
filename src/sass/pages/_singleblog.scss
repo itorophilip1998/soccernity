@@ -1,0 +1,74 @@
+.single-blog {
+    h1 {
+
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 49px;
+        color: #000000;
+    }
+
+    .posted {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000000;
+
+
+        b {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            color: #000000;
+        }
+    }
+
+    .icon {
+        .Fb {
+            color: #4267B2 !important;
+        }
+
+        .Tw {
+            color: #1DA1F2 !important;
+        }
+
+        .Wa {
+            color: #075e54 !important;
+        }
+
+        .Sh {
+            color: grey !important;
+        }
+
+        .ico {
+            margin: auto 4px;
+            cursor: pointer;
+
+        }
+    }
+}
+
+.carousel-item {
+    img {
+        height: 521px;
+    }
+}
+
+.img-Slider {
+  .carousel-indicators{
+    
+  }
+}
+
+.blogText {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    margin: 3rem 0;
+}
+
+.commentBlog{
+    padding: 5rem 8rem;
+        margin: 4rem 0;
+        background: rgba(123, 185, 41, 0.05);
+}
