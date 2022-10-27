@@ -64,7 +64,7 @@ const LastMatch = ({ lastMatch, team }) => {
       </div>)}
 
       {lastMatch?.length >= 6 && <div className="seeMore" onClick={() => seSliceFunc()}>
-        {lastMatch?.length > slice ? "See More " : "See Less"}<img src="/images/seemore.png" alt="" />
+        {lastMatch?.length > slice ? "See More " : "See Less "}<img src="/images/seemore.png" className={lastMatch?.length > slice ? "SeeMore " : "SeeLess"} alt="" />
       </div>
       }
     </div>

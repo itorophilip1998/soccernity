@@ -47,7 +47,7 @@ const HeadToHead = () => {
 
       </div>)}
       {h2h?.length >= 6 && <div className="seeMore" onClick={() => seSliceFunc()}>
-        < span > {h2h?.length > slice ? "See More " : "See Less"}</span> <img src="/images/seemore.png" alt="" />
+        < span > {h2h?.length > slice ? "See More " : "See Less "}</span> <img src="/images/seemore.png" className={h2h?.length > slice ? "SeeMore " : "SeeLess"} alt="" />
       </div>}
     </div >
   )

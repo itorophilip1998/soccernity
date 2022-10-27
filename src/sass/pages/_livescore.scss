@@ -533,7 +533,7 @@
                 }
 
             }
-        } 
+        }
     }
 
     .seeMore {
@@ -546,4 +546,11 @@
         padding: 3rem;
         cursor: pointer;
     }
+}
+
+// .SeeMore {}
+
+.SeeLess {
+    transform: rotate(180deg);
+    margin-top: -.2rem;
 }
