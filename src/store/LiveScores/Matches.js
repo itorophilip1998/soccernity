@@ -78,3 +78,10 @@ export const getAwayLastMatch = createAsyncThunk(
         return res.data.response;
     } 
 ) 
+export const getStanding = createAsyncThunk(
+    'user/getStanding',
+    async ({ league,season }) => {
+        const res = await axios.get(`${config.BaseApi}/standings?league=${league}&season=${season}`, header)
+        return res.data.response;
+    } 
+) 

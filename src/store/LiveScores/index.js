@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 // import { config } from "../../utils/config";
 import { getLegues, getFixturesLive, getFixturesToday, getFixturesDay1, getFixturesDay2, getFixturesDay3 } from "./Fixtures";
-import { getAwayLastMatch, getCoach, getCountry, getEvents, getH2H, getHomeLastMatch, getLineUps, getPlayer, getStatistics } from "./Matches";
+import { getAwayLastMatch, getCoach, getCountry, getEvents, getH2H, getHomeLastMatch, getLineUps, getPlayer, getStanding, getStatistics } from "./Matches";
 
 
 
@@ -25,6 +25,7 @@ export const livescores = createSlice(
             h2h: [],
             lastXaway: [],
             lastXhome: [],
+            standing: []
         },
         reducers: {},
         extraReducers: (builder) => {
@@ -72,6 +73,9 @@ export const livescores = createSlice(
             })
             builder.addCase(getAwayLastMatch.fulfilled, (state, action) => {
                 state.lastXaway = action.payload
+            })
+            builder.addCase(getStanding.fulfilled, (state, action) => {
+                state.standing = action.payload
             })
 
         },
