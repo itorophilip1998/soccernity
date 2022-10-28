@@ -18,18 +18,18 @@ function MatchDetails() {
   const checkTime = (time) => {
     switch (time) {
       case "HT":
-        time = "HALH TIME"
+        time = "HALF TIME"
         break;
       case "FT":
         time = "FULL TIME"
 
         break;
       case "1H":
-        time = "FIRST HALH"
+        time = "FIRST HALF"
 
         break;
       case "2H":
-        time = "SECOND HALH"
+        time = "SECOND HALF"
         break;
       default:
         time = "UP COMING"
@@ -82,13 +82,13 @@ function MatchDetails() {
       <div className='fixtures match_details_summarry '>
         <ul className="nav nav-pills mb-3 " id="pills-tab" role="tablist">
           <li className="nav-item" role="presentation">
-            <button className="nav-link active" id="pills-match-tab" data-toggle="pill" data-target="#pills-match" type="button" role="tab" aria-controls="pills-match" aria-selected="true">{"Match"}</button>
+            <button className="nav-link " id="pills-match-tab" data-toggle="pill" data-target="#pills-match" type="button" role="tab" aria-controls="pills-match" aria-selected="true">{"Match"}</button>
           </li>
           <li className="nav-item" role="presentation">
-            <button className="nav-link" id="pills-h2h-tab" data-toggle="pill" data-target="#pills-h2h" type="button" role="tab" aria-controls="pills-h2h" aria-selected="false">{"H2H"}</button>
+            <button className="nav-link " id="pills-h2h-tab" data-toggle="pill" data-target="#pills-h2h" type="button" role="tab" aria-controls="pills-h2h" aria-selected="false">{"H2H"}</button>
           </li>
           <li className="nav-item" role="presentation">
-            <button className="nav-link" id="pills-standing-tab" data-toggle="pill" data-target="#pills-standing" type="button" role="tab" aria-controls="pills-standing" aria-selected="false">{"Standings"}</button>
+            <button className="nav-link active" id="pills-standing-tab" data-toggle="pill" data-target="#pills-standing" type="button" role="tab" aria-controls="pills-standing" aria-selected="false">{"Standings"}</button>
           </li>
           <li className="nav-item" role="presentation">
             <button className="nav-link" id="pills-video-tab" data-toggle="pill" data-target="#pills-video" type="button" role="tab" aria-controls="pills-video" aria-selected="false">{"Video"}</button>
@@ -96,14 +96,14 @@ function MatchDetails() {
         </ul>
 
         <div className="tab-content container" id="pills-tabContent">
-          <div className="tab-pane fade show active" id="pills-match" role="tabpanel" aria-labelledby="pills-match-tab">
+          <div className="tab-pane fade  " id="pills-match" role="tabpanel" aria-labelledby="pills-match-tab">
             <Match />
           </div>
-          <div className="tab-pane fade" id="pills-h2h" role="tabpanel" aria-labelledby="pills-h2h-tab">
+          <div className="tab-pane fade " id="pills-h2h" role="tabpanel" aria-labelledby="pills-h2h-tab">
             <H2H />
 
           </div>
-          <div className="tab-pane fade" id="pills-standing" role="tabpanel" aria-labelledby="pills-standing-tab">
+          <div className="tab-pane fade show active" id="pills-standing" role="tabpanel" aria-labelledby="pills-standing-tab">
             <Standings />
           </div>
           <div className="tab-pane fade" id="pills-video" role="tabpanel" aria-labelledby="pills-video-tab">

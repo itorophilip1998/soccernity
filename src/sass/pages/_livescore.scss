@@ -376,7 +376,242 @@
     .plank {
         font-weight: 600;
         font-size: 16px;
-        line-height: 20px; 
+        line-height: 20px;
         color: rgba(0, 0, 0, 0.35);
     }
+}
+
+.lineup_players {
+
+    padding: 0;
+
+    li {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: #000000;
+        list-style: none !important;
+        height: 70px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        cursor: pointer;
+
+        &:nth-child(even) {
+            background: rgba(123, 185, 41, 0.06);
+        }
+
+        &:hover {
+            background: rgba(180, 180, 180, 0.06);
+        }
+    }
+
+    .away {
+        justify-content: flex-end
+    }
+
+    .number {
+        display: inline-block;
+        width: 40px;
+        text-align: center;
+    }
+
+    .name {
+        margin: 0 1rem;
+    }
+}
+
+
+.playerInfo .modal-content {
+    margin-top: 45% !important;
+
+    .data {
+        display: flex;
+        flex-direction: row;
+
+        .ask {
+            flex: 1;
+            text-align: right;
+            padding: 0 0.5rem;
+            background: rgba(123, 185, 41, 0.06);
+
+        }
+
+        .ans {
+            flex: 1;
+            text-align: left;
+            padding: 0 0.2rem;
+            background: rgba(123, 185, 41, 0.06);
+        }
+    }
+}
+
+.h2h {
+    padding-bottom: 3rem;
+
+    .plank {
+        color: rgba(0, 0, 0, 0.35);
+    }
+
+    .h2h-lineup {
+        border-bottom: 0.5px solid rgba(123, 184, 42, 0.5);
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: #000000;
+        padding: .9rem .4rem;
+
+        img {
+            max-width: 25px;
+            max-height: 30px;
+        }
+
+        .fcol {
+            width: 30%;
+            padding-top: 1.6rem;
+
+        }
+
+        .lastcol {
+            width: 20%;
+            padding-top: 1.6rem;
+
+
+            .textstatus {
+                width: 36px;
+                height: 34px;
+                margin: auto;
+                font-weight: 600;
+                font-size: 16px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: #FFFFFF;
+            }
+
+            .W {
+                background: #396400;
+            }
+
+            .D {
+                background: #b4c44c;
+            }
+
+            .C {
+                background: #FF0909;
+            }
+
+            .L {
+                background: #970909;
+            }
+        }
+
+        .clubH2H {
+            width: 50%;
+
+            .col-12 {
+                padding-bottom: .9rem;
+
+                img {
+                    margin-right: .6rem;
+                }
+
+                .goal {
+                    float: right;
+                }
+
+                .clubname {
+                    padding: .2rem .5rem;
+                    margin-left: .4rem;
+                }
+
+                .home {
+                    background: rgba(123, 185, 42, 0.12);
+                    border-radius: 3px;
+                }
+
+            }
+        }
+    }
+
+    .seeMore {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        text-decoration-line: underline;
+        color: #000000;
+        text-align: center;
+        padding: 3rem;
+        cursor: pointer;
+    }
+}
+
+// .SeeMore {}
+
+.SeeLess {
+    transform: rotate(180deg);
+    margin-top: -.2rem;
+}
+
+.standingTables {
+    table {
+        text-align: center;
+    }
+
+    th,
+    td {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: rgba(0, 0, 0, 0.35);
+        border: 0;
+        vertical-align: middle;
+
+    }
+
+    thead {
+        height: 56px;
+        background: rgba(123, 185, 41, 0.06);
+        border-radius: 10px;
+        th{
+        vertical-align: middle;
+        }
+    }
+
+
+    tbody {
+        tr {
+            border-bottom: 0.5px solid rgba(123, 184, 42, 0.5);
+        }
+    }
+
+    table {
+        border-radius: 10px;
+    }
+
+    img {
+        max-height: 32.99995422363281px;
+        max-width: 24.77220344543457px;
+        margin: 0 1rem ;
+    }
+
+    .numCount {
+        width: 36px;
+        height: 34px;
+        background: #7BB92A;
+        border-radius: 4px;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        line-height: 2;
+        margin-right: .9rem;
+        color: #FFFFFF;
+    }
+    .name{
+        color: #000000;
+        font-weight: 500;
+    }
+
 }

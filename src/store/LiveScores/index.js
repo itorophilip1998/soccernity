@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 // import { config } from "../../utils/config";
 import { getLegues, getFixturesLive, getFixturesToday, getFixturesDay1, getFixturesDay2, getFixturesDay3 } from "./Fixtures";
-import { getEvents, getLineUps, getStatistics } from "./Matches";
+import { getAwayLastMatch, getCoach, getCountry, getEvents, getH2H, getHomeLastMatch, getLineUps, getPlayer, getStanding, getStatistics } from "./Matches";
 
 
 
@@ -19,6 +19,13 @@ export const livescores = createSlice(
             match_summary: [],
             statistics: [],
             lineups: [],
+            player: [],
+            coach: [],
+            country: [],
+            h2h: [],
+            lastXaway: [],
+            lastXhome: [],
+            standing: []
         },
         reducers: {},
         extraReducers: (builder) => {
@@ -48,6 +55,27 @@ export const livescores = createSlice(
             })
             builder.addCase(getLineUps.fulfilled, (state, action) => {
                 state.lineups = action.payload
+            })
+            builder.addCase(getPlayer.fulfilled, (state, action) => {
+                state.player = action.payload
+            })
+            builder.addCase(getCoach.fulfilled, (state, action) => {
+                state.coach = action.payload
+            })
+            builder.addCase(getCountry.fulfilled, (state, action) => {
+                state.country = action.payload
+            })
+            builder.addCase(getH2H.fulfilled, (state, action) => {
+                state.h2h = action.payload
+            })
+            builder.addCase(getHomeLastMatch.fulfilled, (state, action) => {
+                state.lastXhome = action.payload
+            })
+            builder.addCase(getAwayLastMatch.fulfilled, (state, action) => {
+                state.lastXaway = action.payload
+            })
+            builder.addCase(getStanding.fulfilled, (state, action) => {
+                state.standing = action.payload
             })
 
         },
