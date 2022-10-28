@@ -56,7 +56,7 @@ function LineUp() {
                 <span className="number">{item?.player?.number} </span>
                 <span className="number">{item?.player?.name} </span>
               <span className="number"></span>
-              <span className="number"></span>
+              <span className="number"></span> 
               </li>))}
             </ul>
           </div>
