@@ -35,11 +35,11 @@ function StandingTable({ standing }) {
                         <td>{item?.points}</td>
                         <td>
 
-                            <div className={`numCount ${item?.form?.split("")[0]}`}>{item?.form?.split("")[0]}</div>
-                            <div className={`numCount ${item?.form?.split("")[1]}`}>{item?.form?.split("")[1]}</div>
-                            <div className={`numCount ${item?.form?.split("")[2]}`}>{item?.form?.split("")[2]}</div>
-                            <div className={`numCount ${item?.form?.split("")[3]}`}>{item?.form?.split("")[3]}</div>
-                            <div className={`numCount ${item?.form?.split("")[4]}`}>{item?.form?.split("")[4]}</div>
+                            <div className={`numCount ${item?.form?.charAt(0)}`}>{item?.form?.charAt(0)}</div>
+                            <div className={`numCount ${item?.form?.charAt(1)}`}>{item?.form?.charAt(1)}</div>
+                            <div className={`numCount ${item?.form?.charAt(2)}`}>{item?.form?.charAt(2)}</div>
+                            <div className={`numCount ${item?.form?.charAt(3)}`}>{item?.form?.charAt(3)}</div>
+                            <div className={`numCount ${item?.form?.charAt(4)}`}>{item?.form?.charAt(4)}</div>
 
                         </td>
                     </tr>
