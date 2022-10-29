@@ -491,21 +491,7 @@
                 color: #FFFFFF;
             }
 
-            .W {
-                background: #396400;
-            }
 
-            .D {
-                background: #b4c44c;
-            }
-
-            .C {
-                background: #FF0909;
-            }
-
-            .L {
-                background: #970909;
-            }
         }
 
         .clubH2H {
@@ -575,8 +561,9 @@
         height: 56px;
         background: rgba(123, 185, 41, 0.06);
         border-radius: 10px;
-        th{
-        vertical-align: middle;
+
+        th {
+            vertical-align: middle;
         }
     }
 
@@ -594,13 +581,12 @@
     img {
         max-height: 32.99995422363281px;
         max-width: 24.77220344543457px;
-        margin: 0 1rem ;
+        margin: 0 1rem;
     }
 
     .numCount {
         width: 36px;
         height: 34px;
-        background: #7BB92A;
         border-radius: 4px;
         display: inline-block;
         vertical-align: middle;
@@ -609,9 +595,43 @@
         margin-right: .9rem;
         color: #FFFFFF;
     }
-    .name{
+
+    .name {
         color: #000000;
         font-weight: 500;
     }
 
+    .promoteda {
+        background: #7BB92A;
+    }
+
+    .promotedb {
+        background: #323869;
+    }
+
+    .normal {
+        color: #7BB92A;
+        background: #fff;
+    }
+
+    .relegation {
+        background: #FF0808;
+
+    }
+}
+
+.W {
+    background: #396400;
+}
+
+.D {
+    background: #b4c44c;
+}
+
+.C {
+    background: #970909;
+}
+
+.L {
+    background: #FF0909;
 }
