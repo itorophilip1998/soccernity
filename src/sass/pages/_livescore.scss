@@ -584,41 +584,31 @@
         margin: 0 1rem;
     }
 
-    .numCount {
-        width: 36px;
-        height: 34px;
-        border-radius: 4px;
-        display: inline-block;
-        vertical-align: middle;
-        text-align: center;
-        line-height: 2;
-        margin-right: .9rem;
-        color: #FFFFFF;
-    }
-
+   
     .name {
         color: #000000;
         font-weight: 500;
     }
 
-    .promoteda {
-        background: #7BB92A;
-    }
-
-    .promotedb {
-        background: #323869;
-    }
-
-    .normal {
-        color: #7BB92A;
-        background: #fff;
-    }
-
-    .relegation {
-        background: #FF0808;
-
-    }
+ 
 }
+   .promoteda {
+       background: #7BB92A;
+   }
+
+   .promotedb {
+       background: #323869;
+   }
+
+   .normal {
+       color: #7BB92A;
+       background: #fff;
+   }
+
+   .relegation {
+       background: #FF0808;
+
+   }
 
 .W {
     background: #396400;
@@ -635,3 +625,20 @@
 .L {
     background: #FF0909;
 }
+ .numCount {
+     width: 36px;
+     height: 34px;
+     border-radius: 4px;
+     display: inline-block;
+     vertical-align: middle;
+     text-align: center;
+     line-height: 2;
+     margin-right: .9rem;
+     color: #FFFFFF;
+ }
+ .standingInfo{
+    margin: 2.4rem 0;
+   .stand{
+    margin: .5rem 0;
+   }
+ }

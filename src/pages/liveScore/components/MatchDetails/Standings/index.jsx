@@ -20,6 +20,17 @@ const Standings = () => {
   return (
     <div className='standingTables'>
       <StandingTable standing={standing} />
+      <div className="standingInfo">
+        <div className="stand ">
+          <div className="numCount promoteda"></div> Promotion - UEFA Champions League (Group Stage)
+        </div>
+        <div className="stand">
+          <div className="numCount promotedb"></div> Promotion - Europa Leagie Group (Group Stage)
+        </div>
+        <div className="stand">
+          <div className="numCount relegation"></div> Relegation - Championship
+        </div>
+      </div>
     </div>
   )
 }
