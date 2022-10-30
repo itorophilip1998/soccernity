@@ -16,10 +16,10 @@
 // pages
 @import './pages/blog';
 @import './pages/contact';
-@import './pages/singleblog'; 
-@import './pages/termsPolicy'; 
-@import './pages/livescore'; 
-@import './pages/matchesDetails'; 
+@import './pages/singleblog';
+@import './pages/termsPolicy';
+@import './pages/livescore';
+@import './pages/matchesDetails';
 
 // components
 @import './components/input';
@@ -36,6 +36,7 @@ body {
     font-family: 'Montserrat' !important;
     font-style: normal;
     overflow-x: hidden;
+    overflow-y: hidden;
 
     a {
         text-decoration: none !important;
@@ -52,5 +53,3 @@ body {
 header {
     padding-top: 3rem !important;
 }
-
- 

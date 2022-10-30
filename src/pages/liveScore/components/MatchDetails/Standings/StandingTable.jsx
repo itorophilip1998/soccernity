@@ -1,7 +1,6 @@
 import React from 'react'
 
-function StandingTable({ standing }) {
-    console.log(standing[0]?.league?.standings[0])
+function StandingTable({ standing }) { 
     return (
         <table className="table table-borderless ">
             <thead >

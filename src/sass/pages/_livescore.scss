@@ -2,22 +2,49 @@
     background: rgba(51, 51, 51, 0.04);
 
     // width: 432px;
-    //    max-height: 100vh;
-    padding: 2rem 0;
+    height: 110vh;
+    overflow-y: scroll;
+    margin-bottom: 2rem;
 
     h4 {
-        font-family: 'Montserrat';
-        font-style: normal;
         font-weight: 700;
-        font-size: 24px;
-        line-height: 29px;
+        font-size: 20px;
+        line-height: 24px;
         color: #000000;
+        margin-top: 8rem;
+        padding: 0 1rem;
+    }
+
+    .seach-bar {
         padding: 1rem;
+        padding-top: 2rem;
+        position: absolute;
+        background: whitesmoke;
+        width: 100%;
+
+        input,
+        input:focus {
+            border: 0 !important;
+            border-bottom: 1px solid #000000 !important;
+            background: transparent;
+            width: 100%;
+            color: rgba(0, 0, 0, 0.38);
+            padding-left: 2rem;
+            line-height: 2.6;
+
+
+        }
+
+        .search {
+            position: absolute;
+            margin-top: 0.7rem;
+        }
+
+
     }
 
     ul {
         padding: 0;
-
 
         li {
             list-style-type: none;
@@ -37,10 +64,8 @@
                 }
 
                 color: #000000;
-                font-family: 'Montserrat';
-                font-style: normal;
                 font-weight: 600;
-                font-size: 20px;
+                font-size: 18px;
                 line-height: 29px;
 
                 img {
@@ -584,31 +609,32 @@
         margin: 0 1rem;
     }
 
-   
+
     .name {
         color: #000000;
         font-weight: 500;
     }
 
- 
+
 }
-   .promoteda {
-       background: #7BB92A;
-   }
 
-   .promotedb {
-       background: #323869;
-   }
+.promoteda {
+    background: #7BB92A;
+}
 
-   .normal {
-       color: #7BB92A;
-       background: #fff;
-   }
+.promotedb {
+    background: #323869;
+}
 
-   .relegation {
-       background: #FF0808;
+.normal {
+    color: #7BB92A !important;
+    background: #fff;
+}
 
-   }
+.relegation {
+    background: #FF0808;
+
+}
 
 .W {
     background: #396400;
@@ -625,20 +651,23 @@
 .L {
     background: #FF0909;
 }
- .numCount {
-     width: 36px;
-     height: 34px;
-     border-radius: 4px;
-     display: inline-block;
-     vertical-align: middle;
-     text-align: center;
-     line-height: 2;
-     margin-right: .9rem;
-     color: #FFFFFF;
- }
- .standingInfo{
+
+.numCount {
+    width: 36px;
+    height: 34px;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 2.3;
+    margin-right: .9rem;
+    color: #FFFFFF;
+}
+
+.standingInfo {
     margin: 2.4rem 0;
-   .stand{
-    margin: .5rem 0;
-   }
- }
+
+    .stand {
+        margin: .5rem 0;
+    }
+}

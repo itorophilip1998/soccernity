@@ -57,7 +57,7 @@ const LastMatch = ({ lastMatch, team }) => {
           </div>
         </div>
         <div className="lastcol">
-          <div className={`textstatus ${isStatus(item?.goals?.home, item?.goals?.away)} shadow`}>
+          <div className={`textstatus ${isStatus(item?.goals?.home, item?.goals?.away)} `}>
             {isStatus(parseInt(item?.goals?.home), parseInt(item?.goals?.away))}
           </div>
         </div>
