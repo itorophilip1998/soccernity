@@ -1,0 +1,16 @@
+@baseApi=http://localhost:8000/api
+
+
+### signup
+POST  {{baseApi}}/auth/signup
+Content-Type: application/json
+
+{
+    "firstname":"itoro",
+    "lastname":"philip",
+    "email":"itoro@gmail.com1a",
+    "password":"philip",
+    "password_confirmation":"philip",
+    "phone":"09024195493",
+    "role":"user"
+}
