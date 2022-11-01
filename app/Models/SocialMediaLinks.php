@@ -6,18 +6,17 @@ use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Profile extends Model
+class SocialMediaLinks extends Model
 {
     use HasFactory;
     protected $fillable = [
         'user_id',
-        "fullname",
-        "gender",
-        "address",
-        "profile_picture",
-        "location",
-        "website_link",
-        "bio" 
+        "linkedin",
+        "twitter",
+        "facebook",
+        "behance",
+        "instagram",
+        "dribble"
     ];
 
     public function user()

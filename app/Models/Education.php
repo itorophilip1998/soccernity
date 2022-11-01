@@ -6,18 +6,16 @@ use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Profile extends Model
+class Education extends Model
 {
     use HasFactory;
     protected $fillable = [
         'user_id',
-        "fullname",
-        "gender",
-        "address",
-        "profile_picture",
-        "location",
-        "website_link",
-        "bio" 
+        "school",
+        "degree",
+        "start_date",
+        "end_date",
+        "grade",
     ];
 
     public function user()
