@@ -67,8 +67,8 @@ class VerifyController extends Controller
           'message' => "A verification link has been sent to your account 👉 <$request->email>",
         ], 200);
       } catch (\Throwable $th) {
-        //  throw $th; 
-        return response()->json(['error' => 'Mail was not sent!  check email address and try again ⚠️'], 401);
+         throw $th; 
+        // return response()->json(['error' => 'Mail was not sent!  check email address and try again ⚠️'], 401);
       }
     } catch (\Throwable $th) {
       throw $th;
