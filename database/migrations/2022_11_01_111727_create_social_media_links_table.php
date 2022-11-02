@@ -14,6 +14,7 @@ class CreateSocialMediaLinksTable extends Migration
     public function up()
     {
         Schema::create('social_media_links', function (Blueprint $table) {
+            $table->id();
             $table->unsignedBigInteger("user_id");
             $table->string("linkedin")->nullable();
             $table->string("twitter")->nullable();

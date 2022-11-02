@@ -2,18 +2,9 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
-use App\Models\Save;
-use App\Models\Inbox;
-use App\Models\Photo;
-// use Laravel\Sanctum\HasApiTokens;
-use App\Models\Skill;
-use App\Models\Booked;
 use App\Models\Profile;
-use App\Models\Ranting;
-use App\Models\BankDetails;
-use App\Models\CardDetails;
-use App\Models\ProfileImages;
+use App\Models\Education;
+use App\Models\InterestIn;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -78,48 +69,25 @@ class User extends Authenticatable implements JWTSubject
     {
         return [];
     }
-    public function cardDetails()
-    {
-        return $this->hasMany(CardDetails::class);
-    }
+
     public function profile()
     {
         return $this->hasOne(Profile::class);
     }
-    public function ratings()
+    public function interest_in()
     {
-        return $this->hasMany(Ranting::class);
+        return $this->hasMany(InterestIn::class);
     }
-    public function skills()
+    public function experience()
     {
-        return $this->hasMany(Skill::class);
+        return $this->hasMany(Experience::class);
     }
-    public function bankDetails()
+    public function education()
     {
-        return $this->hasMany(BankDetails::class);
+        return $this->hasMany(Education::class);
     }
-    public function gallery()
+    public function social_media_links()
     {
-        return $this->hasMany(ProfileImages::class);
-    }
-    public function profileImage()
-    {
-        return $this->hasOne(Photo::class);
-    }
-    public function savedUser()
-    {
-        return $this->hasMany(Save::class, "user_id");
-    }
-    public function inbox()
-    {
-        return $this->hasMany(Inbox::class);
-    }
-    public function booked()
-    {
-        return $this->hasMany(Booked::class);
-    }
-    public function isSaved()
-    {
-        return $this->hasOne(Save::class, "saved_user_id");
+        return $this->hasOne(SocialMediaLinks::class);
     }
 }

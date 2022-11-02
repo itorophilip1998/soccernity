@@ -16,7 +16,6 @@ Route::group([
     Route::post('/signin', [AuthController::class, 'signin']);
     Route::post('/signout', [AuthController::class, 'signout']);
     Route::post('/refresh', [AuthController::class, 'refresh']);
-    Route::get('/user', [AuthController::class, 'userProfile']);
 });
 
 //  Verify route
@@ -44,6 +43,7 @@ Route::group([
 ], function ($router) {
     Route::post('/update/{user_id}', [UserController::class, 'updateUser']);
     Route::get('/get/{user_id}', [UserController::class, 'getUser']);
+    Route::get('/user', [UserController::class, 'userProfile']);
 });
 
 //  Update Profile route

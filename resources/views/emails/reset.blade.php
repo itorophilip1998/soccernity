@@ -9,10 +9,10 @@
 
         <section class="content">
             <p>
-                Hi   {{ $data["main"]["firstname"] }}
+                Hello!
             </p>
                 <p>
-                  Hi Steph, You requested to reset your password on {{ now()->format("d M Y h:m") }}.
+                 You requested to reset your password on {{ now()->format("d M Y h:m") }}.
    <br/><br/>
     Search  various types of services around your location with ease — welcome! If there’s anything you need, we’ll be here every step of the way.
 </p>

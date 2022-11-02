@@ -89,7 +89,7 @@ border-radius: 10px;
 <p >
     
 Thanks, <br/>
-Freelancer Team
+Pickt Team
 </p>
   
     </Footer>
