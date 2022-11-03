@@ -1,15 +1,17 @@
 <?php
 
+use App\Models\InterestIn;
+use App\Models\SocialMediaLinks;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\EducationController;
-use App\Http\Controllers\ExperienceController;
-use App\Http\Controllers\InterestInController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\VerifyController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PasswordController;
-use App\Models\InterestIn;
+use App\Http\Controllers\EducationController;
+use App\Http\Controllers\ExperienceController;
+use App\Http\Controllers\InterestInController;
+use App\Http\Controllers\SocialMediaLinksController;
 
 //  Auth route
 Route::group([
@@ -89,9 +91,9 @@ Route::group([
 //  Social Media Links route
 Route::group([
     'middleware' => 'api',
-    'prefix' => 'experience'
-], function ($router) { 
-    Route::get('/get', [ExperienceController::class, 'get']);
-    Route::post('/update', [ExperienceController::class, 'update']);
-    Route::delete('/remove/{name}', [ExperienceController::class, 'delete']);
+    'prefix' => 'socialmedia'
+], function ($router) {
+    Route::get('/get', [SocialMediaLinksController::class, 'get']);
+    Route::post('/update', [SocialMediaLinksController::class, 'update']);
+    Route::delete('/remove', [SocialMediaLinksController::class, 'delete']);
 });

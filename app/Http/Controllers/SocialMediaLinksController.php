@@ -5,82 +5,84 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreSocialMediaLinksRequest;
 use App\Http\Requests\UpdateSocialMediaLinksRequest;
 use App\Models\SocialMediaLinks;
+use Illuminate\Support\Facades\Validator;
 
 class SocialMediaLinksController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+
+
+
+    public function get()
     {
-        //
+        try {
+            if (!auth()->check()) {
+                return response()->json(['message' => 'Unauthorized ⚠️'], 401);
+            }
+            $user = auth()->user();
+            $SocialMediaLinks = SocialMediaLinks::where("user_id", $user->id)->get();
+            return response()->json(["socialMediaLinks" => $SocialMediaLinks]);
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+
+    public function update()
     {
-        //
+        try {
+            if (!auth()->check()) {
+                return response()->json(['message' => 'Unauthorized ⚠️'], 401);
+            }
+            $validator = Validator::make(request()->all(), [
+                'linkedin' => 'required|string',
+                'twitter' => 'required|string',
+                'facebook' => 'required|string',
+                'behance' => 'required|string',
+                'instagram' => 'required|string',
+                'dribble' => 'required|string'
+            ]);
+
+
+            if ($validator->fails()) {
+                return response()->json($validator->errors(), 422);
+            }
+            $user = auth()->user();
+            $SocialMediaLinks = SocialMediaLinks::where("user_id", $user->id)->first();
+
+            $SocialMediaLinks->update(array_merge(
+                $validator->validated(),
+                ["user_id" => $user->id]
+            ));
+
+            return response()->json(["message" => "Successfully Updated SocialMediaLinks", "socialMediaLinks" => $SocialMediaLinks]);
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreSocialMediaLinksRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreSocialMediaLinksRequest $request)
+    public function delete()
     {
-        //
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\SocialMediaLinks  $socialMediaLinks
-     * @return \Illuminate\Http\Response
-     */
-    public function show(SocialMediaLinks $socialMediaLinks)
-    {
-        //
-    }
+        try {
+            $id = request()->item;
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\SocialMediaLinks  $socialMediaLinks
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(SocialMediaLinks $socialMediaLinks)
-    {
-        //
-    }
+            if (!auth()->check()) {
+                return response()->json(['message' => 'Unauthorized ⚠️'], 401);
+            }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateSocialMediaLinksRequest  $request
-     * @param  \App\Models\SocialMediaLinks  $socialMediaLinks
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateSocialMediaLinksRequest $request, SocialMediaLinks $socialMediaLinks)
-    {
-        //
-    }
+            $SocialMediaLinks = auth()->user()->social_media_links;
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\SocialMediaLinks  $socialMediaLinks
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(SocialMediaLinks $socialMediaLinks)
-    {
-        //
+            if (!$SocialMediaLinks) {
+                return response()->json(["message" => "$id was deleted already!"], 404);
+            }
+
+            $SocialMediaLinks?->update([
+                $id => null
+            ]);
+
+            return response()->json(["message" => "Successfully Deleted SocialMediaLinks"]);
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 }
