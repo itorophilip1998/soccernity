@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\EducationController;
+use App\Http\Controllers\ExperienceController;
 use App\Http\Controllers\InterestInController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\VerifyController;
@@ -71,4 +72,26 @@ Route::group([
     Route::get('/get', [EducationController::class, 'get']);
     Route::post('/update/{id}', [EducationController::class, 'update']);
     Route::delete('/remove/{id}', [EducationController::class, 'delete']);
+});
+
+//  Experince In route
+Route::group([
+    'middleware' => 'api',
+    'prefix' => 'experience'
+], function ($router) {
+    Route::post('/add', [ExperienceController::class, 'add']);
+    Route::get('/get', [ExperienceController::class, 'get']);
+    Route::post('/update/{id}', [ExperienceController::class, 'update']);
+    Route::delete('/remove/{id}', [ExperienceController::class, 'delete']);
+});
+
+
+//  Social Media Links route
+Route::group([
+    'middleware' => 'api',
+    'prefix' => 'experience'
+], function ($router) { 
+    Route::get('/get', [ExperienceController::class, 'get']);
+    Route::post('/update', [ExperienceController::class, 'update']);
+    Route::delete('/remove/{name}', [ExperienceController::class, 'delete']);
 });

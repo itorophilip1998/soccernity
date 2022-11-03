@@ -5,82 +5,103 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreExperienceRequest;
 use App\Http\Requests\UpdateExperienceRequest;
 use App\Models\Experience;
+use Illuminate\Support\Facades\Validator;
 
 class ExperienceController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function add()
     {
-        //
+        try {
+            if (!auth()->check()) {
+                return response()->json(['message' => 'Unauthorized ⚠️'], 401);
+            }
+            $validator = Validator::make(request()->all(), [
+                'role' => 'required|string',
+                'company' => 'required|string',
+                'start_date' => 'required|string',
+                'end_date' => 'required|string',
+                'is_present' => 'required|string'
+            ]);
+
+            if ($validator->fails()) {
+                return response()->json($validator->errors(), 422);
+            }
+            $user = auth()->user();
+            $Experience = Experience::create(array_merge(
+                $validator->validated(),
+                ["user_id" => $user->id]
+            ));
+
+            return response()->json(["message" => "Successfully Added Experience", "experience" => $Experience]);
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+
+    public function get()
     {
-        //
+        try {
+            if (!auth()->check()) {
+                return response()->json(['message' => 'Unauthorized ⚠️'], 401);
+            }
+            $user = auth()->user();
+            $Experience = Experience::where("user_id", $user->id)->get();
+            return response()->json(["experience" => $Experience]);
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreExperienceRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreExperienceRequest $request)
+
+    public function update($id)
     {
-        //
+        try {
+            if (!auth()->check()) {
+                return response()->json(['message' => 'Unauthorized ⚠️'], 401);
+            }
+            $validator = Validator::make(request()->all(), [
+                'role' => 'required|string',
+                'company' => 'required|string',
+                'start_date' => 'required|string',
+                'end_date' => 'required|string',
+                'is_present' => 'required|string'
+            ]);
+
+
+            if ($validator->fails()) {
+                return response()->json($validator->errors(), 422);
+            }
+            $user = auth()->user();
+            $Experience = Experience::find($id)->first();
+
+            $Experience->update(array_merge(
+                $validator->validated(),
+                ["user_id" => $user->id]
+            ));
+
+            return response()->json(["message" => "Successfully Updated Experience", "Experience" => $Experience]);
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Experience  $experience
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Experience $experience)
+    public function delete($id)
     {
-        //
-    }
+        try {
+            if (!auth()->check()) {
+                return response()->json(['message' => 'Unauthorized ⚠️'], 401);
+            }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Experience  $experience
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Experience $experience)
-    {
-        //
-    }
+            $Experience = Experience::find($id);
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateExperienceRequest  $request
-     * @param  \App\Models\Experience  $experience
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateExperienceRequest $request, Experience $experience)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Experience  $experience
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Experience $experience)
-    {
-        //
+            if (!$Experience) {
+                return response()->json(["message" => "Data was deleted already!"], 404);
+            }
+            $Experience->delete();
+            return response()->json(["message" => "Successfully Deleted Experience"]);
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 }
