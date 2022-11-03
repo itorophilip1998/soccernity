@@ -81,18 +81,13 @@ class InterestInController extends Controller
             if (!auth()->check()) {
                 return response()->json(['message' => 'Unauthorized ⚠️'], 401);
             }
-            $validator = Validator::make(request()->all(), [
-                'interest_in' => 'required',
-            ]);
 
-            if ($validator->fails()) {
-                return response()->json($validator->errors(), 422);
-            }
-            $interestIn = InterestIn::find($id)->first();
+            $interestIn = InterestIn::find($id);
 
-            if ($interestIn) {
-                $interestIn->delete();
+            if (!$interestIn) {
+                return response()->json(["message" => "Data was deleted already!"], 404);
             }
+            $interestIn->delete();
             return response()->json(["message" => "Successfully Deleted InterestIn"]);
         } catch (\Throwable $th) {
             throw $th;

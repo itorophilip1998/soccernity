@@ -5,82 +5,103 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreEducationRequest;
 use App\Http\Requests\UpdateEducationRequest;
 use App\Models\Education;
+use Illuminate\Support\Facades\Validator;
+
 
 class EducationController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function add()
     {
-        //
+        try {
+            if (!auth()->check()) {
+                return response()->json(['message' => 'Unauthorized ⚠️'], 401);
+            }
+            $validator = Validator::make(request()->all(), [
+                'school' => 'required|string',
+                'degree' => 'required|string',
+                'start_date' => 'required|string',
+                'end_date' => 'required|string',
+                'grade' => 'required|string'
+            ]);
+
+            if ($validator->fails()) {
+                return response()->json($validator->errors(), 422);
+            }
+            $user = auth()->user();
+            $Education = Education::create(array_merge(
+                $validator->validated(),
+                ["user_id" => $user->id]
+            ));
+
+            return response()->json(["message" => "Successfully Added Education", "education" => $Education]);
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+
+    public function get()
     {
-        //
+        try {
+            if (!auth()->check()) {
+                return response()->json(['message' => 'Unauthorized ⚠️'], 401);
+            }
+            $user = auth()->user();
+            $education = Education::where("user_id", $user->id)->get();
+            return response()->json(["education" => $education]);
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreEducationRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreEducationRequest $request)
+
+    public function update($id)
     {
-        //
+        try {
+            if (!auth()->check()) {
+                return response()->json(['message' => 'Unauthorized ⚠️'], 401);
+            }
+            $validator = Validator::make(request()->all(), [
+                'school' => 'required|string',
+                'degree' => 'required|string',
+                'start_date' => 'required|string',
+                'end_date' => 'required|string',
+                'grade' => 'required|string'
+            ]);
+
+            if ($validator->fails()) {
+                return response()->json($validator->errors(), 422);
+            }
+            $user = auth()->user();
+            $education = Education::find($id)->first();
+
+            $education->update(array_merge(
+                $validator->validated(),
+                ["user_id" => $user->id]
+            ));
+
+            return response()->json(["message" => "Successfully Updated Education", "education" => $education]);
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Education  $education
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Education $education)
+    public function delete($id)
     {
-        //
-    }
+        try {
+            if (!auth()->check()) {
+                return response()->json(['message' => 'Unauthorized ⚠️'], 401);
+            }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Education  $education
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Education $education)
-    {
-        //
-    }
+            $education = Education::find($id);
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateEducationRequest  $request
-     * @param  \App\Models\Education  $education
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateEducationRequest $request, Education $education)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Education  $education
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Education $education)
-    {
-        //
+            if (!$education) {
+                return response()->json(["message" => "Data was deleted already!"], 404);
+            }
+            $education->delete();
+            return response()->json(["message" => "Successfully Deleted Education"]);
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 }

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\EducationController;
 use App\Http\Controllers\InterestInController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\VerifyController;
@@ -58,4 +59,16 @@ Route::group([
     Route::get('/get', [InterestInController::class, 'get']);
     Route::post('/update/{id}', [InterestInController::class, 'update']);
     Route::delete('/remove/{id}', [InterestInController::class, 'delete']);
+});
+
+
+//  Education In route
+Route::group([
+    'middleware' => 'api',
+    'prefix' => 'education'
+], function ($router) {
+    Route::post('/add', [EducationController::class, 'add']);
+    Route::get('/get', [EducationController::class, 'get']);
+    Route::post('/update/{id}', [EducationController::class, 'update']);
+    Route::delete('/remove/{id}', [EducationController::class, 'delete']);
 });
