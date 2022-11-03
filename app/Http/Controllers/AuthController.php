@@ -33,15 +33,17 @@ class AuthController extends Controller
                 ]
             ));
 
-            $user->interest_in()->create();
-            $user->experience()->create();
-            $user->education()->create();
+            $user->profile()->create();
             $user->social_media_links()->create();
+
+            // $user->interest_in()->create();
+            // $user->experience()->create();
+            // $user->education()->create();
 
 
             $uri = URL::to("/api/verify/$verify_token/$request->email");
             $mail_data = [
-                "subject" => "Welcome to Freelancer",
+                "subject" => "Welcome to Pickt",
                 "view" => "emails.welcome",
                 "main" => request()->all(),
                 "link" => "$uri",
@@ -117,7 +119,7 @@ class AuthController extends Controller
         }
     }
 
-   
+
 
     protected function createNewToken($token)
     {

@@ -40,7 +40,7 @@ background:white;
          margin: 0px 5px ;
      }
      h3{  
-         color: #4BAF4F;
+         color: #5e48db;
      }
      .head{
          text-align: center;
@@ -61,7 +61,7 @@ background:white;
 color:white;
 font-size: 16px;
 padding: 12px 15px;
-background: #4BAF4F;
+background: #5e48db;
 border-radius: 10px;
  text-decoration: none;  
     }

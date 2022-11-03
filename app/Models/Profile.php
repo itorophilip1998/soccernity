@@ -15,7 +15,7 @@ class Profile extends Model
         "gender",
         "address",
         "profile_picture",
-        "location",
+        "country",
         "website_link",
         "bio" 
     ];

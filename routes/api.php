@@ -2,10 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\InterestInController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\VerifyController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PasswordController;
+use App\Models\InterestIn;
 
 //  Auth route
 Route::group([
@@ -41,16 +43,19 @@ Route::group([
     'middleware' => 'api',
     'prefix' => 'user'
 ], function ($router) {
-    Route::post('/update/{user_id}', [UserController::class, 'updateUser']);
+    Route::post('/update', [UserController::class, 'updateUser']);
     Route::get('/get/{user_id}', [UserController::class, 'getUser']);
-    Route::get('/user', [UserController::class, 'userProfile']);
+    Route::get('/', [UserController::class, 'userProfile']);
+    // Route::post('/change-email', [UserController::class, 'changeEmail']);
 });
 
-//  Update Profile route
+//  Interest In route
 Route::group([
     'middleware' => 'api',
-    'prefix' => 'profile'
+    'prefix' => 'interestin'
 ], function ($router) {
-    Route::post('/update/{user_id}', [ProfileController::class, 'updateProfile']);
-    Route::get('/get/{user_id}', [ProfileController::class, 'getProfile']);
+    Route::post('/add', [InterestInController::class, 'add']);
+    Route::get('/get', [InterestInController::class, 'get']);
+    Route::post('/update/{id}', [InterestInController::class, 'update']);
+    Route::delete('/remove/{id}', [InterestInController::class, 'delete']);
 });

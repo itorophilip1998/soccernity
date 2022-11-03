@@ -55,7 +55,7 @@ class VerifyController extends Controller
       $user->update(["verify_token" => $verify_token]);
       $uri = URL::to("/api/verify/$verify_token/$request->email");
       $mail_data = [
-        "subject" => "Welcome to Freelancer",
+        "subject" => "Welcome to Pickt",
         "view" => "emails.welcome",
         "main" => $user,
         "link" => "$uri",
@@ -67,8 +67,8 @@ class VerifyController extends Controller
           'message' => "A verification link has been sent to your account 👉 <$request->email>",
         ], 200);
       } catch (\Throwable $th) {
-         throw $th; 
-        // return response()->json(['error' => 'Mail was not sent!  check email address and try again ⚠️'], 401);
+        //  throw $th; 
+        return response()->json(['error' => 'Mail was not sent!  check email address and try again ⚠️'], 401);
       }
     } catch (\Throwable $th) {
       throw $th;

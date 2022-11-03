@@ -26,13 +26,14 @@ class PasswordController extends Controller
         return response()->json($validator->errors()->toJson(), 400);
       }
       $user = User::where('email', $request->email)->first();
+
+      if (!$user) {
+        return response()->json(['error' => 'This user does not exist⚠️'], 401);
+      }
       $user_reset = DB::table("password_resets")
         ->where("email", $user->email)
         ->where("token", $request->token);
       $checkTime = $user_reset->first();
-      if (!$user) {
-        return response()->json(['error' => 'This user does not exist⚠️'], 401);
-      }
 
       if (!$user_reset->first()) {
         return response()->json(['error' => 'Invalid token⚠️'], 401);
@@ -50,10 +51,7 @@ class PasswordController extends Controller
         'message' => "Password successfully updated! 👍, Please Login!",
       ], 200);
     } catch (\Throwable $th) {
-      // throw $th;
-      return response()->json([
-        'error' => 'This error is from the backend, please contact the backend developer'
-      ], 500);
+      throw $th;
     }
   }
 
@@ -72,7 +70,7 @@ class PasswordController extends Controller
         return response()->json(['error' => 'This user does not exist⚠️'], 401);
       }
       $token = Str::random(10);
-      $uri = "https://freelancer-beta.netlify.app/reset/?token=$token&email=$request->email";
+      $uri = env("FronEndUrl") . "/reset/?token=$token&email=$request->email";
       $mail_data = [
         "subject" => "Password Reset",
         "view" => "emails.reset",
@@ -100,14 +98,10 @@ class PasswordController extends Controller
           'message' => "A Reset link has been sent to your account 👉 <$request->email>",
         ], 200);
       } catch (\Throwable $th) {
-        throw $th;
-        // return response()->json(['error' => 'Mail was not sent!  check email address and try again ⚠️'], 401); 
+        return response()->json(['error' => 'Mail was not sent!  check email address and try again ⚠️'], 401);
       }
     } catch (\Throwable $th) {
       throw $th;
-      return response()->json([
-        'error' => 'This error is from the backend, please contact the backend developer'
-      ], 500);
     }
   }
 }

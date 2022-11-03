@@ -2,85 +2,100 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreInterestInRequest;
-use App\Http\Requests\UpdateInterestInRequest;
+use App\Models\User;
 use App\Models\InterestIn;
+use Illuminate\Support\Facades\Validator;
+
 
 class InterestInController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+
+    public function add()
     {
-        //
+        try {
+            if (!auth()->check()) {
+                return response()->json(['message' => 'Unauthorized ⚠️'], 401);
+            }
+            $validator = Validator::make(request()->all(), [
+                'interest_in' => 'required',
+            ]);
+
+            if ($validator->fails()) {
+                return response()->json($validator->errors(), 422);
+            }
+            $user = auth()->user();
+            $interestIn = InterestIn::create([
+                'user_id' => $user->id,
+                'interest_in' => request()->interest_in,
+            ]);
+
+            return response()->json(["message" => "Successfully Added InterestIn", "InterestIn" => $interestIn]);
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+
+    public function get()
     {
-        //
+        try {
+            if (!auth()->check()) {
+                return response()->json(['message' => 'Unauthorized ⚠️'], 401);
+            }
+            $user = auth()->user();
+            $interestIn = InterestIn::where("user_id", $user->id)->get();
+            return response()->json(["interestIn" => $interestIn]);
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreInterestInRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreInterestInRequest $request)
+
+    public function update($id)
     {
-        //
+        try {
+            if (!auth()->check()) {
+                return response()->json(['message' => 'Unauthorized ⚠️'], 401);
+            }
+            $validator = Validator::make(request()->all(), [
+                'interest_in' => 'required',
+            ]);
+
+            if ($validator->fails()) {
+                return response()->json($validator->errors(), 422);
+            }
+            $interestIn = InterestIn::find($id)->first();
+            $interestIn->update([
+                'interest_in' => request()->interest_in,
+            ]);
+
+            return response()->json(["message" => "Successfully Updated InterestIn", "InterestIn" => $interestIn]);
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\InterestIn  $interestIn
-     * @return \Illuminate\Http\Response
-     */
-    public function show(InterestIn $interestIn)
+    public function delete($id)
     {
-        //
-    }
+        try {
+            if (!auth()->check()) {
+                return response()->json(['message' => 'Unauthorized ⚠️'], 401);
+            }
+            $validator = Validator::make(request()->all(), [
+                'interest_in' => 'required',
+            ]);
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\InterestIn  $interestIn
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(InterestIn $interestIn)
-    {
-        //
-    }
+            if ($validator->fails()) {
+                return response()->json($validator->errors(), 422);
+            }
+            $interestIn = InterestIn::find($id)->first();
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateInterestInRequest  $request
-     * @param  \App\Models\InterestIn  $interestIn
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateInterestInRequest $request, InterestIn $interestIn)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\InterestIn  $interestIn
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(InterestIn $interestIn)
-    {
-        //
+            if ($interestIn) {
+                $interestIn->delete();
+            }
+            return response()->json(["message" => "Successfully Deleted InterestIn"]);
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 }
