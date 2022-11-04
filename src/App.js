@@ -30,8 +30,8 @@ function App() {
     dispatch(getFixturesLive())
     dispatch(getFixturesToday())
     dispatch(getFixturesDay1())
-    dispatch(getFixturesDay2())
-    dispatch(getFixturesDay3())
+    // dispatch(getFixturesDay2())
+    // dispatch(getFixturesDay3())
     WebFont.load({
       google: {
         families: ['Droid Sans', 'Chilanka']

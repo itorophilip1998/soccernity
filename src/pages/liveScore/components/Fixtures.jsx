@@ -20,12 +20,12 @@ const Fixtures = () => {
                 <li className="nav-item" role="presentation">
                     <button className="nav-link" id="pills-day1-tab" data-toggle="pill" data-target="#pills-day1" type="button" role="tab" aria-controls="pills-day1" aria-selected="false">{moment().add(1, 'days').format("dddd")}</button>
                 </li>
-                <li className="nav-item" role="presentation">
+                {/* <li className="nav-item" role="presentation">
                     <button className="nav-link" id="pills-day2-tab" data-toggle="pill" data-target="#pills-day2" type="button" role="tab" aria-controls="pills-day2" aria-selected="false">{moment().add(2, 'days').format("dddd")}</button>
                 </li>
                 <li className="nav-item" role="presentation">
                     <button className="nav-link" id="pills-day3-tab" data-toggle="pill" data-target="#pills-day3" type="button" role="tab" aria-controls="pills-day3" aria-selected="false">{moment().add(3, 'days').format("dddd")}</button>
-                </li>
+                </li> */}
             </ul>
 
             <div className="tab-content" id="pills-tabContent">
@@ -38,13 +38,13 @@ const Fixtures = () => {
                 <div className="tab-pane fade" id="pills-day1" role="tabpanel" aria-labelledby="pills-day1-tab">
                     <Day1 />
                 </div>
-                <div className="tab-pane fade" id="pills-day2" role="tabpanel" aria-labelledby="pills-day2-tab">
+                {/* <div className="tab-pane fade" id="pills-day2" role="tabpanel" aria-labelledby="pills-day2-tab">
                     <Day2 />
                 </div>
                 <div className="tab-pane fade" id="pills-day3" role="tabpanel" aria-labelledby="pills-day3-tab">
                     <Day3 />
 
-                </div>
+                </div> */}
             </div>
         </div>
     )

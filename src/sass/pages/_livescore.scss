@@ -93,7 +93,6 @@
         border-radius: 10px;
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
         align-items: center;
 
 
@@ -109,7 +108,11 @@
             color: #ABA887;
             background: #fff;
             text-align: center;
-
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+            margin: 0 .5rem;
         }
 
         .active {
