@@ -18,7 +18,7 @@ const Fixtures = () => {
                     <button className="nav-link" id="pills-today-tab" data-toggle="pill" data-target="#pills-today" type="button" role="tab" aria-controls="pills-today" aria-selected="false">{"Today"}</button>
                 </li>
                 <li className="nav-item" role="presentation">
-                    <button className="nav-link" id="pills-day1-tab" data-toggle="pill" data-target="#pills-day1" type="button" role="tab" aria-controls="pills-day1" aria-selected="false">{moment().add(1, 'days').format("dddd")}</button>
+                    <button className="nav-link" id="pills-day1-tab" data-toggle="pill" data-target="#pills-day1" type="button" role="tab" aria-controls="pills-day1" aria-selected="false">{moment().add(1, 'days').format("DD/MM/YYYY")}</button>
                 </li>
                 {/* <li className="nav-item" role="presentation">
                     <button className="nav-link" id="pills-day2-tab" data-toggle="pill" data-target="#pills-day2" type="button" role="tab" aria-controls="pills-day2" aria-selected="false">{moment().add(2, 'days').format("dddd")}</button>
@@ -26,7 +26,12 @@ const Fixtures = () => {
                 <li className="nav-item" role="presentation">
                     <button className="nav-link" id="pills-day3-tab" data-toggle="pill" data-target="#pills-day3" type="button" role="tab" aria-controls="pills-day3" aria-selected="false">{moment().add(3, 'days').format("dddd")}</button>
                 </li> */}
+
+             
             </ul>
+            <div className="loadbox">
+                <img src="/images/calender.png" alt="" />
+            </div>
 
             <div className="tab-content" id="pills-tabContent">
                 <div className="tab-pane fade show active" id="pills-live" role="tabpanel" aria-labelledby="pills-live-tab">
