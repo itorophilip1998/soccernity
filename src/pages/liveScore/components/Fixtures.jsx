@@ -1,16 +1,17 @@
 import moment from 'moment'
-import React from 'react'
+import React, { useState } from 'react'
 import Day1 from './Matches/Day1'
 // import Day2 from './Matches/Day2'
 // import Day3 from './Matches/Day3'
 import Live from './Matches/Live'
 import Today from './Matches/Today'
-
 const Fixtures = () => {
+    const [popcalender, setPopcallender] = useState(false)
+    const [date, setDate] = useState(moment().add(1, 'days').format("DD/MM/YYYY"))
 
     return (
         <div className='fixtures   pl-md-3' >
-            <ul className="nav nav-pills  mb-3 shadow" id="pills-tab" role="tablist">
+            <ul className="nav nav-pills  justify-content-start mb-3 shadow" id="pills-tab" role="tablist">
                 <li className="nav-item" role="presentation">
                     <button className="nav-link active" id="pills-live-tab" data-toggle="pill" data-target="#pills-live" type="button" role="tab" aria-controls="pills-live" aria-selected="true">{"Live"}</button>
                 </li>
@@ -18,7 +19,7 @@ const Fixtures = () => {
                     <button className="nav-link" id="pills-today-tab" data-toggle="pill" data-target="#pills-today" type="button" role="tab" aria-controls="pills-today" aria-selected="false">{"Today"}</button>
                 </li>
                 <li className="nav-item" role="presentation">
-                    <button className="nav-link" id="pills-day1-tab" data-toggle="pill" data-target="#pills-day1" type="button" role="tab" aria-controls="pills-day1" aria-selected="false">{moment().add(1, 'days').format("DD/MM/YYYY")}</button>
+                    <button className="nav-link" id="pills-day1-tab" data-toggle="pill" data-target="#pills-day1" type="button" role="tab" aria-controls="pills-day1" aria-selected="false">{date}</button>
                 </li>
                 {/* <li className="nav-item" role="presentation">
                     <button className="nav-link" id="pills-day2-tab" data-toggle="pill" data-target="#pills-day2" type="button" role="tab" aria-controls="pills-day2" aria-selected="false">{moment().add(2, 'days').format("dddd")}</button>
@@ -30,11 +31,14 @@ const Fixtures = () => {
 
             </ul>
             <div className="loadbox">
-                <img src="/images/calender.png" alt="" />
+                <img src="/images/calender.png" alt="" onClick={() => setPopcallender(true)} />
 
-                <div className="popcallender shadow">
-                    <input type="date" />
-                </div>
+                {popcalender === true && <div className="popcallender shadow">
+                    <div className="closeBtn shadow" onClick={() => setPopcallender(false)} >
+                        x
+                    </div>
+                    <input type="date" className='form-conrol' onChange={(e) => setDate(moment(e.target.value).add(1, 'days').format("DD/MM/YYYY"))} />
+                </div>}
             </div>
 
             <div className="tab-content" id="pills-tabContent">
