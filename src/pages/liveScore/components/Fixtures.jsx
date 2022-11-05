@@ -1,8 +1,8 @@
 import moment from 'moment'
 import React from 'react'
 import Day1 from './Matches/Day1'
-import Day2 from './Matches/Day2'
-import Day3 from './Matches/Day3'
+// import Day2 from './Matches/Day2'
+// import Day3 from './Matches/Day3'
 import Live from './Matches/Live'
 import Today from './Matches/Today'
 
@@ -27,10 +27,14 @@ const Fixtures = () => {
                     <button className="nav-link" id="pills-day3-tab" data-toggle="pill" data-target="#pills-day3" type="button" role="tab" aria-controls="pills-day3" aria-selected="false">{moment().add(3, 'days').format("dddd")}</button>
                 </li> */}
 
-             
+
             </ul>
             <div className="loadbox">
                 <img src="/images/calender.png" alt="" />
+
+                <div className="popcallender shadow">
+                    <input type="date" />
+                </div>
             </div>
 
             <div className="tab-content" id="pills-tabContent">
