@@ -9,8 +9,8 @@ import Today from './Matches/Today'
 const Fixtures = () => {
 
     return (
-        <div className='fixtures pl-md-3'>
-            <ul className="nav nav-pills mb-3 shadow" id="pills-tab" role="tablist">
+        <div className='fixtures   pl-md-3' >
+            <ul className="nav nav-pills  mb-3 shadow" id="pills-tab" role="tablist">
                 <li className="nav-item" role="presentation">
                     <button className="nav-link active" id="pills-live-tab" data-toggle="pill" data-target="#pills-live" type="button" role="tab" aria-controls="pills-live" aria-selected="true">{"Live"}</button>
                 </li>

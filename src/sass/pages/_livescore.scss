@@ -124,10 +124,11 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding: 0 1.3rem;
+        // padding: 0 1.3rem;
+        justify-content: center;
 
 
-        button {
+        button,a {
             min-width: 94px;
             height: 43px;
             border-radius: 5px;
@@ -233,7 +234,7 @@
     .nav {
         height: 80px !important;
         border-radius: 0px !important;
-        width: 478px !important;
+        width: 478px;
         margin: 3rem auto;
         background: #FFFFFF;
         box-shadow: 10px 15px 75px rgba(88, 88, 88, 0.12);
@@ -245,14 +246,14 @@
     margin-top: .4rem;
 }
 
-#match_title {
+.match_title {
     background: transparent !important;
 
     .nav {
         background: transparent !important;
         border-bottom: 0.898256px solid #7BB929;
         height: 44px !important;
-        min-width: 350px !important;
+        width: 350px;
 
         .nav-link.active {
             color: rgba(123, 185, 41, 0.54);
@@ -704,4 +705,8 @@
     .stand {
         margin: .5rem 0;
     }
+}
+
+.match_title .nav {
+    width: 410px;
 }

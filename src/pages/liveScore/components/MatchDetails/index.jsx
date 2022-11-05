@@ -6,7 +6,6 @@ import { useNavigate } from 'react-router-dom';
 import H2H from './H2H';
 import Match from './Match';
 import Standings from './Standings';
-import Videos from './Videos';
 const query = new URLSearchParams(window.location.search);
 const array = query.get("array");
 const id = query.get("id");
@@ -38,6 +37,8 @@ function MatchDetails() {
 
     return time;
   }
+
+
   return (
     <div className='match_details ' >
       <div className="container">
@@ -91,7 +92,7 @@ function MatchDetails() {
             <button className="nav-link active" id="pills-standing-tab" data-toggle="pill" data-target="#pills-standing" type="button" role="tab" aria-controls="pills-standing" aria-selected="false">{"Standings"}</button>
           </li>
           <li className="nav-item" role="presentation">
-            <button className="nav-link" id="pills-video-tab" data-toggle="pill" data-target="#pills-video" type="button" role="tab" aria-controls="pills-video" aria-selected="false">{"Video"}</button>
+            <a href={`https://www.youtube.com/results?search_query=Highlight of ${data?.teams?.away?.name} vs ${data?.teams?.away?.name} of ${moment(data?.fixture?.date).format("DD/MM/YYYY")}`} target="_blank" rel='noreferrer' className="nav-link" id="pills-video-tab" type="button" role="tab" aria-controls="pills-video" aria-selected="false">{"Video"}</a>
           </li>
         </ul>
 
@@ -106,9 +107,7 @@ function MatchDetails() {
           <div className="tab-pane fade show active" id="pills-standing" role="tabpanel" aria-labelledby="pills-standing-tab">
             <Standings />
           </div>
-          <div className="tab-pane fade" id="pills-video" role="tabpanel" aria-labelledby="pills-video-tab">
-            <Videos />
-          </div>
+
         </div>
       </div>
 
