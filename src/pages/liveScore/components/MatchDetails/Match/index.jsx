@@ -7,7 +7,7 @@ const Match = () => {
   return (
     <div>
 
-      <div className='fixtures match_title '>
+      <div className='fixtures match_title ' id='match_title'>
         <ul className="nav nav-pills mb-3 shadow-none" id="pills-tab" role="tablist">
           <li className="nav-item" role="presentation">
             <button className="nav-link " id="pills-match_Summary-tab" data-toggle="pill" data-target="#pills-match_Summary" type="button" role="tab" aria-controls="pills-match_Summary" aria-selected="true">{"Match Summary"}</button>

@@ -85,40 +85,39 @@
 }
 
 .fixtures {
-    // .loadbox {
-    //     text-align: right;
+    .loadbox {
+        text-align: right;
 
-    //     img {
-    //         height: 25.83333396911621px;
-    //         width: 25.83333396911621px;
-    //         position: absolute;
-    //         margin-top: -4.5rem;
-    //         margin-left: -3rem;
-    //         cursor: pointer;
+        img {
+            height: 25.83333396911621px;
+            width: 25.83333396911621px;
+            position: absolute;
+            margin-top: -4.5rem;
+            margin-left: -3rem;
+            cursor: pointer;
 
-    //     }
+        }
 
-    //     .popcallender {
-    //         position: absolute;
-    //         margin-top: -4.5rem;
-    //         right: 8rem;
-    //         cursor: pointer;
-    //         width: 200px;
-    //         padding: 1rem;
-    //         background: #fff;
-    //         border-radius: 4px;
+        .popcallender {
+            position: absolute;
+            margin-top: -4.5rem;
+            right: 8rem;
+            cursor: pointer;
+            width: 200px;
+            padding: 1rem;
+            background: #fff;
+            border-radius: 4px;
 
-    //         input {
-    //             width: 100%;
-    //         }
+            input {
+                width: 100%;
+            }
 
-    //     }
-    // }
+        }
+    }
 
     .nav {
 
         height: 86px;
-
         background: #FFFFFF;
         box-shadow: 9px 33px 87px rgba(38, 38, 38, 0.08);
         border-radius: 10px;
@@ -234,7 +233,7 @@
     .nav {
         height: 80px !important;
         border-radius: 0px !important;
-        width: 478px;
+        width: 478px !important;
         margin: 3rem auto;
         background: #FFFFFF;
         box-shadow: 10px 15px 75px rgba(88, 88, 88, 0.12);
@@ -246,14 +245,14 @@
     margin-top: .4rem;
 }
 
-.match_title {
+#match_title {
     background: transparent !important;
 
     .nav {
         background: transparent !important;
         border-bottom: 0.898256px solid #7BB929;
         height: 44px !important;
-        width: 350px;
+        min-width: 350px !important;
 
         .nav-link.active {
             color: rgba(123, 185, 41, 0.54);
