@@ -37,7 +37,7 @@ const Fixtures = () => {
                     <div className="closeBtn shadow" onClick={() => setPopcallender(false)} >
                         x
                     </div>
-                    <input type="date" className='form-conrol' onChange={(e) => setDate(moment(e.target.value).add(1, 'days').format("DD/MM/YYYY"))} />
+                    <input type="date" data-date-size="4" data-date-inline-picker="true" className='form-control' onChange={(e) => { setDate(moment(e.target.value).add(1, 'days').format("DD/MM/YYYY")); setPopcallender(false) }} />
                 </div>}
             </div>
 

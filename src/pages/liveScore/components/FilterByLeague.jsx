@@ -39,27 +39,29 @@ const FilterByLeague = () => {
 
             </div>
 
-            <div className="sortByCompany ">
+            <div className="sortByCountry ">
                 <h4 className='mt-5'>
                     Sort By Countries
                 </h4>
 
-                <ul>
+                <div className="searchByloaders">
                     {
                         data?.filter((input) =>
-                            (input?.league?.name?.toLowerCase().match(search)))?.slice(0, 5)?.map((item, key) =>
-                                <li key={key}>
-                                    {<Link to="#">
-                                        <div className="img-liner">
-                                            <img src={item?.league?.logo} alt="" />
-                                        </div>
-                                        <span>{item?.league?.name}</span>
-                                    </Link>
-                                    }
-                                </li>
+                            (input?.league?.name?.toLowerCase()?.match(search)))?.map((item, key) =>
+                                <div key={key} >
+                                    <p>
+                                        <a class="btn btn-primary" data-toggle="collapse" href="#contentId" aria-expanded="false" aria-controls="contentId">
+                                            Show
+                                        </a>
+                                    </p>
+                                    <div class="collapse" id="contentId">
+                                        loream
+                                    </div>
+
+                                </div>
 
                             )}
-                </ul>
+                </div>
 
             </div>
         </div>
