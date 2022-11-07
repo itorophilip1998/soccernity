@@ -9,7 +9,7 @@ const LiveScore = () => {
                 <div className="col-md-4 p-0 sidepage">
                     <FilterByLeague />
                 </div>
-                <div className="col-md-8">
+                <div className="col-md-8 ">
                     <Fixtures/>
                 </div>
             </div>

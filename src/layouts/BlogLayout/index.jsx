@@ -8,14 +8,14 @@ const BlogLayout = () => {
   const isindex = useLocation().pathname
   console.log(isindex)
   return (
-      <div>
+    <div>
       {!isindex.match('/blog') ?
-        <LiveScoreHeader className="container" />:
+        <LiveScoreHeader className="container" /> :
         <Header className="container" />
-      
+
       }
-        <Outlet/>
-      <Footer className="container" /> 
+      <Outlet />
+      {isindex.match('/blog') && <Footer className="container" />}
     </div>
   )
 }

@@ -1,10 +1,23 @@
+.livescore_root {
+    .fixtures {
+        position: fixed;
+        overflow-y: scroll;
+        height: 110vh;
+        width: 50%;
+        padding: 1rem;
+    }
+}
+
+
 .FilterByLeague {
     background: rgba(51, 51, 51, 0.04);
 
-    // width: 432px;
+    width: 362px;
     height: 110vh;
     overflow-y: scroll;
     margin-bottom: 2rem;
+    position: fixed;
+
 
     h4 {
         font-weight: 700;
