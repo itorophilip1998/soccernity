@@ -59,8 +59,13 @@ function App() {
           <Route path="/terms" element={<Terms />} />
           <Route path="/policy" element={<Policy />} />
         </Route>
+
         <Route path="/match-details" element={<MatchDetails />} />
         {/* Public Route end*/}
+        <Route path="/auth" element={<AuthLayout />}> 
+          <Route path="signin" element={<Signin />} />
+          </Route>
+
 
         {/* Auth Start */}
         <Route path="/auth" element={<AuthLayout />}>
