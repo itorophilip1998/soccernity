@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+// import { getFixturesDay1, getFixturesLive, getFixturesToday } from '../../../store/LiveScores/Fixtures';
 
 // /**/
 const FilterByLeague = () => {
@@ -10,7 +11,14 @@ const FilterByLeague = () => {
     const [search, setSearch] = useState()
     const [imgRotate, setimgRotate] = useState(false)
     const [isKey, setisKey] = useState()
-    
+    // const dispatch = useDispatch()
+
+    // const loadFixtures = ({ league }) => {
+    //     dispatch(getFixturesLive({ extra: `&league=${league}&season=${2022}` }))
+    //     dispatch(getFixturesToday({ extra: `&league=${league}&season=${2022}` }))
+    //     dispatch(getFixturesDay1({ date: "2022-11-14", extra: `&league=${league}&season=${2022}` }))
+    // }
+
 
     return (
         <div className='FilterByLeague'>
@@ -29,7 +37,8 @@ const FilterByLeague = () => {
                         leagues?.filter((input) =>
                             (input?.league?.name?.toLowerCase().match(search)))?.slice(0, 5)?.map((item, key) =>
                                 <li key={key}>
-                                    {<Link to="#">
+                                    {/* onClick={() => loadFixtures(item?.league?.id)} */}
+                                    {<Link to="#" >
                                         <div className="img-liner">
                                             <img src={item?.league?.logo} alt="" />
                                         </div>
@@ -62,6 +71,7 @@ const FilterByLeague = () => {
 
                                         {leagues?.filter((input) =>
                                             (input?.country?.name?.match(item?.name)))?.map((list, key) =>
+                                                // onClick = {() => loadFixtures(list?.league?.id)}
                                                 <Link to={"#"} class="countryLinks" >
                                                     <span key={key}>
                                                         {list?.league?.name}
@@ -78,7 +88,7 @@ const FilterByLeague = () => {
                 </div>
 
             </div>
-        </div>
+        </div >
     )
 }
 

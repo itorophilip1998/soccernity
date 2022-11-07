@@ -1,11 +1,11 @@
-import {  createAsyncThunk } from "@reduxjs/toolkit";
+import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import moment from "moment";
 import { config } from "../../utils/config";
 
 const header = {
     headers: {
-        "X-RapidAPI-Key": `${config.RapidAPIKey}`, 
+        "X-RapidAPI-Key": `${config.RapidAPIKey}`,
     }
 };
 
@@ -33,7 +33,7 @@ export const getFixturesToday = createAsyncThunk(
 )
 export const getFixturesDay1 = createAsyncThunk(
     'user/getFixturesDay1',
-    async ({date}) => {
+    async ({ date}) => {
         // const date = moment().add(1, 'days').format("YYYY-MM-DD")
         const res = await axios.get(`${config.BaseApi}/fixtures?date=${date}`, header)
         return res.data.response;
