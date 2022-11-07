@@ -4,10 +4,10 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getH2H } from '../../../../../store/LiveScores/Matches'
 
 /*eslint-disable*/
-const HeadToHead = () => {
+const HeadToHead = ({away,home}) => {
   const dispatch = useDispatch()
   useEffect(() => {
-    dispatch(getH2H({ h2h: '19764-16809' }))
+    dispatch(getH2H({ h2h: `${home}-${away}` }))
   }, [])
   const [slice, setSlice] = useState(6)
 

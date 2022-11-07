@@ -11,8 +11,9 @@ const Standings = () => {
   const dispatch = useDispatch()
   const scores = useSelector((state) => state.livescores?.[array]);
   const league = scores?.find((data) => data?.fixture?.id === parseInt(id))
+  console.log(league)
   useEffect(() => {
-    dispatch(getStanding({ season: moment().format("YYYY"), league: 39 }))
+    dispatch(getStanding({ season: moment().format("YYYY"), league: league?.league?.id }))
   }, [])
   const standing = useSelector((state) => state.livescores?.standing);
 
