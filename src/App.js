@@ -31,7 +31,7 @@ function App() {
     dispatch(getLegues())
     dispatch(getFixturesLive())
     dispatch(getFixturesToday())
-    dispatch(getFixturesDay1())
+    // dispatch(getFixturesDay1())
     dispatch(getCountry())
     // dispatch(getFixturesDay2())
     // dispatch(getFixturesDay3())

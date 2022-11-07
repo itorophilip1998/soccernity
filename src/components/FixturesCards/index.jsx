@@ -4,7 +4,7 @@ import moment from "moment"
 const FixturesCards = ({ item, array }) => {
     // const navigate = useNavigate();  
     const navigate = (link) => {
-        window.location.href=link
+        window.location.href = link
     }
     return (
         <div>
@@ -14,6 +14,7 @@ const FixturesCards = ({ item, array }) => {
                     {item?.fixture?.status?.elapsed ? <span>
                         {"‘"}{(item?.fixture?.status.short === "HT") ? "HT" : item?.fixture?.status?.elapsed}
                     </span> :
+
                         moment(item?.fixture?.date).format("HH:MM")
 
                     }

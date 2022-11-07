@@ -1,16 +1,22 @@
 import moment from 'moment'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import { getFixturesDay1 } from '../../../store/LiveScores/Fixtures'
 import Day1 from './Matches/Day1'
 // import Day2 from './Matches/Day2'
 // import Day3 from './Matches/Day3'
 import Live from './Matches/Live'
 import Today from './Matches/Today'
+/*eslint-disable*/
 const Fixtures = () => {
     const [popcalender, setPopcallender] = useState(false)
-    const [date, setDate] = useState(moment().add(1, 'days').format("DD/MM/YYYY"))
-
+    const [date, setDate] = useState(moment().add(1, 'days').format("YYYY-MM-DD"))
+    const dispatch = useDispatch()
+    useEffect(() => {
+        dispatch(getFixturesDay1({ date }))
+    }, [])
     return (
-        <div className='fixtures   pl-md-3' >
+        <div className='fixtures   pl-md-3 container' >
             <ul className="nav nav-pills  justify-content-start mb-3 shadow" id="pills-tab" role="tablist">
                 <li className="nav-item" role="presentation">
                     <button className="nav-link active" id="pills-live-tab" data-toggle="pill" data-target="#pills-live" type="button" role="tab" aria-controls="pills-live" aria-selected="true">{"Live"}</button>
@@ -37,7 +43,7 @@ const Fixtures = () => {
                     <div className="closeBtn shadow" onClick={() => setPopcallender(false)} >
                         x
                     </div>
-                    <input type="date" data-date-size="4" data-date-inline-picker="true" className='form-control' onChange={(e) => { setDate(moment(e.target.value).add(1, 'days').format("DD/MM/YYYY")); setPopcallender(false) }} />
+                    <input type="date" data-date-size="4" data-date-inline-picker="true" className='form-control' onChange={(e) => { setDate(moment(e.target.value).add(1, 'days').format("YYYY-MM-DD")); setPopcallender(false); dispatch(getFixturesDay1({ date })) }} />
                 </div>}
             </div>
 
