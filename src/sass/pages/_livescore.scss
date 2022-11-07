@@ -795,11 +795,54 @@
     transform: rotate(180deg);
 }
 
-#wg-api-football-fixtures {
+#wg-api-football-games {
     td {
-        font-size: 16px !important;
-        img{
-            width:29px !important ;
+
+        .wg_flag,
+        .wg_logo {
+            width: 29px !important;
         }
     }
+
+    .wg_header {
+        padding: 0.5rem;
+        color: #000;
+        background: rgba(123, 185, 41, 0.06);
+        border-radius: 10px;
+        margin: 3rem 0;
+        height: 56px;
+    }
+
+    .wg_finished {
+        color: #7BB929;
+    }
+
+    .wg-dropbtn,
+    .wg_active {
+        background: #7BB929;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
+ 
+
+    .wg_nowrap {
+        font-size: 14px !important;
+        margin-bottom: 4rem;
+    }
+
+    .wg_toolbar {
+        margin-bottom: 1rem;
+        background: rgba(123, 185, 41, 0.06);
+        padding: 1rem 1rem;
+
+        span {
+            font-size: 14px !important;
+        }
+
+
+    }
+
 }
