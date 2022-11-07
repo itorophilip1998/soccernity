@@ -19,6 +19,8 @@ import Policy from "./pages/TermsAndPolicy/Policy";
 import LiveScore from "./pages/liveScore";
 import { getFixturesDay1, getFixturesDay2, getFixturesDay3, getFixturesLive, getFixturesToday, getLegues } from "./store/LiveScores/Fixtures";
 import MatchDetails from "./pages/liveScore/components/MatchDetails/index";
+import { getCountry } from "./store/LiveScores/Matches";
+
 
 function App() {
   const dispatch = useDispatch()
@@ -30,6 +32,7 @@ function App() {
     dispatch(getFixturesLive())
     dispatch(getFixturesToday())
     dispatch(getFixturesDay1())
+    dispatch(getCountry())
     // dispatch(getFixturesDay2())
     // dispatch(getFixturesDay3())
     WebFont.load({

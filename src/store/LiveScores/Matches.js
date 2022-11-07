@@ -50,8 +50,8 @@ export const getCoach = createAsyncThunk(
 )
 export const getCountry = createAsyncThunk(
     'user/getCountry',
-    async ({ name }) => {
-        const res = await axios.get(`${config.BaseApi}/countries?name=${name}`, header)
+    async () => {
+        const res = await axios.get(`${config.BaseApi}/countries`, header)
         return res.data.response;
     }
 
@@ -69,19 +69,19 @@ export const getHomeLastMatch = createAsyncThunk(
     async ({ team }) => {
         const res = await axios.get(`${config.BaseApi}/fixtures?last=50&team=${team}`, header)
         return res.data.response;
-    } 
-) 
+    }
+)
 export const getAwayLastMatch = createAsyncThunk(
     'user/getAwayLastMatch',
     async ({ team }) => {
         const res = await axios.get(`${config.BaseApi}/fixtures?last=50&team=${team}`, header)
         return res.data.response;
-    } 
-) 
+    }
+)
 export const getStanding = createAsyncThunk(
     'user/getStanding',
-    async ({ league,season }) => {
+    async ({ league, season }) => {
         const res = await axios.get(`${config.BaseApi}/standings?league=${league}&season=${season}`, header)
         return res.data.response;
-    } 
+    }
 ) 

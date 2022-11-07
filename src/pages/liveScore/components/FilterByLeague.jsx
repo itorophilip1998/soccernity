@@ -5,8 +5,12 @@ import { Link } from 'react-router-dom';
 
 // /**/
 const FilterByLeague = () => {
-    const data = useSelector((state) => state.livescores?.leagues)
+    const leagues = useSelector((state) => state.livescores?.leagues)
+    const country = useSelector((state) => state.livescores?.country)
     const [search, setSearch] = useState()
+    const [imgRotate, setimgRotate] = useState(false)
+    const [isKey, setisKey] = useState()
+
 
     return (
         <div className='FilterByLeague'>
@@ -22,7 +26,7 @@ const FilterByLeague = () => {
 
                 <ul>
                     {
-                        data?.filter((input) =>
+                        leagues?.filter((input) =>
                             (input?.league?.name?.toLowerCase().match(search)))?.slice(0, 5)?.map((item, key) =>
                                 <li key={key}>
                                     {<Link to="#">
@@ -44,21 +48,31 @@ const FilterByLeague = () => {
                     Sort By Countries
                 </h4>
 
+
                 <div className="searchByloaders">
                     {
-                        data?.filter((input) =>
-                            (input?.league?.name?.toLowerCase()?.match(search)))?.map((item, key) =>
-                                <div key={key} >
-                                    <p>
-                                        <a class="btn btn-primary" data-toggle="collapse" href="#contentId" aria-expanded="false" aria-controls="contentId">
-                                            Show
-                                        </a>
-                                    </p>
-                                    <div class="collapse" id="contentId">
-                                        loream
+                        country?.filter((input) =>
+                            (input?.name?.toLowerCase()?.match(search)))?.map((item, key) =>
+                                <p key={key} className="countryBox">
+                                    <a onClick={() => { setimgRotate(!imgRotate); setisKey(key) }} class="countryLinks" data-toggle="collapse" href={`#content${key}`} aria-expanded="true" aria-controls={`#content${key}`}>
+                                        <span>{item?.name}</span> <img src={"/images/caret.png"} className={`caret ${key === isKey && imgRotate ? 'img-rotate' : ''}`} alt="" />
+                                    </a>
+
+                                    <div class="collapse" id={`content${key}`} >
+
+                                        {leagues?.filter((input) =>
+                                            (input?.country?.name?.match(item?.name)))?.map((list, key) =>
+                                                <Link to={"#"} class="countryLinks" >
+                                                    <span key={key}>
+                                                        {list?.league?.name}
+                                                    </span>
+                                                </Link>
+
+                                            )}
+
                                     </div>
 
-                                </div>
+                                </p>
 
                             )}
                 </div>

@@ -6,9 +6,12 @@ const Day2 = () => {
   const data = useSelector((state) => state.livescores?.day2)
   return (
     <div>
-      {data && data.map((item, key) =>
-        <FixturesCards item={item} key={key} array="day2" />
-      )}
+      {data?.length ? data?.map((item, key) =>
+        <FixturesCards item={item} key={key} array="today" />
+      ) :
+
+        <h5 className='text-muted text-center p-3 pt-5'>No Fixtures </h5>
+      }
     </div>
   )
 }

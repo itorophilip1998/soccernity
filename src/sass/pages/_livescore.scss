@@ -135,7 +135,7 @@
 
                 &:hover {
                     background: rgb(188, 5, 5);
-                border: none;
+                    border: none;
                 }
             }
 
@@ -737,4 +737,45 @@
 
 .match_title .nav {
     width: 410px;
+}
+
+.countryLinks {
+    height: 58px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 1rem;
+    justify-content: space-between;
+    margin: 0 !important;
+
+    &:hover,
+    &:focus {
+        font-weight: 500;
+        color: #000000;
+        background: #E8E8E8;
+    }
+
+    img {
+        height: 5px;
+        width: 10px;
+        left: 378px;
+        top: 1105px;
+        border-radius: 0px;
+    }
+}
+
+.countryBox {
+    margin: 0;
+    z-index: 0 !important;
+}
+
+.img-rotate {
+    transform: rotate(180deg);
 }
