@@ -12,7 +12,7 @@ const FixturesCards = ({ item, array }) => {
             <div className='fixturesCards' onClick={() => navigate(`/match-details?id=${item?.fixture?.id}&array=${array}`)}>
                 <div className="elapse">
                     {item?.fixture?.status?.elapsed ? <span>
-                        {"‘"}{(item?.fixture?.status.short === "HT") ? "HT" : item?.fixture?.status?.elapsed}
+                        {"‘"}{(item?.fixture?.status.short === "HT") ? "HT" : (item?.fixture?.status?.elapsed > 90) ? "FT" : item?.fixture?.status?.elapsed}
                     </span> :
 
                         moment(item?.fixture?.date).format("HH:MM")

@@ -10,7 +10,7 @@ import Today from './Matches/Today'
 /*eslint-disable*/
 const Fixtures = () => {
     const [popcalender, setPopcallender] = useState(false)
-    const [date, setDate] = useState(moment().add(1, 'days').format("YYYY-MM-DD"))
+    const [date, setDate] = useState(moment().format("YYYY-MM-DD"))
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch(getFixturesDay1({ date }))
@@ -43,7 +43,7 @@ const Fixtures = () => {
                     <div className="closeBtn shadow" onClick={() => setPopcallender(false)} >
                         x
                     </div>
-                    <input type="date" data-date-size="4" data-date-inline-picker="true" className='form-control' onChange={(e) => { setDate(moment(e.target.value).add(1, 'days').format("YYYY-MM-DD")); setPopcallender(false); dispatch(getFixturesDay1({ date })) }} />
+                    <input type="date" data-date-size="4" data-date-inline-picker="true" className='form-control' onChange={(e) => { setDate(moment(e.target.value).format("YYYY-MM-DD")); setPopcallender(false); dispatch(getFixturesDay1({ date })) }} />
                 </div>}
             </div>
 

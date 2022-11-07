@@ -46,10 +46,17 @@ body {
     .link {
         cursor: pointer;
     }
+
+
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
 
 
 header {
     padding-top: 3rem !important;
 }
+
+ 

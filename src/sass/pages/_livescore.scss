@@ -18,7 +18,7 @@
     overflow-y: scroll;
     margin-bottom: 2rem;
     position: fixed;
-        padding-bottom: 3rem;
+    padding-bottom: 3rem;
 
 
     h4 {
@@ -793,4 +793,13 @@
 
 .img-rotate {
     transform: rotate(180deg);
+}
+
+#wg-api-football-fixtures {
+    td {
+        font-size: 16px !important;
+        img{
+            width:29px !important ;
+        }
+    }
 }

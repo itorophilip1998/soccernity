@@ -92,7 +92,7 @@ function MatchDetails() {
             <button className="nav-link active" id="pills-standing-tab" data-toggle="pill" data-target="#pills-standing" type="button" role="tab" aria-controls="pills-standing" aria-selected="false">{"Standings"}</button>
           </li>
           <li className="nav-item" role="presentation">
-            <a href={`https://www.youtube.com/results?search_query=Highlight of ${data?.teams?.away?.name} vs ${data?.teams?.away?.name} of ${moment(data?.fixture?.date).format("DD/MM/YYYY")}`} target="_blank" rel='noreferrer' className="nav-link" id="pills-video-tab" type="button" role="tab" aria-controls="pills-video" aria-selected="false">{"Video"}</a>
+            <a href={`https://www.youtube.com/results?search_query=Highlight of ${data?.teams?.home?.name} vs ${data?.teams?.away?.name} of ${moment(data?.fixture?.date).format("DD/MM/YYYY")}`} target="_blank" rel='noreferrer' className="nav-link" id="pills-video-tab" type="button" role="tab" aria-controls="pills-video" aria-selected="false">{"Video"}</a>
           </li>
         </ul>
 

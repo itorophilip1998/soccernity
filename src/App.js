@@ -19,7 +19,9 @@ import Policy from "./pages/TermsAndPolicy/Policy";
 import LiveScore from "./pages/liveScore";
 import { getFixturesDay1, getFixturesDay2, getFixturesDay3, getFixturesLive, getFixturesToday, getLegues } from "./store/LiveScores/Fixtures";
 import MatchDetails from "./pages/liveScore/components/MatchDetails/index";
-import { getCountry } from "./store/LiveScores/Matches";
+import { getCountry } from "./store/LiveScores/Matches"; 
+import Community from "./pages/Community";
+import Layout from "./layouts/Layout";
 
 
 function App() {
@@ -51,20 +53,19 @@ function App() {
         {/* Private Route end*/}
 
         {/* Public Route start*/}
-        <Route path="/" element={<BlogLayout />}>
+        <Route path="/" element={<Layout />}>
           <Route path="/" element={<LiveScore />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<SingleBlog />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/policy" element={<Policy />} />
+          <Route path="/" element={<Community />} /> 
         </Route>
 
-        <Route path="/match-details" element={<MatchDetails />} />
+        <Route path="/match-details" element={<MatchDetails />} /> 
         {/* Public Route end*/}
-        <Route path="/auth" element={<AuthLayout />}> 
-          <Route path="signin" element={<Signin />} />
-          </Route>
+       
 
 
         {/* Auth Start */}
