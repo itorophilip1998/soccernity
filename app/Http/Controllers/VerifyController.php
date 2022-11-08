@@ -19,9 +19,8 @@ class VerifyController extends Controller
         ->first();
 
       if (!$user) {
-        return response()->json(['error' => 'This user does not exist or incorrect token, Resend mail notification ⚠️'], 401);
+        return redirect(env("FronEndUrl") . '/signin?status=failed');
       }
-
       $user->update(["email_verified_at" => now()]);
       $user->update(["verify_token" => null]);
       return redirect(env("FronEndUrl") . '/signin');
@@ -50,7 +49,7 @@ class VerifyController extends Controller
         return response()->json(['error' => 'This user does not exist⚠️'], 401);
       }
       if ($user->email_verified_at) {
-        return response()->json(['error' => 'This user does is already verified ⚠️'], 401);
+        return response()->json(['error' => 'This user has already been verified ⚠️'], 401);
       }
       $user->update(["verify_token" => $verify_token]);
       $uri = URL::to("/api/verify/$verify_token/$request->email");
@@ -70,6 +69,35 @@ class VerifyController extends Controller
         //  throw $th; 
         return response()->json(['error' => 'Mail was not sent!  check email address and try again ⚠️'], 401);
       }
+    } catch (\Throwable $th) {
+      throw $th;
+    }
+  }
+
+
+  public function changeEmail()
+  {
+    try {
+
+      $validator = Validator::make(request()->all(), [
+        'oldEmail' => 'required|email',
+        'email' => 'required|email|unique:users',
+      ]);
+
+      if ($validator->fails()) {
+        return response()->json($validator->errors(), 422);
+      }
+
+      $authUser = User::where("email", request()->oldEmail)->first();
+
+      if (!$authUser) {
+        return response()->json(['message' => 'Old Email Not found ⚠️'], 404);
+      }
+
+      $authUser->update([
+        "email" => request()->email
+      ]);
+      return response()->json(["message" => "Email Updated Successfully", "user" => $authUser]);
     } catch (\Throwable $th) {
       throw $th;
     }

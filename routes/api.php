@@ -31,6 +31,8 @@ Route::group([
 ], function ($router) {
     Route::get('/{token}/{email}', [VerifyController::class, 'verify']);
     Route::post('/resend', [VerifyController::class, 'resend']);
+    Route::post('/change-email', [VerifyController::class, 'changeEmail']);
+
 });
 
 //  Password route
@@ -50,7 +52,6 @@ Route::group([
     Route::post('/update', [UserController::class, 'updateUser']);
     Route::get('/get/{user_id}', [UserController::class, 'getUser']);
     Route::get('/', [UserController::class, 'userProfile']);
-    // Route::post('/change-email', [UserController::class, 'changeEmail']);
 });
 
 //  Interest In route

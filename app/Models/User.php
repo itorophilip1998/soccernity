@@ -76,7 +76,7 @@ class User extends Authenticatable implements JWTSubject
     }
     public function interest_in()
     {
-        return $this->hasMany(InterestIn::class);
+        return $this->hasOne(InterestIn::class);
     }
     public function experience()
     {

@@ -35,8 +35,8 @@ class AuthController extends Controller
 
             $user->profile()->create();
             $user->social_media_links()->create();
+            $user->interest_in()->create();
 
-            // $user->interest_in()->create();
             // $user->experience()->create();
             // $user->education()->create();
 
@@ -90,10 +90,7 @@ class AuthController extends Controller
             throw $th;
         }
     }
-
-
-
-
+ 
     public function signout()
     {
         try {

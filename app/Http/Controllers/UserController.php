@@ -84,34 +84,5 @@ class UserController extends Controller
     }
 
 
-    // public function changeEmail()
-    // {
-    //     try {
-    //         if (!auth()->check()) {
-    //             return response()->json(['message' => 'Unauthorized ⚠️'], 401);
-    //         }
-    //         $validator = Validator::make(request()->all(), [
-    //             'oldEmail' => 'required|email',
-    //             'newEmail' => 'required|email|unique:user',
-    //         ]);
-
-    //         if ($validator->fails()) {
-    //             return response()->json($validator->errors(), 422);
-    //         }
-    //         if (!$authUser) {
-    //             return response()->json(['message' => 'Old Email Not found ⚠️'], 404);
-    //         }
-
-
-    //         $user = auth()->user();
-    //         $authUser = User::find($user->id)->first();
-
-    //         $authUser->update([
-    //             "email" => request()->newEmail
-    //         ]);
-    //         return response()->json(["message" => "Email Updated Successfully", "user" => $authUser]);
-    //     } catch (\Throwable $th) {
-    //         throw $th;
-    //     }
-    // }
+   
 }

@@ -16,7 +16,10 @@ class CreateInterestInsTable extends Migration
         Schema::create('interest_ins', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger("user_id");
-            $table->string("interest_in")->nullable();
+            // $table->string("interest_in")->nullable();
+            $table->json('interest_in')->nullable();
+
+
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
