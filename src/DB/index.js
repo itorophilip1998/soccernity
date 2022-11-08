@@ -1361,3 +1361,11 @@ const H2H = [
         "score": {}
     }
 ]
+
+
+const navlinks = [
+    {
+        name: "Sports",
+        icon:"soccer.png",
+    }
+]
