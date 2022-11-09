@@ -37,6 +37,8 @@ class SocialMediaLinksController extends Controller
                 'behance' => 'required|string',
                 'instagram' => 'required|string',
                 'dribbble' => 'required|string'
+
+
             ]);
 
 
