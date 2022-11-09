@@ -39,7 +39,7 @@ class SocialMediaLinksController extends Controller
                 'facebook' => 'required|string',
                 'behance' => 'required|string',
                 'instagram' => 'required|string',
-                'dribble' => 'required|string'
+                'dribbble' => 'required|string'
             ]);
 
 

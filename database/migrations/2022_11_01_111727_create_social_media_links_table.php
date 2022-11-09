@@ -21,7 +21,7 @@ class CreateSocialMediaLinksTable extends Migration
             $table->string("facebook")->nullable();
             $table->string("behance")->nullable();
             $table->string("instagram")->nullable();
-            $table->string("dribble")->nullable();
+            $table->string("dribbble")->nullable();
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });

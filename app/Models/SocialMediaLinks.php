@@ -16,7 +16,7 @@ class SocialMediaLinks extends Model
         "facebook",
         "behance",
         "instagram",
-        "dribble"
+        "dribbble"
     ];
 
     public function user()
