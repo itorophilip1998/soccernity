@@ -19,8 +19,8 @@ class EducationController extends Controller
             $validator = Validator::make(request()->all(), [
                 'school' => 'required|string',
                 'degree' => 'required|string',
-                'start_date' => 'required|string',
-                'end_date' => 'required|string',
+                'start_date' => 'required',
+                'end_date' => 'required',
                 'grade' => 'required|string'
             ]);
 
@@ -64,8 +64,8 @@ class EducationController extends Controller
             $validator = Validator::make(request()->all(), [
                 'school' => 'required|string',
                 'degree' => 'required|string',
-                'start_date' => 'required|string',
-                'end_date' => 'required|string',
+                'start_date' => 'required',
+                'end_date' => 'required',
                 'grade' => 'required|string'
             ]);
 

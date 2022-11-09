@@ -19,8 +19,8 @@ class ExperienceController extends Controller
                 'role' => 'required|string',
                 'company' => 'required|string',
                 'start_date' => 'required|string',
-                'end_date' => 'required|string',
-                'is_present' => 'required|string'
+                 'end_date' => 'required_if:is_present,null',
+                'is_present' => 'required_if:end_date,null|boolean'
             ]);
 
             if ($validator->fails()) {
@@ -63,9 +63,9 @@ class ExperienceController extends Controller
             $validator = Validator::make(request()->all(), [
                 'role' => 'required|string',
                 'company' => 'required|string',
-                'start_date' => 'required|string',
-                'end_date' => 'required|string',
-                'is_present' => 'required|string'
+                'start_date' => 'required',
+                'end_date' => 'required_if:is_present,null',
+                'is_present' => 'required_if:end_date,null|boolean'
             ]);
 
 
