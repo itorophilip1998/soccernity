@@ -9,9 +9,6 @@ use Illuminate\Support\Facades\Validator;
 
 class SocialMediaLinksController extends Controller
 {
-
-
-
     public function get()
     {
         try {
