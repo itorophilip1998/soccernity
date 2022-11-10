@@ -32,8 +32,8 @@ class AuthController extends Controller
                     "role" => "client"
                 ]
             ));
-
             $user->profile()->create();
+            $user->wallet()->create();
             $user->social_media_links()->create();
             $user->interest_in()->create();
 
@@ -90,7 +90,7 @@ class AuthController extends Controller
             throw $th;
         }
     }
- 
+
     public function signout()
     {
         try {

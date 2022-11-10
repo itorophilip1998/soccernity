@@ -2,9 +2,11 @@
 
 namespace App\Models;
 
+use App\Models\Wallet;
 use App\Models\Profile;
 use App\Models\Education;
 use App\Models\InterestIn;
+use App\Models\Transactions;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -89,5 +91,13 @@ class User extends Authenticatable implements JWTSubject
     public function social_media_links()
     {
         return $this->hasOne(SocialMediaLinks::class);
+    }
+    public function wallet()
+    {
+        return $this->hasOne(Wallet::class);
+    }
+    public function transactions()
+    {
+        return $this->hasMany(Transactions::class);
     }
 }

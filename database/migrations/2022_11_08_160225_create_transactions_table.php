@@ -11,11 +11,17 @@ class CreateTransactionsTable extends Migration
      *
      * @return void
      */
+    
     public function up()
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger("user_id");
+            $table->float("balance")->default(0);
+            $table->float("total_balance")->default(0);
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+  
         });
     }
 

@@ -75,14 +75,11 @@ class UserController extends Controller
             }
             $id = auth()->user();
             $authUser = User::where("id", $id["id"])
-                ->with("profile", "interest_in", "experience", "education", "social_media_links")
+                ->with("profile", "interest_in", "experience", "education", "social_media_links", "wallet")
                 ->first();
             return response()->json(["user" => $authUser]);
         } catch (\Throwable $th) {
             throw $th;
         }
     }
-
-
-   
 }

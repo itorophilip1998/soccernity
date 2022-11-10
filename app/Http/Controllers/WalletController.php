@@ -5,82 +5,87 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreWalletRequest;
 use App\Http\Requests\UpdateWalletRequest;
 use App\Models\Wallet;
+use Illuminate\Support\Facades\Validator;
 
 class WalletController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+
+    public function balance()
     {
-        //
+        try {
+            if (!auth()->check()) {
+                return response()->json(['message' => 'Unauthorized ⚠️'], 401);
+            }
+
+            $wallet = Wallet::where("user_id", auth()->user()->id)->first();
+            return response()->json(["message" => "Wallet Balance ", "wallet" => $wallet]);
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+
+
+    public function topUp()
     {
-        //
+        try {
+            if (!auth()->check()) {
+                return response()->json(['message' => 'Unauthorized ⚠️'], 401);
+            }
+            $validator = Validator::make(request()->all(), [
+                'balance' => 'required'
+            ]);
+
+            if ($validator->fails()) {
+                return response()->json($validator->errors(), 422);
+            }
+            $wallet = Wallet::where("user_id", auth()->user()->id)->first();
+            if (request()->balance < 5) {
+                return response()->json(["message" => "minimuim top up is 5 USD"]);
+            }
+            $wallet->update(
+                [
+                    'balance' =>  request()->balance + $wallet->balance,
+                    'total_balance' =>  request()->balance + $wallet->balance
+                ]
+            );
+
+            return response()->json(["message" => "Successfully topup", "wallet" => $wallet]);
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreWalletRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreWalletRequest $request)
-    {
-        //
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Wallet  $wallet
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Wallet $wallet)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Wallet  $wallet
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Wallet $wallet)
+    public function withdraw()
     {
-        //
-    }
+        try {
+            if (!auth()->check()) {
+                return response()->json(['message' => 'Unauthorized ⚠️'], 401);
+            }
+            $validator = Validator::make(request()->all(), [
+                'balance' => 'required'
+            ]);
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateWalletRequest  $request
-     * @param  \App\Models\Wallet  $wallet
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateWalletRequest $request, Wallet $wallet)
-    {
-        //
-    }
+            if ($validator->fails()) {
+                return response()->json($validator->errors(), 422);
+            }
+            $wallet = Wallet::where("user_id", auth()->user()->id)->first();
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Wallet  $wallet
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Wallet $wallet)
-    {
-        //
+            if ($wallet->balance < request()->balance) {
+                return response()->json(["message" => "Insufficient funds"]);
+            }
+
+            $wallet->update(
+                [
+                    'balance' => $wallet->balance - request()->balance,
+                    'total_balance' =>  $wallet->balance - request()->balance
+                ]
+            );
+            return response()->json(["message" => "Successfully topup", "wallet" => $wallet]);
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 }

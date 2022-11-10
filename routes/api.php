@@ -12,6 +12,7 @@ use App\Http\Controllers\EducationController;
 use App\Http\Controllers\ExperienceController;
 use App\Http\Controllers\InterestInController;
 use App\Http\Controllers\SocialMediaLinksController;
+use App\Http\Controllers\WalletController;
 
 //  Auth route
 Route::group([
@@ -32,7 +33,6 @@ Route::group([
     Route::get('/{token}/{email}', [VerifyController::class, 'verify']);
     Route::post('/resend', [VerifyController::class, 'resend']);
     Route::post('/change-email', [VerifyController::class, 'changeEmail']);
-
 });
 
 //  Password route
@@ -97,4 +97,14 @@ Route::group([
     Route::get('/get', [SocialMediaLinksController::class, 'get']);
     Route::post('/update', [SocialMediaLinksController::class, 'update']);
     Route::delete('/remove', [SocialMediaLinksController::class, 'delete']);
+});
+
+//  Wwallet route
+Route::group([
+    'middleware' => 'api',
+    'prefix' => 'wallet'
+], function ($router) {
+    Route::get('/balance', [WalletController::class, 'balance']);
+    Route::post('/topup', [WalletController::class, 'topUp']);
+    Route::post('/withdraw', [WalletController::class, 'withdraw']);
 });
