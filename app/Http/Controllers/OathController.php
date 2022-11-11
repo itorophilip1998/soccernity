@@ -22,7 +22,7 @@ class OathController extends Controller
     {
         try {
             $data = Socialite::driver('linkedin')->user();
-            // dd($data);
+            dd($data);
             $verify_token = rand(1111, 9999);
             $user = User::updateOrCreate([
                 'oath_id' => $data->id,
@@ -61,6 +61,7 @@ class OathController extends Controller
     {
         try {
             $data = Socialite::driver('google')->user();
+            dd($data);
 
             $verify_token = rand(1111, 9999);
             $user = User::updateOrCreate([
