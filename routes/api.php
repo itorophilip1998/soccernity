@@ -11,6 +11,7 @@ use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\EducationController;
 use App\Http\Controllers\ExperienceController;
 use App\Http\Controllers\InterestInController;
+use App\Http\Controllers\SkillsController;
 use App\Http\Controllers\SocialMediaLinksController;
 use App\Http\Controllers\WalletController;
 
@@ -84,8 +85,6 @@ Route::group([
 ], function ($router) {
     Route::post('/add', [ExperienceController::class, 'add']);
     Route::get('/get', [ExperienceController::class, 'get']);
-    Route::post('/update/{id}', [ExperienceController::class, 'update']);
-    Route::delete('/remove/{id}', [ExperienceController::class, 'delete']);
 });
 
 
@@ -107,4 +106,13 @@ Route::group([
     Route::get('/balance', [WalletController::class, 'balance']);
     Route::post('/topup', [WalletController::class, 'topUp']);
     Route::post('/withdraw', [WalletController::class, 'withdraw']);
+});
+
+//  Skills In route
+Route::group([
+    'middleware' => 'api',
+    'prefix' => 'skills'
+], function ($router) {
+    Route::post('/add', [SkillsController::class, 'add']);
+    Route::get('/get', [SkillsController::class, 'get']);
 });

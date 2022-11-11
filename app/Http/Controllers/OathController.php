@@ -95,8 +95,6 @@ class OathController extends Controller
 
     public function signinoauth(Request $request)
     {
-
-
         try {
 
             $validator = Validator::make($request->all(), [
@@ -116,11 +114,8 @@ class OathController extends Controller
             }
 
             $verified = User::where("email", $request->email)
-                ->where("email_verified_at", "<>", null)
                 ->first();
-            if ($verified->oath_id) {
-                return response()->json(['message' => 'Previously loggedin with Oauth ⚠️'], 401);
-            }
+
             if (!$verified) {
                 return response()->json(['message' => 'Account not verified ⚠️'], 401);
             }
