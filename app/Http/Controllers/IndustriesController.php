@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Skills;
-use App\Http\Requests\StoreSkillsRequest;
+use App\Models\Industries;
 use Illuminate\Support\Facades\Validator;
-use App\Http\Requests\UpdateSkillsRequest;
+use App\Http\Requests\StoreIndustriesRequest;
+use App\Http\Requests\UpdateIndustriesRequest;
 
-class SkillsController extends Controller
+class IndustriesController extends Controller
 {
     public function add()
     {
@@ -16,25 +16,25 @@ class SkillsController extends Controller
                 return response()->json(['message' => 'Unauthorized ⚠️'], 401);
             }
             $validator = Validator::make(request()->all(), [
-                'skills' => 'required|array',
+                'industry' => 'required|array',
             ]);
 
             if ($validator->fails()) {
                 return response()->json($validator->errors(), 422);
             }
             $user = auth()->user();
-            $user->skills()->updateOrCreate(
+            $user->industries()->updateOrCreate(
                 [
                     'user_id' => $user->id,
                 ],
                 [
                     'user_id' => $user->id,
-                    'skills' => request()->skills,
+                    'industry' => request()->industry,
                 ]
             );
-            $skills = Skills::where("user_id", $user->id)->first();
+            $industries = Industries::where("user_id", $user->id)->first();
 
-            return response()->json(["message" => "Successfully Updated skills", "skills" => $skills]);
+            return response()->json(["message" => "Successfully Updated industries", "industries" => $industries]);
         } catch (\Throwable $th) {
             throw $th;
         }
@@ -48,8 +48,8 @@ class SkillsController extends Controller
                 return response()->json(['message' => 'Unauthorized ⚠️'], 401);
             }
             $user = auth()->user();
-            $skills = Skills::where("user_id", $user->id)->get();
-            return response()->json(["skills" => $skills]);
+            $industry = Industries::where("user_id", $user->id)->get();
+            return response()->json(["industry" => $industry]);
         } catch (\Throwable $th) {
             throw $th;
         }

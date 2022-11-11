@@ -10,7 +10,9 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\EducationController;
 use App\Http\Controllers\ExperienceController;
+use App\Http\Controllers\IndustriesController;
 use App\Http\Controllers\InterestInController;
+use App\Http\Controllers\PROsController;
 use App\Http\Controllers\SkillsController;
 use App\Http\Controllers\SocialMediaLinksController;
 use App\Http\Controllers\WalletController;
@@ -115,4 +117,31 @@ Route::group([
 ], function ($router) {
     Route::post('/add', [SkillsController::class, 'add']);
     Route::get('/get', [SkillsController::class, 'get']);
+});
+
+//  industry  route
+Route::group([
+    'middleware' => 'api',
+    'prefix' => 'industry'
+], function ($router) {
+    Route::post('/add', [IndustriesController::class, 'add']);
+    Route::get('/get', [IndustriesController::class, 'get']);
+});
+
+//  industry  route
+Route::group([
+    'middleware' => 'api',
+    'prefix' => 'industry'
+], function ($router) {
+    Route::post('/add', [IndustriesController::class, 'add']);
+    Route::get('/get', [IndustriesController::class, 'get']);
+});
+
+
+Route::group([
+    'middleware' => 'api',
+    'prefix' => 'pros'
+], function ($router) {
+    Route::get('/', [PROsController::class, 'getPro']);
+    Route::get('/{email}', [PROsController::class, 'proByEmail']);
 });

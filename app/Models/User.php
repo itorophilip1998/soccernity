@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Models\Wallet;
 use App\Models\Profile;
 use App\Models\Education;
+use App\Models\Industries;
 use App\Models\InterestIn;
 use App\Models\Transactions;
 use Tymon\JWTAuth\Contracts\JWTSubject;
@@ -93,6 +94,14 @@ class User extends Authenticatable implements JWTSubject
     public function wallet()
     {
         return $this->hasOne(Wallet::class);
+    }
+    public function skills()
+    {
+        return $this->hasOne(Skills::class);
+    }
+    public function industries()
+    {
+        return $this->hasOne(Industries::class);
     }
     public function transactions()
     {

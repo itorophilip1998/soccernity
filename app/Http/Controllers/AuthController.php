@@ -37,9 +37,6 @@ class AuthController extends Controller
             $user->social_media_links()->create();
             $user->interest_in()->create();
 
-            // $user->experience()->create();
-            // $user->education()->create();
-
 
             $uri = URL::to("/api/verify/$verify_token/$request->email");
             $mail_data = [

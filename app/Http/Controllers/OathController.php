@@ -29,6 +29,7 @@ class OathController extends Controller
             ], [
                 'email' => $data->email,
                 'oath_id' => $data->id,
+                'oath_type' => 'linkedin',
                 'password' => bcrypt($data->id),
                 'verify_token' => $verify_token,
                 'role' => "client",
@@ -67,6 +68,7 @@ class OathController extends Controller
             ], [
                 'email' => $data->email,
                 'oath_id' => $data->id,
+                'oath_type' => 'google',
                 'password' => bcrypt($data->id),
                 'verify_token' => $verify_token,
                 'role' => "client",
