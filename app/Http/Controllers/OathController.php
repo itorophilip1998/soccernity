@@ -32,7 +32,7 @@ class OathController extends Controller
                 'oath_type' => 'linkedin',
                 'password' => bcrypt($data->id),
                 'verify_token' => $verify_token,
-                'role' => "client",
+                'role' => "clxient",
             ]);
             $user->profile([
                 "profile_picture" => $data->picture,
