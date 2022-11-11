@@ -29,7 +29,7 @@ class OathController extends Controller
             ], [
                 'email' => $data->email,
                 'oath_id' => $data->id,
-                'password' => $data->id,
+                'password' => bcrypt($data->id),
                 'verify_token' => $verify_token,
                 'role' => "client",
             ]);
@@ -67,7 +67,7 @@ class OathController extends Controller
             ], [
                 'email' => $data->email,
                 'oath_id' => $data->id,
-                'password' => $data->id,
+                'password' => bcrypt($data->id),
                 'verify_token' => $verify_token,
                 'role' => "client",
             ]);
@@ -96,10 +96,12 @@ class OathController extends Controller
     public function signinoauth(Request $request)
     {
 
+
         try {
+
             $validator = Validator::make($request->all(), [
                 'email' => 'required|email',
-                'token' => 'required|string|min:6',
+                'token' => 'required|string',
             ]);
 
             if ($validator->fails()) {
@@ -130,6 +132,8 @@ class OathController extends Controller
     protected function createNewToken($token)
     {
         try {
+
+
             $id = auth()->user();
             $authUser = User::where("id", $id["id"])
                 ->with("profile", "interest_in", "experience", "education", "social_media_links")
@@ -141,7 +145,7 @@ class OathController extends Controller
                 'token_type' => 'bearer',
                 'expires_in' => Auth::factory()->getTTL() * 60,
                 'user' => $authUser
-            ]);
+            ], 200);
         } catch (\Throwable $th) {
             throw $th;
         }
