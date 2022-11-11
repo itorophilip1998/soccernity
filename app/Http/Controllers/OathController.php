@@ -85,10 +85,10 @@ class OathController extends Controller
         }
     }
 
-    protected function redirect($user)
+    protected function redirect($data)
     {
         try {
-            return redirect(env("FronEndUrl") . "/callback?status=true&email=$user->email&token=$user->password");
+            return redirect(env("FronEndUrl") . "/callback?status=true&email=$data->email&token=$data->id");
         } catch (\Throwable $th) {
             throw $th;
         }

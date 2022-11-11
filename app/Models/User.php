@@ -26,14 +26,12 @@ class User extends Authenticatable implements JWTSubject
         "password",
         "role",
         "verify_token",
-        "email_verified_at"
+        "email_verified_at",
+        "oath_type",
+        "oath_id",
     ];
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
+
     protected $hidden = [
         'password',
         'remember_token',

@@ -78,10 +78,13 @@ class AuthController extends Controller
             if (!$token = auth()->attempt($validator->validated())) {
                 return response()->json(['message' => 'Unauthorized ⚠️'], 401);
             }
+
             $verified = User::where("email", $request->email)
                 ->where("email_verified_at", "<>", null)
                 ->first();
-
+            if ($verified->oath_id) {
+                return response()->json(['message' => 'Previously loggedin with Oauth ⚠️'], 401);
+            }
             if (!$verified) {
                 return response()->json(['message' => 'Account not verified ⚠️'], 401);
             }
