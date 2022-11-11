@@ -24,4 +24,5 @@ Route::get('/', function () {
 Route::get('/api/oauth/linkedin', [OathController::class, 'linkedinRedirect']);
 Route::get('/api/oauth/linkedin/callback', [OathController::class, 'linkedinCallback']);
 Route::get('/api/oauth/google', [OathController::class, 'googleRedirect']);
-Route::get('/api/oauth/google/callback', [OathController::class, 'googleCallback']); 
+Route::get('/api/oauth/google/callback', [OathController::class, 'googleCallback']);
+Route::get('/api/login', [OathController::class, 'signinoauth']);
