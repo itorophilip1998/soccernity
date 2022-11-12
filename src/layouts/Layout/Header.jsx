@@ -1,34 +1,37 @@
-import React from 'react'
-
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { navlinks } from "../../DB"
 function Header() {
+  const [iskey, setIskey] = useState(null)
+
   return (
     <div className='header'>
-      <nav class="navbar navbar-expand-sm navbar-light">
+      <nav className="navbar navbar-expand-sm navbar-light">
         <div className="container">
-          <a class="navbar-brand" href="#">
+          <Link className="navbar-brand" to="/">
             <img src="/images/nav/logo.png" alt="" />
-          </a>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" />
+          </Link>
+          <form className="form-inline my-2 my-lg-0">
+            <input className="form-control mr-sm-2" type="search" placeholder="Search" />
           </form>
 
 
-          <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+          <button className="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
             aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home</a>
-              </li>
-              {/* <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              */}
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
+          <div className="collapse navbar-collapse" id="collapsibleNavId">
+            <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
 
+              {navlinks?.map((item, key) => <li key={key} className="nav-item active">
+                <Link className="nav-link" to={item?.url} onMouseOver={() => { setIskey(key) }} onMouseOut={() => { setIskey(null) }}>
+                  {iskey === key && <img src={item?.icon} alt="" />}
+                  {iskey !== key && <img src={item?.icon} alt="" />}
+                </Link>
+              </li>)}
+
+            </ul>
+            <form className="form-inline my-2 my-lg-0">
               <img src="/images/nav/notify.png" alt="" />
               <img src="/images/nav/msg.png" alt="" />
               <img src="/images/nav/profile.png" alt="" />

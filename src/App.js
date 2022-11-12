@@ -60,7 +60,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/policy" element={<Policy />} />
-          <Route path="/" element={<Community />} /> 
+          <Route path="/community" element={<Community />} />  
         </Route>
 
         <Route path="/match-details" element={<MatchDetails />} /> 
