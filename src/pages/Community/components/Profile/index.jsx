@@ -34,8 +34,8 @@ function Profile() {
                             </div>
                         </div>
                     </div>
-                    <div className="text-center p-4">
-                        <a href="/community" className='link btn'>View profile</a>
+                    <div className="text-center  p-4">
+                        <a href="/community" className='link-btn btn'>View profile</a>
                     </div>
                 </div>
             </div>

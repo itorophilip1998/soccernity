@@ -5,8 +5,8 @@ function Header() {
   const route = useLocation().pathname
 
   return (
-    <div className='header'>
-      <nav className="navbar navbar-expand-sm navbar-light shadow">
+    <div className='header mb-header'>
+      <nav className="navbar navbar-expand-sm navbar-light shadow fixed-top">
         <div className="container">
           <Link className="navbar-brand" to="/">
             <img src="/images/nav/logo.png" className="nav-logo" alt="" />

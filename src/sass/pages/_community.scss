@@ -6,7 +6,9 @@
     .col-md-3 {
         max-width: 371px !important;
     }
+
 }
+
 
 .profile {
     .card {
@@ -72,16 +74,143 @@
         }
     }
 
-    .link {
-        font-weight: 600;
-        font-size: 13px;
-        line-height: 12px;
-        color: #282E65;
 
-        &:hover {
-            border: 1px solid #282E65 !important;
-            background: #282E65 !important;
-            color: white;
+}
+
+.headbox {
+    background: #FFFFFF;
+    border-radius: 12px;
+    margin-top: 1rem;
+
+    .header {
+        border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+            height: 16.000001907348633px;
+            width: 16.015968322753906px;
+            cursor: pointer;
         }
     }
+
+
+}
+
+.trending_news {
+    .col-4 {
+        text-align: center;
+
+        img {
+            width: 56.56px;
+            height: 46.95px;
+            border-radius: 6.76212px;
+        }
+    }
+
+    .col-8 {
+        h3 {
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 16px;
+            color: #000000;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            color: #000000;
+        }
+
+        .time {
+            font-weight: 500;
+            font-size: 12px;
+
+            img {
+                height: 20px;
+                width: 20px;
+            }
+        }
+
+    }
+
+    .row {
+        padding: 1rem;
+        padding-bottom: 0;
+    }
+}
+
+.suggestedfreinds {
+    .isfollow {
+        border: 1px solid #282E65;
+        border-radius: 16px;
+        padding: .6rem 1rem;
+        border-radius: 13px;
+        font-size: 12px;
+        line-height: 12px;
+        -webkit-border-radius: 16px;
+        -moz-border-radius: 16px;
+        -ms-border-radius: 16px;
+        -o-border-radius: 16px;
+
+        &:hover,
+        &:focus {
+            background: #282E65 !important;
+            color: white;
+            border: 1px solid #282E65;
+        }
+    }
+
+    .profile-img {
+        height: 39px;
+        width: 33px;
+        border-radius: 0px;
+    }
+
+}
+
+.img-hr {
+    max-height: 6.25px !important;
+    max-width: 13.75px !important;
+    cursor: pointer;
+}
+
+.link-btn {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 12px;
+    color: #282E65;
+
+    &:hover {
+        border: 1px solid #282E65 !important;
+        background: #282E65 !important;
+        color: white;
+    }
+}
+
+.community_fixtures {
+   
+    span {
+        font-size: 12px;
+        line-height: 15px;
+        color: #000000;
+
+    }
+
+    img {
+        max-height: 18.915048599243164px;
+        max-width: 14.199136734008789px;
+        border-radius: 0px;
+    }
+    .block{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+    }
+    padding-bottom: 1rem;
 }
