@@ -70,7 +70,7 @@ header {
         background-size: cover;
 
         a {
-            color: $primary  !important;
+            color: $primary !important;
         }
     }
 
@@ -91,7 +91,7 @@ header {
             color: #fff !important;
 
             &:hover {
-                color: $primary  !important;
+                color: $primary !important;
             }
         }
     }
@@ -99,8 +99,70 @@ header {
     .theme-link {
         a {
             width: 60.64px;
-            img{
-            margin-top: -4px;
+
+            img {
+                margin-top: -4px;
+            }
+        }
+    }
+}
+
+.header {
+    nav {
+        height: 84px;
+        background: #FFFFFF;
+        box-shadow: 0px 12px 58px rgba(101, 101, 101, 0.06);
+
+        input {
+            width: 342px !important;
+            height: 41px;
+            background: rgba(123, 185, 41, 0.12);
+            border-radius: 10px;
+            border: none !important;
+            padding-left: 2.7rem;
+            padding-right: 1rem;
+
+            &:focus {
+                width: 342px !important;
+                background: rgba(123, 185, 41, 0.12);
+                padding: 0 .4rem;
+            }
+
+        }
+
+        input:focus .search {
+            display: none !important;
+        }
+
+        .nav-logo {
+            height: 32px;
+            width: 32px;
+            border-radius: 0px;
+        }
+
+        img {
+            cursor: pointer;
+            max-width: 31px;
+            max-height: 31px;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: 0 .6rem;
+        }
+
+        .search {
+            position: absolute;
+            margin-left: .8rem;
+
+        }
+
+        .second-nav {
+            img {
+                margin-left: 1rem;
             }
         }
     }

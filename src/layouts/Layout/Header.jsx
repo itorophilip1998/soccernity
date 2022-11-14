@@ -9,9 +9,10 @@ function Header() {
       <nav className="navbar navbar-expand-sm navbar-light">
         <div className="container">
           <Link className="navbar-brand" to="/">
-            <img src="/images/nav/logo.png" alt="" />
+            <img src="/images/nav/logo.png" className="nav-logo" alt="" />
           </Link>
           <form className="form-inline my-2 my-lg-0">
+            <img src="/images/nav/search.png" className='search' alt="" />
             <input className="form-control mr-sm-2" type="search" placeholder="Search" />
           </form>
 
@@ -23,7 +24,7 @@ function Header() {
           <div className="collapse navbar-collapse" id="collapsibleNavId">
             <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
 
-              {navlinks?.map((item, key) => <li key={key} className="nav-item active">
+              {navlinks?.map((item, key) => <li key={key} className="nav-item  active">
                 <Link className="nav-link" to={item?.url} onMouseOver={() => { setIskey(key) }} onMouseOut={() => { setIskey(null) }}>
                   {iskey === key && <img src={item?.icon} alt="" />}
                   {iskey !== key && <img src={item?.icon} alt="" />}
@@ -31,7 +32,7 @@ function Header() {
               </li>)}
 
             </ul>
-            <form className="form-inline my-2 my-lg-0">
+            <form className="form-inline second-nav my-2 my-lg-0">
               <img src="/images/nav/notify.png" alt="" />
               <img src="/images/nav/msg.png" alt="" />
               <img src="/images/nav/profile.png" alt="" />
