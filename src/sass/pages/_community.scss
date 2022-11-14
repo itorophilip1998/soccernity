@@ -193,7 +193,7 @@
 }
 
 .community_fixtures {
-   
+
     span {
         font-size: 12px;
         line-height: 15px;
@@ -206,11 +206,77 @@
         max-width: 14.199136734008789px;
         border-radius: 0px;
     }
-    .block{
+
+    .block {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
+        padding: 1rem;
+        justify-items: center;
+
 
     }
+
     padding-bottom: 1rem;
+}
+
+.postBox {
+    height: 219px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding-top: 1.4rem;
+
+    textarea {
+        height: 125px;
+        background: rgba(40, 46, 101, 0.12);
+        border-radius: 6px;
+        resize: none;
+        width: 100%;
+        padding: 1rem;
+
+        &:focus {
+            border: 1ps solid rgba(40, 46, 101, 0.12);
+        }
+    }
+}
+
+.postBottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: .4rem;
+
+    .f-img {
+        img {
+            margin: 0 .8rem;
+            margin-left: 0;
+        }
+    }
+
+    .s-img {
+        img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: rgba(40, 46, 101, 0.12);
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+        }
+
+        .btn,
+        .btn:focus,
+        .btn:hover {
+            width: 113px;
+            height: 36px;
+            background: #282E65;
+            border-radius: 51px;
+            font-size: 14px;
+            line-height: 17px;
+            color: #FFFFFF;
+            margin-left: .6rem;
+        }
+    }
 }
