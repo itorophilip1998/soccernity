@@ -1,0 +1,87 @@
+.community {
+    background: rgba(0, 0, 0, 0.26);
+    padding: 3rem 0;
+    min-height: 100vh;
+
+    .col-md-3 {
+        max-width: 371px !important;
+    }
+}
+
+.profile {
+    .card {
+        padding: 0 !important;
+        border-radius: 12px;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.5);
+
+        .img-top-profile {
+            position: absolute;
+            margin-top: -2rem;
+            margin-left: 40%;
+        }
+
+        .card-body {
+            padding: 0 !important;
+        }
+
+        .card-content {
+            padding-top: 3rem;
+            padding-bottom: 1rem;
+            text-align: center;
+
+            h4 {
+                font-size: 16px;
+                line-height: 17px;
+                color: #000000;
+            }
+
+            p {
+                font-size: 13px;
+                line-height: 2px;
+            }
+        }
+
+        hr {
+            border-top: 1px solid rgba(0, 0, 0, 0.25) !important;
+        }
+
+        .card-content-2 {
+            text-align: center;
+
+            .card-bio,
+            .card-location {
+                font-size: 12px;
+                line-height: 12px;
+                margin-bottom: .5rem;
+            }
+
+            .bt {
+                border-right: 1px solid rgba(0, 0, 0, 0.25);
+            }
+
+            .firm {
+                font-size: 10px;
+                line-height: 10px;
+            }
+
+            .details {
+                font-size: 14px;
+                line-height: 17px;
+            }
+        }
+    }
+
+    .link {
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 12px;
+        color: #282E65;
+
+        &:hover {
+            border: 1px solid #282E65 !important;
+            background: #282E65 !important;
+            color: white;
+        }
+    }
+}

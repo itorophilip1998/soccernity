@@ -1277,3 +1277,14 @@ export const navlinks = [
     },
 
 ]
+
+export const user = {
+    name: "Adeniyi Christiana",
+    img: "/profile.png",
+    bio: "Fine Girl, Hard Arsenal Stan!",
+    location: "Port Harcourt, Nigeria",
+    followers: "5,500",
+    post: "250",
+    following: "5,500",
+    email: "@christine001"
+}

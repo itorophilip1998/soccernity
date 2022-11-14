@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { navlinks } from "../../DB"
 function Header() {
-  const [iskey, setIskey] = useState(null)
+  const route = useLocation().pathname
 
   return (
     <div className='header'>
-      <nav className="navbar navbar-expand-sm navbar-light">
+      <nav className="navbar navbar-expand-sm navbar-light shadow">
         <div className="container">
           <Link className="navbar-brand" to="/">
             <img src="/images/nav/logo.png" className="nav-logo" alt="" />
@@ -25,17 +25,22 @@ function Header() {
             <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
 
               {navlinks?.map((item, key) => <li key={key} className="nav-item  active">
-                <Link className="nav-link" to={item?.url} onMouseOver={() => { setIskey(key) }} onMouseOut={() => { setIskey(null) }}>
-                  {iskey === key && <img src={item?.icon} alt="" />}
-                  {iskey !== key && <img src={item?.icon} alt="" />}
+                <Link className="nav-link" to={item?.url} >
+                  {item?.url === route && <img src={item?.hover_icon} alt="" />}
+                  {item?.url !== route && <img src={item?.icon} alt="" />}
                 </Link>
               </li>)}
 
             </ul>
             <form className="form-inline second-nav my-2 my-lg-0">
-              <img src="/images/nav/notify.png" alt="" />
-              <img src="/images/nav/msg.png" alt="" />
-              <img src="/images/nav/profile.png" alt="" />
+              <span>
+                <img src="/images/nav/notify.png" alt="" />
+                <img src="/images/nav/msg.png" alt="" />
+                <img src="/images/nav/profile.png" alt="" />
+              </span>
+              {/* <button className='isloggesIN'>
+                Login
+              </button> */}
             </form>
           </div>
         </div>
