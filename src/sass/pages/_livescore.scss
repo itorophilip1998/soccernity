@@ -853,15 +853,64 @@
 }
 
 .post-cards {
-    height: 517px;
     background: #FFFFFF !important;
     border-radius: 12px;
 
-    .img-box {
-        background: #000;
 
-        img {
-            width: 100% !important;
+    .row {
+        padding: 1rem;
+
+        .topinfo {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-right: 1rem;
+
+            .name {
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 15px;
+                color: #000000;
+            }
+
+            .username {
+                font-weight: 600;
+                font-size: 13px;
+                line-height: 12px;
+                color: rgba(0, 0, 0, 0.5);
+                margin-left: 1rem;
+            }
+
+            .time {
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 15px;
+                color: rgba(0, 0, 0, 0.31);
+                margin-left: 1rem;
+            }
+
+            .post_text {
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 15px;
+                color: #000000;
+            }
+        }
+
+        .footer-box {
+
+            padding: .5rem 0;
+
+            .tag {
+                font-size: 12px;
+                line-height: 15px;
+                color: rgba(60, 58, 58, 0.988);
+                margin-right: 1rem;
+
+                img {
+                    padding-right: .4rem;
+                }
+            }
         }
     }
 
