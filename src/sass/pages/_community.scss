@@ -235,7 +235,7 @@
         padding: 1rem;
 
         &:focus {
-            border: 1ps solid rgba(40, 46, 101, 0.12);
+            border: 1px solid #282E65 !important;
         }
     }
 }
@@ -279,4 +279,13 @@
             margin-left: .6rem;
         }
     }
+}
+
+.post-cards {
+    .col-2 {
+        text-align: center;
+
+    }
+
+    .col-8 {}
 }

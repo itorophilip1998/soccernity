@@ -42,6 +42,9 @@ const LiveScore = () => {
                 data-modal-standings="true"
                 data-modal-show-logos="true">
             </div>
+            <div className="reload">
+                
+            </div>
         </div>
     )
 }

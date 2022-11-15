@@ -25,6 +25,23 @@ function Postcards() {
             <img src="/images/postImg.png" alt="" />
 
           </div>
+          <div className="footer-box">
+            <span>
+              <img src="/images/box/comment.png" alt="" />
+              <span className="tag">25</span>
+          </span>
+            <span>
+              <img src="/images/box/love.png" alt="" />
+              <span className="tag">124</span>
+          </span>
+            <span>
+              <img src="/images/box/share.png" alt="" />
+              <span className="tag">345</span>
+          </span>
+            <span>
+              <img src="/images/box/connect.png" alt="" /> 
+          </span>
+          </div>
         </div>
       </div>
     </div>

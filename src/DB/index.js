@@ -1243,18 +1243,18 @@ export const fixtures = [
 
 export const navlinks = [
     {
-        name: "Sports",
-        icon: "/images/nav/soccer.png",
-        hover_icon: "/images/nav/dsoccer.png",
-        url: "/"
-    },
-    {
         name: "Community",
         icon: "/images/nav/home.png",
         hover_icon: "/images/nav/dhome.png",
         url: "/community"
 
+    }, {
+        name: "Sports",
+        icon: "/images/nav/soccer.png",
+        hover_icon: "/images/nav/dsoccer.png",
+        url: "/"
     },
+
     {
         name: "Blog",
         icon: "/images/nav/news.png",
