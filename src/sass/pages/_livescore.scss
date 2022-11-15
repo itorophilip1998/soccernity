@@ -851,3 +851,19 @@
     }
 
 }
+
+.post-cards {
+    height: 517px;
+    background: #FFFFFF !important;
+    border-radius: 12px;
+
+    .img-box {
+        background: #000;
+
+        img {
+            width: 100% !important;
+        }
+    }
+
+    margin-top: 1.5rem;
+}

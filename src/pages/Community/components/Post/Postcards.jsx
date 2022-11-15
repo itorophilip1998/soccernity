@@ -2,7 +2,7 @@ import React from 'react'
 
 function Postcards() {
   return (
-    <div className='post-cards'>
+    <div className='post-cards '>
       <div className="row m-0">
         <div className="col-2">
           <img src="/images/emeka.png" alt="" />
@@ -14,8 +14,8 @@ function Postcards() {
               <span className="username">@mekusa</span>
               <span className="time">2m</span>
             </div>
-            <div className="img-Box">
-              <img src="/images/box/vr.png" alt="" />
+            <div className="img-Box ">
+              <img src="/images/box/vr.png"  alt="" />
             </div>
           </p>
           <p className="bio">

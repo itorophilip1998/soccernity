@@ -3,7 +3,11 @@ import { Link, useLocation } from 'react-router-dom'
 import { navlinks } from "../../DB"
 function Header() {
   const route = useLocation().pathname
-
+  const loaderInfo = (url) => {
+    if (url === '/') {
+      window.location.href = url
+    }
+  }
   return (
     <div className='header mb-header'>
       <nav className="navbar navbar-expand-sm navbar-light shadow fixed-top">
@@ -21,11 +25,11 @@ function Header() {
             aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="collapsibleNavId">
+          <div className="collapse navbar-collapse bg-white" id="collapsibleNavId">
             <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
 
               {navlinks?.map((item, key) => <li key={key} className="nav-item  active">
-                <Link className="nav-link" to={item?.url} >
+                <Link className="nav-link" to={item?.url} onClick={() => loaderInfo(item?.url)} >
                   {item?.url === route && <img src={item?.hover_icon} alt="" />}
                   {item?.url !== route && <img src={item?.icon} alt="" />}
                 </Link>
