@@ -19,7 +19,7 @@ function PostBlog() {
                             <img src="/images/box/emoji.png" alt="" />
                         </div>
                         <div className='s-img'>
-                            <img src="/images/box/add.png" alt="" />
+                            <img src="/images/box/add.png" className='link' alt="" />
                             <button className="btn add-post ">Post</button>
                         </div>
                     </div>
