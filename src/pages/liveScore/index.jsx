@@ -1,6 +1,6 @@
 import React from 'react'
-import FilterByLeague from './components/FilterByLeague'
-import Fixtures from './components/Fixtures'
+// import FilterByLeague from './components/FilterByLeague'
+// import Fixtures from './components/Fixtures'
 
 const LiveScore = () => {
     return (
@@ -43,7 +43,7 @@ const LiveScore = () => {
                 data-modal-show-logos="true">
             </div>
             <div className="reload">
-                
+
             </div>
         </div>
     )
