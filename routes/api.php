@@ -15,7 +15,9 @@ use App\Http\Controllers\InterestInController;
 use App\Http\Controllers\PROsController;
 use App\Http\Controllers\SkillsController;
 use App\Http\Controllers\SocialMediaLinksController;
+use App\Http\Controllers\TransactionsController;
 use App\Http\Controllers\WalletController;
+use PayPal\Api\Transaction;
 
 //  Auth route
 Route::group([
@@ -144,4 +146,13 @@ Route::group([
 ], function ($router) {
     Route::get('/', [PROsController::class, 'getPro']);
     Route::get('/{email}', [PROsController::class, 'proByEmail']);
+});
+
+Route::group([
+    'middleware' => 'api',
+    'prefix' => 'payment'
+], function ($router) {
+    Route::get('/types', [TransactionsController::class, 'paymentTypes']); 
+    Route::post('/init', [TransactionsController::class, 'paymentInit']); 
+    Route::get('/types', [TransactionsController::class, 'paymentTypes']); 
 });

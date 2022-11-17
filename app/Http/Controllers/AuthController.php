@@ -53,7 +53,7 @@ class AuthController extends Controller
             }
             return response()->json([
                 'message' => "User successfully registered 👍,  please verify your account 👉 <$request->email>",
-                'user' => $user
+                'user' => $user 
             ], 200);
         } catch (\Throwable $th) {
             throw $th;

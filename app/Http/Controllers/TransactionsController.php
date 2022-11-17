@@ -2,85 +2,56 @@
 
 namespace App\Http\Controllers;
 
+use Stripe\Stripe;
+use Stripe\StripeClient;
+use Stripe\PaymentIntent;
+use App\Models\Transactions;
+use PhpParser\Node\Stmt\TryCatch;
 use App\Http\Requests\StoreTransactionsRequest;
 use App\Http\Requests\UpdateTransactionsRequest;
-use App\Models\Transactions;
 
 class TransactionsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+
+    public function paymentTypes()
     {
-        //
+        try {
+            $payment_types = ['ebook', 'audiocall', 'videocall', 'chat', 'topup'];
+            return response()->json(["payment_types" => $payment_types]);
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function paymentInit()
     {
-        //
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreTransactionsRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreTransactionsRequest $request)
-    {
-        //
-    }
+        try {
+            Stripe::setApiKey(env('STRIPE_SK'));
+            header('Content-Type: application/json');
+            // retrieve JSON from POST body
+            $jsonStr = file_get_contents('php://input');
+            $jsonObj = json_decode($jsonStr);
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Transactions  $transactions
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Transactions $transactions)
-    {
-        //
-    }
+            // Create a PaymentIntent with amount and currency
+            $paymentIntent = PaymentIntent::create([
+                'amount' => request()->amount,
+                'currency' => 'usd',
+                'automatic_payment_methods' => [
+                    'enabled' => true,
+                ],
+            ]);
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Transactions  $transactions
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Transactions $transactions)
-    {
-        //
-    }
+            $output = [
+                'clientSecret' => $paymentIntent->client_secret,
+            ];
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateTransactionsRequest  $request
-     * @param  \App\Models\Transactions  $transactions
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateTransactionsRequest $request, Transactions $transactions)
-    {
-        //
-    }
+            
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Transactions  $transactions
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Transactions $transactions)
-    {
-        //
+            return response()->json($output);
+        } catch (\Throwable $e) {
+            http_response_code(500);
+            echo json_encode(['error' => $e->getMessage()]);
+        }
     }
 }

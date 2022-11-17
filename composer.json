@@ -20,6 +20,7 @@
         "league/flysystem-aws-s3-v3": "^1.0",
         "paypal/rest-api-sdk-php": "^1.14",
         "srmklive/paypal": "~3.0",
+        "stripe/stripe-php": "^10.0",
         "tymon/jwt-auth": "^1.0",
         "unzerdev/php-sdk": "^1.2"
     },

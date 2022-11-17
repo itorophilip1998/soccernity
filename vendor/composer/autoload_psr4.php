@@ -40,6 +40,7 @@ return array(
     'Symfony\\Component\\ErrorHandler\\' => array($vendorDir . '/symfony/error-handler'),
     'Symfony\\Component\\CssSelector\\' => array($vendorDir . '/symfony/css-selector'),
     'Symfony\\Component\\Console\\' => array($vendorDir . '/symfony/console'),
+    'Stripe\\' => array($vendorDir . '/stripe/stripe-php/lib'),
     'StellaMaris\\Clock\\' => array($vendorDir . '/stella-maris/clock/src'),
     'Srmklive\\PayPal\\' => array($vendorDir . '/srmklive/paypal/src'),
     'Ramsey\\Uuid\\' => array($vendorDir . '/ramsey/uuid/src'),
