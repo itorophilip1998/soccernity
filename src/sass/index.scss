@@ -21,6 +21,7 @@
 @import './pages/livescore';
 @import './pages/matchesDetails';
 @import './pages/community';
+@import './pages/chat';
 
 // components
 @import './components/input';
@@ -58,4 +59,8 @@ body {
 
 header {
     padding-top: 3rem !important;
+}
+
+.container-fluid {
+    width: 90%;
 }

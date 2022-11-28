@@ -10,20 +10,20 @@ import Postcards from './components/Post/Postcards'
 function Community() {
     return (
         <div className=' community'>
-            <div className="container">
+            <div className="container-fluid ">
                 <div className="row m-0">
-                    <div className="col-md-3 sidebarleft p-0">
+                    <div className="col-md-3 sidebarleft p-0 mx-auto">
                         <Profile user={user} />
                         <TrendingNews user={user} />
                         <SuggestedFreinds user={user} />
                     </div>
-                    <div className="col-md-6 p-0 ">
+                    <div className="col-md-6 p-0 mx-auto">
                         <div className="mx-md-4">
                             <PostBlog />
                             <Postcards />
                       </div>
                     </div>
-                    <div className="col-md-3 p-0">
+                    <div className="col-md-3 p-0 mx-auto">
                         <TrendForYou user={user} />
                         <FixturesSub user={user} />
 

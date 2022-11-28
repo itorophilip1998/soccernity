@@ -6,7 +6,7 @@ import LiveScoreHeader from '../Header/LiveScoreHeader'
 
 const BlogLayout = () => {
   const isindex = useLocation().pathname
-  console.log(isindex)
+  // console.log(isindex)
   return (
     <div>
       {!isindex.match('/blog') ?

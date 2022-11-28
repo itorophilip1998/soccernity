@@ -6,7 +6,7 @@ import BlogForm from '../Blog/components/BlogForm';
 import Comments from '../Blog/components/Comments';
 function SingleBlog() {
   return (
-    <div className='container py-5 single-blog'>
+    <div className='container-fluid py-5 single-blog'>
           <div className="header-single-blog py-md-5">
                 <h1 className="title">
               Zaha double helps Crystal Palace ease past Villa for first PL win.

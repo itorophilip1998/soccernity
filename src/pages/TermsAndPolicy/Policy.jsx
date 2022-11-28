@@ -3,7 +3,7 @@ import Hero from '../Blog/components/Hero'
 
 function Policy() {
     return (
-        <div className="policy container">
+        <div className="policy container-fluid">
             <Hero  />
             <h1>Privacy Policy for Soccernity
             </h1>

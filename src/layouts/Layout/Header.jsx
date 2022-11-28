@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { navlinks } from "../../DB"
+import Inbox from '../../pages/Chats/inbox'
 function Header() {
   const route = useLocation().pathname
   const loaderInfo = (url) => {
@@ -8,10 +9,11 @@ function Header() {
       window.location.href = url
     }
   }
+  const [isInbox, setisInbox] = useState(false)
   return (
     <div className='header mb-header'>
       <nav className="navbar navbar-expand-sm navbar-light shadow fixed-top">
-        <div className="container">
+        <div className="container-fluid">
           <Link className="navbar-brand" to="/">
             <img src="/images/nav/logo.png" className="nav-logo" alt="" />
           </Link>
@@ -27,24 +29,24 @@ function Header() {
           </button>
           <div className="collapse navbar-collapse bg-white" id="collapsibleNavId">
             <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-
               {navlinks?.map((item, key) => <li key={key} className="nav-item  active">
                 <Link className="nav-link" to={item?.url} onClick={() => loaderInfo(item?.url)} >
                   {item?.url === route && <img src={item?.hover_icon} alt="" />}
                   {item?.url !== route && <img src={item?.icon} alt="" />}
                 </Link>
               </li>)}
-
             </ul>
             <form className="form-inline second-nav my-2 my-lg-0">
               <span>
-                <img src="/images/nav/notify.png" alt="" />
-                <img src="/images/nav/msg.png" alt="" />
-                <img src="/images/nav/profile.png" alt="" />
+                <img src="/images/nav/notify.png" alt="" className="topImg-header" />
+                <img src="/images/nav/msg.png" alt="" onClick={() => setisInbox(!isInbox)} className="topImg-header" />
+                <img src="/images/nav/profile.png" alt="" className="topImg-header" />
               </span>
               {/* <button className='isloggesIN'>
                 Login
               </button> */}
+
+              {isInbox && <Inbox />}
             </form>
           </div>
         </div>

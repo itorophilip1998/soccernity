@@ -1,0 +1,178 @@
+.inbox {
+    height: 90vh;
+    background: #FFFFFF;
+    border-radius: 12px;
+    width: 360px;
+    position: absolute;
+    margin-left: -13rem;
+    top: 4rem;
+    padding: 3rem 1rem;
+
+    .inbox-head {
+        h4 {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+            color: #000000;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    .input-section {
+
+        input,
+        input:focus {
+            width: 100% !important;
+            height: 38px;
+            background: rgba(40, 46, 101, 0.08);
+            border-radius: 27px;
+            padding: 1.3rem !important;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+            color: rgba(0, 0, 0, 0.50);
+        }
+
+        .input-box-btn,
+        .input-box-btn:hover {
+            width: 81px;
+            background: rgba(40, 46, 101, 0.1);
+            border-radius: 33px;
+            border: .5px solid #282E65 !important;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 15px;
+            color: #282E65;
+            border-right: none !important;
+
+            &:hover {
+                background: #282E65 !important;
+                color: #FFFFFF;
+            }
+        }
+
+    }
+}
+
+
+.chats {
+    width: 100%;
+    height: 68px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: .6rem;
+    align-items: center;
+    font-family: 'Inter';
+    font-style: normal;
+    cursor: pointer;
+
+    &:hover {
+        background: rgba(217, 217, 217, 0.2);
+
+    }
+
+    .img-box-chats {
+        width: 30% !important;
+
+        img {
+            min-width: 57px !important;
+            min-height: 57px !important;
+            max-width: 57px !important;
+            max-height: 57px !important;
+            border-radius: 50%;
+        }
+
+        .isOnline {
+            position: absolute;
+            max-width: 8px !important;
+            max-height: 8px !important;
+            min-width: 8px !important;
+            min-height: 8px !important;
+            background: #7BB929;
+            margin-left: -.9rem;
+            margin-top: 3rem;
+        }
+
+    }
+
+    .infobox {
+        width: 70% !important;
+
+        .name {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            color: #282E65;
+        }
+
+
+        .islastchat {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 15px;
+
+            color: rgba(40, 46, 101, 0.5);
+        }
+    }
+
+
+    .right-info {
+        width: 20% !important;
+    }
+
+    .space {
+        margin: 0 .5rem;
+    }
+
+    .other-chat {
+        color: #DBA111;
+    }
+
+
+}
+
+.chats-list {
+    height: 60vh;
+    overflow-y: scroll;
+    margin: 1rem 0;
+}
+
+.dropchatsInput {
+    position: absolute;
+    margin-left: -12.4rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    padding: .3rem;
+    background: #FFFFFF;
+    border-radius: 8px;
+border:none !important;
+    button,
+    button:hover {
+        width: 239px;
+        height: 38px;
+        border-radius: 8px;
+        background: white !important;
+        color: #282E65;
+        padding-left: 0;
+
+
+        &:hover {
+            background: rgba(40, 46, 101, 0.05) !important;
+            border: none !important;
+
+        }
+
+        img {
+            margin-right: .5rem;
+        }
+    }
+}

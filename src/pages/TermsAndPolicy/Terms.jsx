@@ -4,7 +4,7 @@ import Hero from '../Blog/components/Hero'
 
 const Terms = () => {
     return (
-        <div className='terms container'>
+        <div className='terms container-fluid'>
             <Hero />
 
             <h1>Terms of Service</h1>

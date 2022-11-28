@@ -4,7 +4,7 @@ import React from 'react'
 
 const LiveScore = () => {
     return (
-        <div className='container livescore_root'>
+        <div className='container-fluid livescore_root'>
             {/* <div className="row m-0">
                 <div className="col-md-4 p-0 sidepage">
                     <FilterByLeague />
