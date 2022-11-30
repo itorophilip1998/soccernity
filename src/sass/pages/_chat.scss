@@ -154,7 +154,8 @@
     padding: .3rem;
     background: #FFFFFF;
     border-radius: 8px;
-border:none !important;
+    border: none !important;
+
     button,
     button:hover {
         width: 239px;
@@ -174,5 +175,83 @@ border:none !important;
         img {
             margin-right: .5rem;
         }
+    }
+}
+
+
+.chat {
+    position: absolute;
+    margin-left: -27rem;
+    width: 388px;
+    height: 538px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    top: 10.5rem;
+    padding: .7rem;
+    padding-top: 1rem;
+
+    .subHead {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        width: 258px;
+        height: 63px;
+        background: rgba(217, 217, 217, 0.3);
+        border-radius: 8px;
+        justify-content: space-evenly;
+
+        .chat-img {
+            width: 50px;
+            margin: 0 !important;
+            display: inline;
+
+            img {
+                min-width: 43px !important;
+                max-width: 43px !important;
+                min-height: 43px !important;
+                max-height: 43px !important;
+                border-radius: 50%;
+                margin-top: .5rem;
+                // margin: 0;
+                margin: auto;
+                margin-top: .6rem;
+            }
+        }
+    }
+
+    .chat-name {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+        color: #282E65;
+    }
+
+    .chat-time {
+        font-size: 12px;
+        line-height: 15px;
+        color: rgba(40, 46, 101, 0.5);
+    }
+
+    .prof-info,
+    .caret,
+    .nav-box {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .chat-header {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        justify-content: space-between;
+        
+    }
+    hr{
+        border: 1px solid rgba(0, 0, 0, 0.12);
     }
 }

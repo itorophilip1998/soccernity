@@ -1,8 +1,16 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import { openIschat } from '../../../store/General'
 
 const Chat = ({ item, key }) => {
+  const dispatch = useDispatch()
+  const setIsMessage = () => {
+    dispatch(openIschat({
+      isChat: true
+    }))
+  }
   return (
-    <div className='chats'>
+    <div className='chats' onClick={() => setIsMessage()}>
       <div className="img-box-chats">
         <img src="/images/chat-profile.png" alt="" />
         {(item === 2 || item === 5) && <img src="/images/online.png" alt="" className='isOnline' />}
@@ -15,7 +23,6 @@ const Chat = ({ item, key }) => {
           {(item === 2 || item === 5) ? <span className='other-chat'>Hey Man</span> :
             <span> You: Morning </span>}
           <img src="/images/dot.png" alt="" className='space' />
-
           <span className="time">10h</span>
         </p>
       </div>

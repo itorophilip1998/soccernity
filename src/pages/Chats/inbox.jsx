@@ -1,5 +1,6 @@
 import React from 'react'
 import Chat from './components/Chat'
+import Messages from './components/Messages'
 const chats = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 const Inbox = () => {
   return (
@@ -15,6 +16,8 @@ const Inbox = () => {
         <input type="search" placeholder='Search Messages' />
         <button className='btn input-box-btn'>Inbox</button>
 
+        <Messages />
+
         <div className="chats-list">
           {
             chats?.map((item, key) => (
@@ -22,6 +25,7 @@ const Inbox = () => {
             ))
           }
         </div>
+
       </div>
     </div>
   )
