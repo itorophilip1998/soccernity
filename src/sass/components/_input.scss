@@ -6,13 +6,13 @@ textarea {
 
     &:focus {
         outline: none !important;
-        border: 1px solid $primary  !important;
+        border: 1px solid $primary !important;
         box-shadow: none !important;
     }
 }
 
 .authInput {
-    margin-top: 2rem;
+    margin-top: .6rem;
 
     label,
     input {
@@ -22,7 +22,7 @@ textarea {
         font-size: 16px;
         line-height: 19px;
         color: #000000;
-        text-transform: capitalize;
+        // text-transform: capitalize;
     }
 
     input {

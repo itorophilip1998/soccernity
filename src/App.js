@@ -19,9 +19,14 @@ import Policy from "./pages/TermsAndPolicy/Policy";
 import LiveScore from "./pages/liveScore";
 import { getFixturesDay1, getFixturesDay2, getFixturesDay3, getFixturesLive, getFixturesToday, getLegues } from "./store/LiveScores/Fixtures";
 import MatchDetails from "./pages/liveScore/components/MatchDetails/index";
-import { getCountry } from "./store/LiveScores/Matches"; 
+import { getCountry } from "./store/LiveScores/Matches";
 import Community from "./pages/Community";
-import Layout from "./layouts/Layout";
+import Layout from "./layouts/Layout"; 
+import { ToastContainer } from "react-toastify";
+import Verify from "./pages/Auth/Verify";
+import Layout2 from "./layouts/Layout/authLayout2";
+import ProtectedRoutes from "./Middleware/ProtectedRoutes";
+import { setAuth } from "./store/General";
 
 
 function App() {
@@ -35,7 +40,7 @@ function App() {
     dispatch(getFixturesToday())
     dispatch(getFixturesDay1())
     dispatch(getCountry())
-    // dispatch(getFixturesDay2())
+    dispatch(setAuth())
     // dispatch(getFixturesDay3())
     WebFont.load({
       google: {
@@ -51,7 +56,6 @@ function App() {
         {/* Private Route start*/}
 
         {/* Private Route end*/}
-
         {/* Public Route start*/}
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<LiveScore />} />
@@ -59,16 +63,18 @@ function App() {
           <Route path="/blog/:id" element={<SingleBlog />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/terms" element={<Terms />} />
-          <Route path="/policy" element={<Policy />} />
-          <Route path="/community" element={<Community />} />  
-          <Route path="/leaderboard" element={<Community />} />  
-          <Route path="/banter" element={<Community />} />  
+          <Route path="/policy" element={<Policy />} /> 
+        </Route>  
+
+        <Route path="/" element={<ProtectedRoutes />}>
+          <Route path="/community" element={<Community />} />
+          <Route path="/leaderboard" element={<Community />} />
+          <Route path="/banter" element={<Community />} />
         </Route>
 
-        <Route path="/match-details" element={<MatchDetails />} /> 
-        {/* Public Route end*/}
-       
 
+        <Route path="/match-details" element={<MatchDetails />} />
+        {/* Public Route end*/} 
 
         {/* Auth Start */}
         <Route path="/auth" element={<AuthLayout />}>
@@ -76,11 +82,26 @@ function App() {
           <Route path="signup" element={<Signup />} />
           <Route path="forgot-password" element={<ForgotPassword />} />
           <Route path="reset-password" element={<ResetPassword />} />
+          <Route path="verify" element={<Verify />} />
         </Route>
         <Route path="verified" element={<ResetPassword />} />
 
         {/* Auth end */}
       </Routes>
+
+
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </Router>
   );
 }

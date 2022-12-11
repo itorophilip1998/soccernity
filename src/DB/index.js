@@ -1243,12 +1243,6 @@ export const fixtures = [
 
 export const navlinks = [
     {
-        name: "Community",
-        icon: "/images/nav/home.png",
-        hover_icon: "/images/nav/dhome.png",
-        url: "/community"
-
-    }, {
         name: "Sports",
         icon: "/images/nav/soccer.png",
         hover_icon: "/images/nav/dsoccer.png",
@@ -1260,6 +1254,13 @@ export const navlinks = [
         icon: "/images/nav/news.png",
         hover_icon: "/images/nav/dnews.png",
         url: "/blog"
+
+    },
+    {
+        name: "Community",
+        icon: "/images/nav/home.png",
+        hover_icon: "/images/nav/dhome.png",
+        url: "/community"
 
     },
     {

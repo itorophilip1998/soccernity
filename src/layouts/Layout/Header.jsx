@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { navlinks } from "../../DB"
 import Inbox from '../../pages/Chats/inbox'
+import { signoutReq } from '../../utils/request'
 function Header() {
   const route = useLocation().pathname
   const loaderInfo = (url) => {
@@ -10,6 +12,8 @@ function Header() {
     }
   }
   const [isInbox, setisInbox] = useState(false)
+  const token = useSelector((state) => state.general?.token)
+  const navigate = useNavigate()
   return (
     <div className='header mb-header'>
       <nav className="navbar navbar-expand-sm navbar-light shadow fixed-top">
@@ -37,14 +41,25 @@ function Header() {
               </li>)}
             </ul>
             <form className="form-inline second-nav my-2 my-lg-0">
-              <span>
+              {token ? <span>
                 <img src="/images/nav/notify.png" alt="" className="topImg-header" />
                 <img src="/images/nav/msg.png" alt="" onClick={() => setisInbox(!isInbox)} className="topImg-header" />
-                <img src="/images/nav/profile.png" alt="" className="topImg-header" />
+                <img src="/images/nav/profile.png" alt="" className="topImg-header"
+                  id="triggerId" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false" />
+
+
+                <div class="dropdown">
+                  <div class="dropdown-menu" aria-labelledby="triggerId">
+                    <a class="dropdown-item" href="/">Profile</a>
+                    <button class="dropdown-item" onClick={() => signoutReq()} >Logout</button>
+                  </div>
+                </div>
               </span>
-              {/* <button className='isloggesIN'>
-                Login
-              </button> */}
+                :
+                <button className='isloggesIN' onClick={() => navigate('/auth/signin')}>
+                  Login
+                </button>}
 
               {isInbox && <Inbox />}
             </form>

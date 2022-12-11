@@ -9,11 +9,11 @@ const Messages = () => {
   if (isChat)
     return (
       <div className='chat shadow-lg'>
-       <ChatHeader/>
+        <ChatHeader />
         <hr />
-<ChatBox/>
+        <ChatBox />
 
-       
+
       </div>
     )
 }
