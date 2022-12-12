@@ -8,7 +8,7 @@ import { setAuth } from '../../store/General';
 import { useDispatch } from 'react-redux';
 
 function Signin() {
-  const [value, setformValue] = useState(); 
+  const [value, setformValue] = useState();
   const dispatch = useDispatch()
   // const [error, setError] = useState();
   const [passwordType, setPType] = useState("password");
