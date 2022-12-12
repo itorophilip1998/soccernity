@@ -1,14 +1,14 @@
  
 
 import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom' 
+import { Link } from 'react-router-dom' 
 import { forgotPasswordReq } from '../../utils/request';
 import { toast } from 'react-toastify';  
 
 function ForgotPassword() {
   const [value, setformValue] = useState();
-  const navigate = useNavigate() 
-  const [error, setError] = useState(); 
+  // const navigate = useNavigate() 
+  // const [error, setError] = useState(); 
   const [isload, setLoading] = useState(false);
   const addValue = (e) => {
     setformValue({ ...value, [e.target.name]: e.target.value, first_name: 'first_name', last_name: 'last_name' })
@@ -18,7 +18,7 @@ function ForgotPassword() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true)
-    setError(null)
+    // setError(null)
     const res = await forgotPasswordReq(value);
     if (res && res.data) {
       toast.success(res?.data?.message)
@@ -28,7 +28,7 @@ function ForgotPassword() {
     }
     else if (res && res?.response) {
       toast.error(res?.response?.data?.message)
-      setError(res?.response?.data?.errors)
+      // setError(res?.response?.data?.errors)
       setLoading(false)
     }
     else {

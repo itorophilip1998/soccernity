@@ -9,7 +9,7 @@ function ResetPassword() {
   const email = query.get("email");
   const token = query.get("token");
   const [value, setformValue] = useState();
-  const [error, setError] = useState();
+  // const [error, setError] = useState();
   const [passwordType, setPType] = useState("password");
   const [isload, setLoading] = useState(false);
   const addValue = (e) => {
@@ -24,7 +24,7 @@ function ResetPassword() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true)
-    setError(null)
+    // setError(null)
     const res = await resetPasswordReq(value);
     if (res && res.data) {
       toast.success(res?.data?.message)
@@ -34,7 +34,7 @@ function ResetPassword() {
     }
     else if (res && res?.response) {
       toast.error(res?.response?.data?.message)
-      setError(res?.response?.data?.errors)
+      // setError(res?.response?.data?.errors)
       setLoading(false)
     }
     else {

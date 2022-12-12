@@ -10,7 +10,7 @@ import { useDispatch } from 'react-redux';
 function Signin() {
   const [value, setformValue] = useState(); 
   const dispatch = useDispatch()
-  const [error, setError] = useState();
+  // const [error, setError] = useState();
   const [passwordType, setPType] = useState("password");
   const [isload, setLoading] = useState(false);
   const addValue = (e) => {
@@ -21,7 +21,7 @@ function Signin() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true)
-    setError(null)
+    // setError(null)
     const res = await signinReq(value);
     if (res && res.data) {
       toast.success(res?.data?.message)
@@ -33,7 +33,7 @@ function Signin() {
     }
     else if (res && res?.response) {
       toast.error(res?.response?.data?.message)
-      setError(res?.response?.data?.errors)
+      // setError(res?.response?.data?.errors)
       setLoading(false)
     }
     else {
