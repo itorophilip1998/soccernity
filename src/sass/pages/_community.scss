@@ -328,3 +328,114 @@
         padding-top: 5px !important;
     }
 }
+
+.viewProfile {
+    margin-top: 1rem;
+
+    .card {
+        border-radius: 12px;
+
+
+
+        .avatar {
+            position: absolute;
+            border: 3px solid #FFFFFF;
+            margin-top: -6rem;
+            width: 158px;
+            height: 158px;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            margin-left: 1rem;
+        }
+
+
+        .fullname {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            color: #282E65;
+        }
+
+        .username {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            color: #000000;
+        }
+
+        .bio {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            color: #000000;
+        }
+    }
+
+    .firstCol {
+        height: 80px;
+        // background: #000;
+    }
+
+    .isclub {
+        margin: 0 .5rem;
+    }
+
+    .location {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 12px;
+        color: rgba(0, 0, 0, 0.5);
+        margin-left: 1rem;
+
+        img {
+            margin: 0 .3rem;
+        }
+    }
+
+    .follows {
+        .info {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            color: #000000;
+            margin: 0 .5rem;
+        }
+
+        .details {
+            color: rgba(0, 0, 0, 0.5);
+            margin-left: .2rem;
+        }
+
+        .dotDivider {
+            width: 4px;
+            height: 4px;
+            background: rgba(0, 0, 0, 0.5);
+            display: inline-block;
+            border-radius: 50%;
+            margin: 0 .2rem;
+            margin-top: -40px;
+
+        }
+    }
+
+    .shadowBox {
+        box-shadow: 8px 9px 48px rgba(69, 69, 69, 0.17);
+        border-radius: 8px;
+        width: 250px;
+    }
+
+    .dropdown-item {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000000;
+
+        img {
+            margin-right: .3rem;
+        }
+    }
+    
+}
