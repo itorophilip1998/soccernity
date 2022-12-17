@@ -52,7 +52,7 @@ function SignUp() {
             <div className="form-group authInput">
               <label htmlFor={'finame'} >Username</label>
               <input type={'text'}
-                className={`form-control border-0  m_extra `} name={'username'} id="" aria-describedby="emailHelpId" placeholder={'Enter Email'}
+                className={`form-control border-0  m_extra `} name={'username'} id="" aria-describedby="emailHelpId" placeholder={'Enter Username'}
                 onChange={(e) => addValue(e)}
                 required
               />
@@ -65,7 +65,7 @@ function SignUp() {
             <div className="form-group authInput">
               <label htmlFor={'email'} >Email</label>
               <input type={'text'}
-                className={`form-control border-0  m_extra `} name={'email'} id="" aria-describedby="emailHelpId" placeholder={'Enter Username'}
+                className={`form-control border-0  m_extra `} name={'email'} id="" aria-describedby="emailHelpId" placeholder={'Enter Email'}
                 onChange={(e) => addValue(e)}
                 required />
               {error?.email && <small id="emailHelpId" className="form-text text-danger">{error?.email[0]}</small>}

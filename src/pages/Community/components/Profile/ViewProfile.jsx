@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
+import EditProfile from './EditProfile'
 
 function ViewProfile() {
+  const [isfollow, setIsFollow] = useState(false)
   return (
     <div className='viewProfile'>
       <div class="card">
@@ -9,7 +11,7 @@ function ViewProfile() {
           <img src="/images/profile/profile.png" className='avatar' alt="" />
           <div className="row m-0 ">
             <div className="col-md-12 p-0 text-right firstCol">
-              <div className="isGuest">
+              <div className="isGuest d-none">
                 {/* dropdown */}
                 <div class="dropdown">
                   <div class="dropdown-menu shadowBox" aria-labelledby="triggerisguest">
@@ -20,10 +22,12 @@ function ViewProfile() {
                 </div>
                 <button className="btn lightHover" id="triggerisguest" data-toggle="dropdown" aria-haspopup="true"><img src="/images/profile/vh.png" alt="" /></button>
                 <button className="btn lightHover"><img src="/images/profile/msg.png" alt="" /></button>
-                <button className="btn btn-blue-btn shadow">Follow</button>
+                <button className="btn btn-blue-btn shadow" onClick={() => setIsFollow(!isfollow)}>{isfollow ? 'Follow' : 'Unfollow'}</button>
               </div>
-              <div className="isAuth d-none">
-                <button className="btn btn-blue-btn shadow">Edit Profile</button>
+              <div className="isAuth ">
+                <button className="btn btn-blue-btn shadow" data-toggle="modal" data-target="#editProfile">Edit Profile</button>
+                <EditProfile />
+
               </div>
             </div>
 
@@ -46,7 +50,7 @@ function ViewProfile() {
                   <span className="details">Following</span>
                 </span>
               </p>
-            </div> 
+            </div>
           </div>
         </div>
       </div>
