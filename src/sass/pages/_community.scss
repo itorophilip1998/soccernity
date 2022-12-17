@@ -240,6 +240,19 @@
     }
 }
 
+.postBox2 {
+    height: 107px !important;
+
+    input {
+        width: 100%;
+        height: 64px;
+        background: rgba(40, 46, 101, 0.12);
+        border-radius: 6px;
+        padding: 1rem;
+        cursor: pointer;
+    }
+}
+
 .postBottom {
     display: flex;
     flex-direction: row;
@@ -251,6 +264,7 @@
         img {
             margin: 0 .8rem;
             margin-left: 0;
+            cursor: pointer;
         }
     }
 
@@ -287,5 +301,30 @@
 
     }
 
-    .col-8 {}
+}
+
+#loadPopup {
+    .modal-title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        color: #282E65;
+    }
+
+    .modal-header {
+        border-bottom: 1px solid rgba(3, 70, 148, 0.19);
+        justify-content: space-around !important;
+    }
+
+    .modal-content {
+        margin-top: 12rem;
+        border-radius: 12px;
+    }
+
+    .postBox {
+        margin: 0 !important;
+        padding-top: 5px !important;
+    }
 }

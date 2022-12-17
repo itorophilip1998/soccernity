@@ -1,29 +1,17 @@
 import React from 'react'
+import PopupPost from './PopupPost'
 
 function PostBlog() {
     return (
-        <div className='postBox '>
+        <div className='postBox postBox2'>
             <div className="row m-0">
                 <div className="col-2 text-center p-0">
                     <img src="/images/profile.png" alt="" />
                 </div>
                 <div className="col-9 p-md-0">
-                    <textarea name="" placeholder="What’s happening?"></textarea>
-
-                    <div className="postBottom">
-                        <div className='f-img'>
-                            <img src="/images/box/picture.png" alt="" />
-                            <img src="/images/box/video.png" alt="" />
-                            <img src="/images/box/gif.png" alt="" />
-                            <img src="/images/box/more.png" alt="" />
-                            <img src="/images/box/emoji.png" alt="" />
-                        </div>
-                        <div className='s-img'>
-                            <img src="/images/box/add.png" className='link' alt="" />
-                            <button className="btn add-post ">Post</button>
-                        </div>
-                    </div>
+                    <input name="" placeholder="What’s happening?" data-toggle="modal" data-target="#loadPopup" />
                 </div>
+                <PopupPost />
             </div>
         </div>
     )

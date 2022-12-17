@@ -14,7 +14,7 @@ function Signin() {
   const [passwordType, setPType] = useState("password");
   const [isload, setLoading] = useState(false);
   const addValue = (e) => {
-    setformValue({ ...value, [e.target.name]: e.target.value, first_name: 'first_name', last_name: 'last_name' })
+    setformValue({ ...value, [e.target.name]: e.target.value })
 
   }
 
@@ -55,7 +55,7 @@ function Signin() {
             <div className="form-group authInput">
               <label htmlFor={'email'} >Email</label>
               <input type={'text'}
-                className={`form-control border-0  m_extra `} name={'email'} id="" aria-describedby="emailHelpId" placeholder={'Enter Email or Username'}
+                className={`form-control border-0  m_extra `} name={'login'} id="" aria-describedby="emailHelpId" placeholder={'Enter Email or Username'}
                 onChange={(e) => addValue(e)}
                 required />
             </div>
