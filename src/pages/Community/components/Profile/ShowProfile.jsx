@@ -6,6 +6,7 @@ import Postcards from '../Post/Postcards'
 import TrendForYou from '../TrendForYou/TrendForYou'
 import FixturesSub from '../Fixtures'
 import ViewProfile from './ViewProfile'
+import PostMediaBox from './PostMediaBox'
 function ShowProfile() {
     return (
         <div className=' community'>
@@ -18,6 +19,7 @@ function ShowProfile() {
                     <div className="col-md-6 p-0 mx-auto">
                         <div className="mx-md-4 ">
                             <ViewProfile />
+                            <PostMediaBox />
                             <Postcards />
                         </div>
                     </div>

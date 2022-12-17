@@ -18,12 +18,12 @@ function ViewProfile() {
                     <button class="dropdown-item"  > <img src="/images/profile/block.png" alt="" /> Block <span className='font-weight-normal'>nelson_iheagwam</span></button>
                   </div>
                 </div>
-                <button className="btn" id="triggerisguest" data-toggle="dropdown" aria-haspopup="true"><img src="/images/profile/vh.png" alt="" /></button>
-                <button className="btn"><img src="/images/profile/msg.png" alt="" /></button>
-                <button className="btn">Follow</button>
+                <button className="btn lightHover" id="triggerisguest" data-toggle="dropdown" aria-haspopup="true"><img src="/images/profile/vh.png" alt="" /></button>
+                <button className="btn lightHover"><img src="/images/profile/msg.png" alt="" /></button>
+                <button className="btn btn-blue-btn shadow">Follow</button>
               </div>
               <div className="isAuth d-none">
-                <button className="btn">Edit Profile</button>
+                <button className="btn btn-blue-btn shadow">Edit Profile</button>
               </div>
             </div>
 
@@ -46,9 +46,7 @@ function ViewProfile() {
                   <span className="details">Following</span>
                 </span>
               </p>
-            </div>
-
-
+            </div> 
           </div>
         </div>
       </div>

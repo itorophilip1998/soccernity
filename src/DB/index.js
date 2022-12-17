@@ -1246,14 +1246,14 @@ export const navlinks = [
         name: "Sports",
         icon: "/images/nav/soccer.png",
         hover_icon: "/images/nav/dsoccer.png",
-        url: "/"
+        url: "/sport"
     },
 
     {
         name: "Blog",
         icon: "/images/nav/news.png",
         hover_icon: "/images/nav/dnews.png",
-        url: "/blog"
+        url: "/"
 
     },
     {

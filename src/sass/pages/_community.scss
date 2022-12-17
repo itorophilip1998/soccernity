@@ -437,5 +437,74 @@
             margin-right: .3rem;
         }
     }
-    
+
+    .lightHover {
+        width: 40px;
+        height: 40px;
+        border: 1px solid rgba(40, 46, 101, 0.21) !important;
+        text-align: center;
+        border-radius: 50%;
+        margin-right: .9rem;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            background: #d5d5f1;
+            border: 1px solid rgba(40, 46, 101, 0.21) !important;
+
+        }
+    }
+
+    .btn-blue-btn {
+        width: 76px;
+        height: 38px;
+        background: #282E65;
+        border-radius: 23px;
+        font-size: 14px;
+        line-height: 17px;
+        color: #FFFFFF;
+
+        &:hover,
+        &:focus {
+            border: 1px solid rgba(40, 46, 101, 0.21) !important;
+
+        }
+    }
+
+}
+
+.PostMediaBox {
+    background: #FFFFFF;
+    border-radius: 8px;
+    height: 38px;
+    max-width: 315px;
+    margin: 1.4rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .dividerBox {
+        width: 16px;
+        height: 0px;
+        border: 1px solid #000000;
+        transform: rotate(90deg);
+    }
+
+    a {
+        margin: 0 .5rem;
+        color: rgba(3, 70, 148, 0.3);
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+
+        &:hover,
+        &:focus {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            color: #034694;
+        }
+    }
+
 }

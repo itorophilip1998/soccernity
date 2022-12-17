@@ -4,7 +4,7 @@ function FixturesSub() {
     return (
         <div className='trending_news headbox '>
             <div className="header">
-                <span> Trending News </span><img src="/images/reload.png" alt="" />
+                <span> Fixtures </span><img src="/images/reload.png" alt="" />
             </div>
             <div className="postNews community_fixtures">
                 {post?.map((item, key) => (
@@ -15,8 +15,7 @@ function FixturesSub() {
                                 <img src="/images/chelsea.png" alt="" />
                             </div>
                             <div className="vs">
-                                <span>16:00</span>
-
+                                <span>16:00</span> 
                             </div>
                             <div className="away">
                                 <img src="/images/liverpool.png" alt="" />

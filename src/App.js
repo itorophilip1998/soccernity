@@ -59,9 +59,11 @@ function App() {
         {/* Private Route end*/}
         {/* Public Route start*/}
         <Route path="/" element={<Layout />}>
-          <Route path="/" element={<LiveScore />} />
+          <Route path="/" element={<Blog />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<SingleBlog />} />
+          <Route path="/sport" element={<LiveScore />} />
+
           <Route path="/contact" element={<Contact />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/policy" element={<Policy />} />
