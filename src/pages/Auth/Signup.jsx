@@ -12,6 +12,7 @@ function SignUp() {
   const [isload, setLoading] = useState(false);
   const addValue = (e) => {
     setformValue({ ...value, [e.target.name]: e.target.value, first_name: 'first_name', last_name: 'last_name' })
+    setError(null)
 
   }
 
