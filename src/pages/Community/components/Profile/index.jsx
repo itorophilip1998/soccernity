@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Profile() {
     return (
@@ -35,7 +36,7 @@ function Profile() {
                         </div>
                     </div>
                     <div className="text-center  p-4">
-                        <a href="/community" className='link-btn btn'>View profile</a>
+                        <Link to="/profile?user=itorophilip1998" className='link-btn btn'>View profile</Link>
                     </div>
                 </div>
             </div>

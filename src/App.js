@@ -21,12 +21,13 @@ import { getFixturesDay1, getFixturesDay2, getFixturesDay3, getFixturesLive, get
 import MatchDetails from "./pages/liveScore/components/MatchDetails/index";
 import { getCountry } from "./store/LiveScores/Matches";
 import Community from "./pages/Community";
-import Layout from "./layouts/Layout"; 
+import Layout from "./layouts/Layout";
 import { ToastContainer } from "react-toastify";
 import Verify from "./pages/Auth/Verify";
 import Layout2 from "./layouts/Layout/authLayout2";
 import ProtectedRoutes from "./Middleware/ProtectedRoutes";
 import { setAuth } from "./store/General";
+import ShowProfile from "./pages/Community/components/Profile/ShowProfile";
 
 
 function App() {
@@ -63,18 +64,19 @@ function App() {
           <Route path="/blog/:id" element={<SingleBlog />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/terms" element={<Terms />} />
-          <Route path="/policy" element={<Policy />} /> 
-        </Route>  
+          <Route path="/policy" element={<Policy />} />
+        </Route>
 
         <Route path="/" element={<ProtectedRoutes />}>
           <Route path="/community" element={<Community />} />
           <Route path="/leaderboard" element={<Community />} />
           <Route path="/banter" element={<Community />} />
+          <Route path="/profile" element={<ShowProfile />} />
         </Route>
 
 
         <Route path="/match-details" element={<MatchDetails />} />
-        {/* Public Route end*/} 
+        {/* Public Route end*/}
 
         {/* Auth Start */}
         <Route path="/auth" element={<AuthLayout />}>

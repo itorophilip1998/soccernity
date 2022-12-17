@@ -51,7 +51,7 @@ function Header() {
 
                 <div class="dropdown">
                   <div class="dropdown-menu" aria-labelledby="triggerId">
-                    <a class="dropdown-item" href="/">Profile</a>
+                    <Link class="dropdown-item" to="/profile?user=itorophilip">Profile</Link>
                     <button class="dropdown-item" onClick={() => signoutReq()} >Logout</button>
                   </div>
                 </div>
