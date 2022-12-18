@@ -7,7 +7,7 @@ import { signoutReq } from '../../utils/request'
 function Header() {
   const route = useLocation().pathname
   const loaderInfo = (url) => {
-    if (url === '/') {
+    if (url === '/sport') {
       window.location.href = url
     }
   }
