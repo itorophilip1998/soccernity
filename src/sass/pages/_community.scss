@@ -508,3 +508,44 @@
     }
 
 }
+
+
+.imgbox_container {
+    background: url("../../../public/images/profile/defaultbg.png"), rgba(40, 46, 101, 0.5);
+    background-size: cover;
+    background-blend-mode: darken;
+    height: 247px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    &:hover .img {
+        cursor: pointer;
+        display: block;
+
+    }
+
+    .img {
+        display: none;
+    }
+}
+
+.avatarBox {
+    position: absolute;
+    margin-top: -6rem;
+    margin-left: 3rem;
+}
+
+.editProfileForm {
+    padding: 10% 5% 0;
+
+    input,
+    select {
+        height: 69px;
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        border-radius: 12px;
+        padding: 1rem;
+    }
+}

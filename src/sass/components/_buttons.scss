@@ -71,3 +71,19 @@
         color: #fff
     }
 }
+
+.btn-blue {
+    // width: 106px;
+    height: 38px;
+    background: #282E65;
+    border-radius: 23px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+
+    &:hover,
+    &:focus {
+        border: 1px solid rgba(40, 46, 101, 0.21) !important;
+        color: #FFFFFF;
+    }
+}
