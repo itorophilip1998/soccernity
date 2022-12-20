@@ -12,18 +12,18 @@ function ShowProfile() {
         <div className=' community'>
             <div className="container-fluid ">
                 <div className="row m-0">
-                    <div className="col-md-3 sidebarleft p-0 mx-auto  ">
+                    <div className="col-md-3 sidebarleft p-0 mx-auto  centerPage">
                         <TrendingNews user={user} className="mt-0" />
                         <SuggestedFreinds user={user} />
                     </div>
-                    <div className="col-md-6 p-0 mx-auto">
+                    <div className="col-md-6 p-0 mx-auto centerPage">
                         <div className="mx-md-4 ">
                             <ViewProfile />
                             <PostMediaBox />
                             <Postcards />
                         </div>
                     </div>
-                    <div className="col-md-3 p-0 mx-auto mt-3">
+                    <div className="col-md-3 p-0 mx-auto mt-3 centerPage">
                         <TrendForYou user={user} />
                         <FixturesSub user={user} />
                     </div>

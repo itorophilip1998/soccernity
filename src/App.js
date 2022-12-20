@@ -1,11 +1,7 @@
 /* eslint-disable */
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React from "react";
 import Blog from "./pages/Blog";
-import { useDispatch } from "react-redux";
-import WebFont from 'webfontloader';
 import SingleBlog from "./pages/SingleBlog";
 import Contact from "./pages/Contact";
 import Signin from "./pages/Auth/Signin";
@@ -13,43 +9,20 @@ import Signup from "./pages/Auth/Signup";
 import ForgotPassword from "./pages/Auth/ForgotPassword";
 import ResetPassword from "./pages/Auth/ResetPassword";
 import AuthLayout from "./layouts/AuthLayout";
-import BlogLayout from "./layouts/BlogLayout";
 import Terms from "./pages/TermsAndPolicy/Terms";
 import Policy from "./pages/TermsAndPolicy/Policy";
 import LiveScore from "./pages/liveScore";
-import { getFixturesDay1, getFixturesDay2, getFixturesDay3, getFixturesLive, getFixturesToday, getLegues } from "./store/LiveScores/Fixtures";
 import MatchDetails from "./pages/liveScore/components/MatchDetails/index";
-import { getCountry } from "./store/LiveScores/Matches";
 import Community from "./pages/Community";
 import Layout from "./layouts/Layout";
-import { ToastContainer } from "react-toastify";
 import Verify from "./pages/Auth/Verify";
-import Layout2 from "./layouts/Layout/authLayout2";
 import ProtectedRoutes from "./Middleware/ProtectedRoutes";
-import { setAuth } from "./store/General";
 import ShowProfile from "./pages/Community/components/Profile/ShowProfile";
+import AppLoader from "./AppLoader";
 
 
 function App() {
-  const dispatch = useDispatch()
-
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-    dispatch(getLegues())
-    dispatch(getFixturesLive())
-    dispatch(getFixturesToday())
-    dispatch(getFixturesDay1())
-    dispatch(getCountry())
-    dispatch(setAuth())
-    // dispatch(getFixturesDay3())
-    WebFont.load({
-      google: {
-        families: ['Droid Sans', 'Chilanka']
-      }
-    });
-  }, []);
-
+  AppLoader()
   return (
     <Router>
 
@@ -93,19 +66,6 @@ function App() {
         {/* Auth end */}
       </Routes>
 
-
-      <ToastContainer
-        position="top-center"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
     </Router>
   );
 }

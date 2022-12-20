@@ -3,6 +3,9 @@ import { config } from './config'
 
 const { Api } = config;
 const { header } = config
+
+
+// auth request
 export const signupReq = async (req) => {
     try {
         const res = await axios.post(`${Api}/auth/signup`, req);
@@ -56,3 +59,12 @@ export const forgotPasswordReq = async (req) => {
     }
 }
 
+// blog request 
+export const getBlogReq = async (req) => {
+    try {
+        const res = await axios.get(`${Api}/categories`);
+        return res
+    } catch (error) {
+        return error
+    }
+}

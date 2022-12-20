@@ -12,18 +12,18 @@ function Community() {
         <div className=' community'>
             <div className="container-fluid ">
                 <div className="row m-0">
-                    <div className="col-md-3 sidebarleft p-0 mx-auto">
+                    <div className="col-md-3 sidebarleft p-0 mx-auto centerPage">
                         <Profile user={user} />
                         <TrendingNews user={user} />
                         <SuggestedFreinds user={user} />
                     </div>
-                    <div className="col-md-6 p-0 mx-auto">
+                    <div className="col-md-6 p-0 mx-auto centerPage">
                         <div className="mx-md-4">
                             <PostBlog />
                             <Postcards />
                       </div>
                     </div>
-                    <div className="col-md-3 p-0 mx-auto">
+                    <div className="col-md-3 p-0 mx-auto centerPage">
                         <TrendForYou user={user} />
                         <FixturesSub user={user} />
 

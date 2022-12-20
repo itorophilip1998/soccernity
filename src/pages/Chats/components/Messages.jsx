@@ -11,8 +11,7 @@ const Messages = () => {
       <div className='chat shadow-lg'>
         <ChatHeader />
         <hr />
-        <ChatBox />
-
+        <ChatBox /> 
 
       </div>
     )
