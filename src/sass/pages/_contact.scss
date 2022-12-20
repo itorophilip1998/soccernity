@@ -1,0 +1,28 @@
+.conTxt {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 59px;
+    text-align: center;
+    color: #000000;
+}
+
+.contact {
+    form {
+        background: rgba(229, 229, 229, 0.6);
+
+        input,
+        select {
+            height: 78px;
+            background: #FFFFFF;
+            border-radius: 12px;
+        }
+
+        textarea {
+            border-radius: 12px;
+        }
+
+        select {
+            cursor: pointer;
+        }
+    }
+}

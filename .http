@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @baseApi=http://localhost:8000/api
 
 
@@ -13,4 +14,39 @@ Content-Type: application/json
     "password_confirmation":"philip",
     "phone":"09024195493",
     "role":"user"
+=======
+@baseUrl=https://clisha-dev-server.herokuapp.com/api
+@accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjYxMzUzNDI5LCJleHAiOjE2NjY1Mzc0Mjl9.Gp5TyKqhtZ2hmwlhpspYkmwAymg0njiWEdOc2eAMTAw
+
+### Create task
+POST {{ baseUrl }}/admin/tasks   
+Authorization: Bearer {{accessToken}}
+Content-Type: application/json 
+
+{
+    "points":308,
+    "url":"https://expectoo.de/",
+    "start":"2022-09-02",
+    "task_type":"website_click",
+   "google_search":{ 
+     "title": "Entwickler- IT Experten - Nearshore | Expectoo GmbH",
+    "search_phrase": "Entwickler- IT Experten - Nearshore | Expectoo GmbH"
+  },
+   "journey": [
+      {
+        "link": "https://www.figma.com/file/Ee4SurHLxAqhib7Ox4D55Q/Clisha-Working-Document?node-id=15%3A29120",
+        "link_type": "form",
+        "description": "Chrome Developer"
+      }
+   ]
+}
+
+### Login
+POST {{ baseUrl }}/admin/authenticate 
+Content-Type: application/json 
+
+{
+    "email":"admin@expectoo.dev",
+    "password":"clisha_@dmin"
+>>>>>>> 70ce75cea19a2ca62044395a015e8db5ebd8c20c
 }

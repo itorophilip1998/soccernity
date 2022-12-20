@@ -1,0 +1,89 @@
+.loadMore-btn {
+    width: 202px;
+    height: 56px;
+    border: 3px solid #1E1E1E;
+    box-sizing: border-box;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+    display: inline;
+    background: white;
+
+    &:hover {
+        background: #000000;
+        color: white;
+    }
+
+    transition: 0.7s;
+    -webkit-transition: 0.7s;
+    -moz-transition: 0.7s;
+    -ms-transition: 0.7s;
+    -o-transition: 0.7s;
+}
+
+.btn:focus,
+.btn:hover {
+    outline: none !important;
+    border: 1px solid $primary !important;
+    box-shadow: none !important;
+}
+
+.authButton {
+    .btn {
+        /*Autolayout*/
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+        gap: 10px;
+        height: 69px;
+        /*Primary*/
+        background: #323080;
+        box-shadow: 0px 30px 60px rgba(79, 70, 229, 0.15);
+        border-radius: 6px;
+        /*Insideautolayout*/
+        flex: none;
+        order: 3;
+        align-self: stretch;
+        flex-grow: 0;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        margin-top: 1.6rem;
+        color: #FFFFFF;
+
+        &:hover {
+            background: $primary;
+        }
+
+    }
+}
+
+.dropdown-item {
+
+    &:hover,
+    &:focus {
+        background: $primary;
+        color: #fff
+    }
+}
+
+.btn-blue {
+    // width: 106px;
+    height: 38px;
+    background: #282E65;
+    border-radius: 23px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+
+    &:hover,
+    &:focus {
+        border: 1px solid rgba(40, 46, 101, 0.21) !important;
+        color: #FFFFFF;
+    }
+}

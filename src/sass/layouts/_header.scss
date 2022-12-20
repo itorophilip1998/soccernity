@@ -1,0 +1,179 @@
+header {
+
+    a {
+        color: rgba(77, 69, 0, 0.47);
+        cursor: pointer;
+        margin: 0 10px;
+        padding-bottom: 3px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        text-decoration: none;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: #4D4500;
+        }
+
+
+
+
+    }
+
+}
+
+.underlinImg {
+    margin-left: 2px;
+    margin-top: 2px;
+    display: flex;
+}
+
+// .isactive {
+//     color: #4D4500;
+//     border-bottom: 2px dotted #4D4500;
+// }
+
+.logo {
+    width: 204px;
+    height: 53px;
+    background: #D9D9D9;
+    border-radius: 25px;
+}
+
+.logoImg {
+    width: 44.25px;
+    height: 46.12px;
+
+}
+
+.logoName {
+    font-weight: bolder;
+    margin-left: 0.6rem;
+    font-weight: 600;
+    font-size: 27.7644px;
+    line-height: 34px;
+    color: $primary
+}
+
+.livescoreHeader {
+    a {
+
+        font-weight: 600;
+        width: 101.64px;
+        text-align: center;
+    }
+
+    .scores-link {
+        box-shadow: 6px 6px 23px rgba(193, 193, 193, 0.25);
+        background-image: url("../../../public/images/linkShadow.png");
+        background-size: cover;
+
+        a {
+            color: $primary !important;
+        }
+    }
+
+    .blog-link {
+        a {
+            color: #223C00 !important;
+        }
+
+        img {
+            padding-left: 2px;
+        }
+
+    }
+
+    .login-link {
+        a {
+            background: #282E65;
+            color: #fff !important;
+
+            &:hover {
+                color: $primary !important;
+            }
+        }
+    }
+
+    .theme-link {
+        a {
+            width: 60.64px;
+
+            img {
+                margin-top: -4px;
+            }
+        }
+    }
+}
+
+.header {
+    nav {
+        height: 84px;
+        background: #FFFFFF;
+        // box-shadow: 0px 12px 58px rgba(101, 101, 101, 0.06);
+
+
+        input,
+        input:focus {
+            width: 342px !important;
+            height: 41px;
+            background: rgba(123, 185, 41, 0.12);
+            border-radius: 10px;
+            border: none !important;
+            padding-left: 2.7rem;
+            padding-right: 1rem;
+
+        }
+
+
+        .nav-logo {
+            height: 32px;
+            width: 32px;
+            border-radius: 0px;
+        }
+
+        img {
+            cursor: pointer;
+            max-width: 31px;
+            max-height: 31px;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: 0 .6rem;
+            width: 40px;
+        }
+
+        .search {
+            position: absolute;
+            margin-left: .8rem;
+
+        }
+
+        .second-nav {
+            img {
+                margin-left: 1rem;
+            }
+        }
+
+        .isloggesIN {
+            width: 142px;
+            height: 50px;
+            background: #282E65;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            color: #FFFFFF;
+        }
+    }
+}
+
+.mb-header {
+    margin-bottom: 5rem;
+}
+
+ 

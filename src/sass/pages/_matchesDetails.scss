@@ -1,0 +1,56 @@
+.match_details {
+    .title {
+        margin-top: 2rem;
+        height: 320px; 
+        box-shadow: 29px 39px 96px rgba(129, 129, 129, 0.12);
+        background-image: url("../../../public/images/match_bg.png"); 
+        padding-top: 4rem;
+        background-size: cover;
+
+        .home,
+        .away {
+            img {
+                max-height: 158px;
+                max-width: 118.60735321044922px;
+            }
+            .img_box{
+                min-height: 160px;  
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            h2{
+                margin-top: 1.7rem;
+            }
+        }
+
+        .scores {
+            h1 {
+                height: 88px;
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 90px;
+                line-height: 110px;
+                color: #2E2E2E;
+            }
+
+            .textTop {
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 29px;
+                color: #B6B6B6;
+            }
+
+            .fullTime {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 24px;
+                color: #000000;
+                margin-top: 2rem;
+            }
+        }
+    }
+}
