@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -8,8 +7,10 @@ import { getFixturesDay1, getFixturesLive, getFixturesToday, getLegues } from ".
 import { getCountry } from "./store/LiveScores/Matches";
 import { setAuth } from "./store/General";
 import { getBlog } from "./store/Blog";
+
+/*eslint-disable*/
 function AppLoader() {
-    const dispatch = useDispatch() 
+    const dispatch = useDispatch()
     useEffect(() => {
         AOS.init();
         AOS.refresh();
