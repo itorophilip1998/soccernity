@@ -19,6 +19,7 @@ import Verify from "./pages/Auth/Verify";
 import ProtectedRoutes from "./Middleware/ProtectedRoutes";
 import ShowProfile from "./pages/Community/components/Profile/ShowProfile";
 import AppLoader from "./AppLoader";
+import CompleteProfile from "./pages/Auth/CompleteProfile";
 
 
 function App() {
@@ -60,6 +61,7 @@ function App() {
           <Route path="forgot-password" element={<ForgotPassword />} />
           <Route path="reset-password" element={<ResetPassword />} />
           <Route path="verify" element={<Verify />} />
+          <Route path="complete-profile" element={<CompleteProfile />} />
         </Route>
         <Route path="verified" element={<ResetPassword />} />
 
