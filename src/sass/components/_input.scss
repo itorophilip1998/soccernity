@@ -80,3 +80,19 @@ textarea {
     height: 400px !important;
     resize: none;
 }
+
+.uploadFileInput {
+    width: 177px !important;
+    height: 177px !important;
+    border-radius: 50% !important; 
+    cursor: pointer;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    -ms-border-radius: 50% !important;
+    -o-border-radius: 50% !important;
+    color: transparent !important;
+}
+
+.uploadFileInput::-webkit-file-upload-button {
+    display: none;
+}
