@@ -8,12 +8,13 @@ function BlogCard({ blog }) {
       {blog?.data?.map((category, index) =>
         <div className={'row m-0 blogcards'} key={index}>
           {category?.articles?.map((article, key) =>
-            <div key={key} className={`${article?.key === 0 ? 'headeline-cards' : 'detailed-cards col-md-4 mx-auto'} my-3`}>
+            <div key={key} className={`${key === 0 ? 'detailed-cards col-md-4 mx-auto' : 'headeline-cards'} my-3`}>
               <div className="img">
-                {/* <img src={article.img} alt="" /> */}
+                {/* <img src={article?.photos[0]} alt="" /> */}
               </div>
+
               <div className="card-body">
-                {article?.key === 0 && <div className='tag'>{category?.name}</div>}
+                {key === 0 && <div className='tag'>{category?.name}</div>}
                 <h3>
                   <Link to={"/blog/blog_id"}>{article.title}</Link>
                 </h3>
@@ -24,8 +25,6 @@ function BlogCard({ blog }) {
                 </p>
               </div>
             </div>)}
-
-
         </div>
       )
       }
