@@ -1,8 +1,7 @@
 import axios from 'axios'
 import { config } from './config'
 
-const { Api } = config;
-const { header } = config
+const { Api, Header } = config;
 
 
 // auth request
@@ -27,7 +26,7 @@ export const signinReq = async (req) => {
 export const signoutReq = async (req) => {
     try {
         window.localStorage.clear()
-        await axios.post(`${Api}/auth/signout`, header);
+        await axios.post(`${Api}/auth/signout`, Header);
         window.location.href = '/auth/signin'
     } catch (error) {
         return error
@@ -58,6 +57,24 @@ export const forgotPasswordReq = async (req) => {
         return error
     }
 }
+export const updatProfileReq = async (req) => {
+    try {
+        const res = await axios.post(`${Api}/auth/update-profile`, req, Header);
+        return res
+    } catch (error) {
+        return error
+    }
+}
+
+export const getUserReq = async (req) => {
+    try { 
+        const res = await axios.get(`${Api}/auth/user-account`, Header);
+        return res
+    } catch (error) {
+        return error
+    }
+}
+
 
 // blog request 
 export const getBlogReq = async (req) => {

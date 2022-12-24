@@ -1,46 +1,26 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-import axios from "axios";
-// import url from "../../json/config";
-const api = process.env.REACT_APP_API;
+import { getUserReq } from "../../utils/request";
 
-let token = window.localStorage.getItem("token");
-const config = { headers: { Authorization: `bearer ${token}` } };
 
 export const getUser = createAsyncThunk(
     'user/getUser',
     async () => {
-        const res = await axios.get(`${api}/user/profile`, config)
-        const balance = res.data.data.rank.balance;
-        window.localStorage.setItem("balance", balance);
-        return res.data.data;
+        const res = await getUserReq();
+        return res.data;
     }
 )
 export const authSlice = createSlice(
     {
         name: "user",
-        initialState: {
-            data: [],
-            loading: false,
-            error: false
-        },
+        initialState: {},
+        user: "",
         reducers: {
             logoutAction: () => {
                 localStorage.removeItem("token")
                 window.location.href = "/signin"
             },
             updateProfile: (state, action) => {
-                // state.error = false 
-                // state.loading = true 
-                // axios.post(`${api}/user/profile`, action.payload, config).then((res) => {
-                //     // window.location.href = "/dashboard/profile" 
-                //     state.loading = false
-
-                // }).catch((err) => {  
-                //     state.error=true
-                //     state.loading=false
-                //     console.log(err) 
-                // });
             }
 
         },
@@ -48,7 +28,7 @@ export const authSlice = createSlice(
             // Add reducers for additional action types here, and handle loading state as needed
             builder.addCase(getUser.fulfilled, (state, action) => {
                 // Add user to the state array
-                state.data = action.payload
+                state.user = action.payload; 
             })
         },
     });

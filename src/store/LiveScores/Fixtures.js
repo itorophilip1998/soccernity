@@ -16,6 +16,13 @@ export const getLegues = createAsyncThunk(
         return res.data.response;
     }
 )
+export const getTeams = createAsyncThunk(
+    'user/getTeams',
+    async ({ search }) => {
+        const res = await axios.get(`${config.BaseApi}/teams?search=${search}`, header)
+        return res.data.response;
+    }
+)
 export const getFixturesLive = createAsyncThunk(
     'user/getFixturesLive',
     async () => {
@@ -33,7 +40,7 @@ export const getFixturesToday = createAsyncThunk(
 )
 export const getFixturesDay1 = createAsyncThunk(
     'user/getFixturesDay1',
-    async ({ date}) => {
+    async ({ date }) => {
         // const date = moment().add(1, 'days').format("YYYY-MM-DD")
         const res = await axios.get(`${config.BaseApi}/fixtures?date=${date}`, header)
         return res.data.response;

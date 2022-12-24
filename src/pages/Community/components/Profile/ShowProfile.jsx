@@ -7,7 +7,12 @@ import TrendForYou from '../TrendForYou/TrendForYou'
 import FixturesSub from '../Fixtures'
 import ViewProfile from './ViewProfile'
 import PostMediaBox from './PostMediaBox'
+import { useSelector } from 'react-redux'
+
 function ShowProfile() {
+
+    const data = useSelector((state) => state.user)
+    console.log(data)
     return (
         <div className=' community'>
             <div className="container-fluid ">
