@@ -10,8 +10,8 @@ export const getBlog = createAsyncThunk(
 )
 export const getSingleBlog = createAsyncThunk(
     'user/getSingleBlog',
-    async (queryId) => {
-        const res = await getSingleBlogReq({ queryId });
+    async ( queryId ) => {
+        const res = await getSingleBlogReq(queryId);
         return res.data?.article;
     }
 )

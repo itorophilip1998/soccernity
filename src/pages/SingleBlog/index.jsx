@@ -7,6 +7,8 @@ import Comments from '../Blog/components/Comments';
 import { useDispatch, useSelector } from 'react-redux';
 import { getSingleBlog } from "../../store/Blog";
 import moment from "moment";
+import { ShareSocial } from 'react-share-social'
+
 function SingleBlog() {
   const dispatch = useDispatch()
   const article = useSelector((state) => state.blog?.articles);
@@ -14,17 +16,22 @@ function SingleBlog() {
   useEffect(() => {
     dispatch(getSingleBlog(queryId))
   }, [])
-  console.log(article)
+
+  const SocialMedia = () => {
+    return <ShareSocial
+      socialTypes={['facebook', 'twitter', 'reddit', 'linkedin']}
+    />
+  }
   return (
     <div className='container-fluid py-5 single-blog'>
       <div className="header-single-blog py-md-5">
         <h1 className="title text-capitalize">
           {article?.title}
         </h1>
-        <div className="info row m-0 py-3 ">
-          <div className="col-md-8 p-0 ">
+        <div className="info row m-0 py-3 align-items-center">
+          <div className="col-md-8 p-0   ">
             <div className="row m-0">
-              <div className="col-6 p-0 posted">
+              <div className="col-6 p-0 posted ">
                 <span> Posted By:</span> <b> {article?.user?.role}</b>
               </div>
               <div className="col-6 ">
@@ -35,27 +42,18 @@ function SingleBlog() {
           </div>
           <div className="col-md-4 text-right">
             Share via:
-            <i className="icon">
-              <Facebook className="Fb ico" />
-              <Twitter className="Tw ico" />
-              <WhatsApp className="Wa ico" />
-              <Share className="Sh ico" />
-            </i>
+            <SocialMedia/>
           </div>
         </div>
       </div>
       <Slider article={article} />
       <p className='blogText'>
-         {article?.body}
+        {article?.body}
       </p>
       <div >
         Share via:
-        <i className="icon">
-          <Facebook className="Fb ico" />
-          <Twitter className="Tw ico" />
-          <WhatsApp className="Wa ico" />
-          <Share className="Sh ico" />
-        </i>
+        <SocialMedia />
+
       </div>
       <div className="commentBlog">
         <BlogForm />

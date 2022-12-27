@@ -5,11 +5,12 @@ function Slider({ article }) {
     <div className="img-Slider">
       <div id="imgSlider" className="carousel slide" data-ride="carousel">
         <ol className="carousel-indicators">
-          <li data-target="#imgSlider" data-slide-to="0" className="active"></li> 
+          {article?.images?.map((item, key) => <li data-target="#imgSlider" data-slide-to={key} className="active"></li>
+          )}
 
         </ol>
         <div className="carousel-inner">
-          {article?.images?.map((item, key) => <div className="carousel-item active">
+          {article?.images?.map((item, key) => <div className={`carousel-item ${key === 0 && 'active'}`}>
             <img src={item?.url} className="d-block w-100" alt="..." />
           </div>)}
         </div>
@@ -22,6 +23,11 @@ function Slider({ article }) {
           <span className="sr-only">Next</span>
         </button>
       </div>
+
+
+
+
+
     </div>
   )
 }
