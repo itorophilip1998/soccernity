@@ -3,12 +3,14 @@ import livescores from "./LiveScores";
 import general from "./General";
 // import auth from "./Auth";
 import blog from "./Blog";
+import auth from "./Auth";
 import community from "./Community";
 export const store = configureStore({
   reducer: {
     livescores,
     general,
     blog,
-    community
+    community,
+    auth
   } 
 });

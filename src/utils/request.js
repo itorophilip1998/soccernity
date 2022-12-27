@@ -85,9 +85,17 @@ export const getBlogReq = async (req) => {
         return error
     }
 }
-export const getSingleBlogReq = async (queryId) => {
+export const getSingleBlogReq = async (req) => {
     try {
-        const res = await axios.get(`${Api}/article/find/${queryId}`);
+        const res = await axios.get(`${Api}/article/find/${req}`);
+        return res
+    } catch (error) {
+        return error
+    }
+}
+export const addCommentReq = async (req) => {
+    try {
+        const res = await axios.post(`${Api}/comment/create`, req, Header);
         return res
     } catch (error) {
         return error

@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { Facebook, Twitter, WhatsApp, Share } from '@material-ui/icons';
 import Slider from './components/Slider';
 import TrendingNews from '../../components/TrendingNews';
 import BlogForm from '../Blog/components/BlogForm';
@@ -12,6 +11,7 @@ import { ShareSocial } from 'react-share-social'
 function SingleBlog() {
   const dispatch = useDispatch()
   const article = useSelector((state) => state.blog?.articles);
+  const user = useSelector((state) => state.auth?.user);
   const queryId = window.location.pathname.slice(6);
   useEffect(() => {
     dispatch(getSingleBlog(queryId))
@@ -42,7 +42,7 @@ function SingleBlog() {
           </div>
           <div className="col-md-4 text-right">
             Share via:
-            <SocialMedia/>
+            <SocialMedia />
           </div>
         </div>
       </div>
@@ -56,10 +56,11 @@ function SingleBlog() {
 
       </div>
       <div className="commentBlog">
-        <BlogForm />
-        <Comments />
-        <Comments />
-        <Comments />
+        <BlogForm user={user} article_id={article?.id} />
+        {
+          article?.comments?.map((item, key) =>
+            < Comments user={user} item={item} key={key} />
+          )}
       </div>
       <TrendingNews />
     </div>
