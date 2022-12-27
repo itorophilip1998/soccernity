@@ -3,16 +3,14 @@ import React, { useState } from 'react'
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 // import { getFixturesDay1, getFixturesLive, getFixturesToday } from '../../../store/LiveScores/Fixtures';
-
-// /**/
+  
 const FilterByLeague = () => {
     const leagues = useSelector((state) => state.livescores?.leagues)
     const country = useSelector((state) => state.livescores?.country)
     const [search, setSearch] = useState()
     const [imgRotate, setimgRotate] = useState(false)
-    const [isKey, setisKey] = useState()
-    // const dispatch = useDispatch()
-
+    const [isKey, setisKey] = useState() 
+    // const dispatch = useDispatch() 
     // const loadFixtures = ({ league }) => {
     //     dispatch(getFixturesLive({ extra: `&league=${league}&season=${2022}` }))
     //     dispatch(getFixturesToday({ extra: `&league=${league}&season=${2022}` }))
@@ -55,9 +53,7 @@ const FilterByLeague = () => {
             <div className="sortByCountry ">
                 <h4 className='mt-5'>
                     Sort By Countries
-                </h4>
-
-
+                </h4> 
                 <div className="searchByloaders">
                     {
                         country?.filter((input) =>

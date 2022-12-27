@@ -62,6 +62,7 @@
         border-radius: 8px;
         color: #fff;
         margin-bottom: 1rem;
+        text-transform: capitalize;
     }
 
     .detailed-cards {
@@ -85,7 +86,7 @@
         h3 {
             font-weight: 700;
             font-size: 24px;
-            line-height: 29px;
+            line-height: 29px; 
 
             a {
                 color: #000;

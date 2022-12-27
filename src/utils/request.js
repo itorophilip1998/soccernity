@@ -67,7 +67,7 @@ export const updatProfileReq = async (req) => {
 }
 
 export const getUserReq = async (req) => {
-    try { 
+    try {
         const res = await axios.get(`${Api}/auth/user-account`, Header);
         return res
     } catch (error) {
@@ -80,6 +80,14 @@ export const getUserReq = async (req) => {
 export const getBlogReq = async (req) => {
     try {
         const res = await axios.get(`${Api}/categories`);
+        return res
+    } catch (error) {
+        return error
+    }
+}
+export const getSingleBlogReq = async (queryId) => {
+    try {
+        const res = await axios.get(`${Api}/article/find/${queryId}`);
         return res
     } catch (error) {
         return error

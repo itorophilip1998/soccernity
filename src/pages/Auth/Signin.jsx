@@ -29,11 +29,11 @@ function Signin() {
       localStorage.setItem('email', res.data?.user?.email)
       localStorage.setItem('username', res.data?.user?.username)
       dispatch(setAuth(res.data))
-      if (!res.data?.user?.profile) {
-        window.location.href = "/auth/complete-profile"
-
-      }
-      window.location.href = "/community"
+      if (res.data?.user?.profile?.first_name) {
+        window.location.href = "/community" 
+      } else {
+        window.location.href = "/auth/complete-profile" 
+      } 
     }
     else if (res && res?.response) {
       toast.error(res?.response?.data?.message)

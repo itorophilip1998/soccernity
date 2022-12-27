@@ -2,21 +2,20 @@ import React from 'react'
 import moment from 'moment/moment';
 import { Link } from 'react-router-dom';
 function BlogCard({ blog }) {
-  console.log(blog)
   return (
     <div className="container-fluid pb-3">
       {blog?.data?.map((category, index) =>
         <div className={'row m-0 blogcards'} key={index}>
           {category?.articles?.map((article, key) =>
-            <div key={key} className={`${key === 0 ? 'detailed-cards col-md-4 mx-auto' : 'headeline-cards'} my-3`}>
-              <div className="img">
-                {/* <img src={article?.photos[0]} alt="" /> */}
+            <div key={key} className={`${key !== 0 ? 'detailed-cards col-md-4 mx-auto' : 'headeline-cards'} my-3`}>
+              <div className="img ">
+                <img src={article?.images[0]?.url} alt="" className='imgBlogcard' />
               </div>
 
               <div className="card-body">
                 {key === 0 && <div className='tag'>{category?.name}</div>}
                 <h3>
-                  <Link to={"/blog/blog_id"}>{article.title}</Link>
+                  <Link to={`/blog/${article?.id}`}>{article.title}</Link>
                 </h3>
                 <p className='body'>{article?.body}</p>
                 <p className='time'>
