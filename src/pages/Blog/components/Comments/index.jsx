@@ -1,6 +1,5 @@
 import moment from 'moment'
-import React, { useState } from 'react'
-import { comments } from "../../../../DB";
+import React, { useState } from 'react' 
 import ThumbUpAltOutlinedIcon from '@material-ui/icons/ThumbUpAltOutlined';
 import Reactions from '../React';
 function Comments({ user, item }) {

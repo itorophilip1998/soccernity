@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getSingleBlog } from "../../store/Blog";
 import moment from "moment";
 import { ShareSocial } from 'react-share-social'
-
+/*eslint-disable*/ 
 function SingleBlog() {
   const dispatch = useDispatch()
   const article = useSelector((state) => state.blog?.articles);
