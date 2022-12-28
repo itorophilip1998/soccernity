@@ -101,3 +101,19 @@ export const addCommentReq = async (req) => {
         return error
     }
 }
+export const getCommentsReq = async (req) => {
+    try {
+        const res = await axios.post(`${Api}/comment/create`, req, Header);
+        return res
+    } catch (error) {
+        return error
+    }
+}
+export const addLikeReq = async (req) => {
+    try {
+        const res = await axios.post(`${Api}/like/create/${req.article_id}`, req, Header);
+        return res
+    } catch (error) {
+        return error
+    }
+}

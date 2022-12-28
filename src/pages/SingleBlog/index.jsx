@@ -7,7 +7,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getSingleBlog } from "../../store/Blog";
 import moment from "moment";
 import { ShareSocial } from 'react-share-social'
-/*eslint-disable*/ 
+// import { getCommentsReq } from "../../utils/request";
+/*eslint-disable*/
 function SingleBlog() {
   const dispatch = useDispatch()
   const article = useSelector((state) => state.blog?.articles);
@@ -15,6 +16,7 @@ function SingleBlog() {
   const queryId = window.location.pathname.slice(6);
   useEffect(() => {
     dispatch(getSingleBlog(queryId))
+    // dispatch(getCommentsReq(queryId))
   }, [])
 
   const SocialMedia = () => {
@@ -59,7 +61,7 @@ function SingleBlog() {
         <BlogForm user={user} article_id={article?.id} />
         {
           article?.comments?.map((item, key) =>
-            < Comments user={user} item={item} key={key} />
+            < Comments user={user} item={item} key={key} article_id={article?.id} />
           )}
       </div>
       <TrendingNews />

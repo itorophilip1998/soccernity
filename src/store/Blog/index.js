@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { getBlogReq, getSingleBlogReq } from "../../utils/request";
+import {  getBlogReq, getSingleBlogReq } from "../../utils/request";
 
 export const getBlog = createAsyncThunk(
     'user/getBlog',
@@ -10,11 +10,12 @@ export const getBlog = createAsyncThunk(
 )
 export const getSingleBlog = createAsyncThunk(
     'user/getSingleBlog',
-    async ( queryId ) => {
+    async (queryId) => {
         const res = await getSingleBlogReq(queryId);
         return res.data?.article;
     }
 )
+
 export const blog = createSlice(
     {
         name: "blog",

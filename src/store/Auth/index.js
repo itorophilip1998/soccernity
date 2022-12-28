@@ -7,10 +7,12 @@ export const getUser = createAsyncThunk(
     'user/getUser',
     async () => {
         const res = await getUserReq();
-        if (!res) {
-            localStorage.removeItem("token")
-            window.location.href = "/signin"
-        }
+        // if (res?.response?.data?.message === "Unauthenticated.") {
+        //     // localStorage.removeItem("token")
+        //     // window.location.href = "/auth/signin"
+        //     console.log(res.data?.email)
+
+        // }  
         return res.data;
     }
 )

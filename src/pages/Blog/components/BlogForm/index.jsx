@@ -32,7 +32,7 @@ function BlogForm({ user, article_id }) {
     else if (res && res?.response) {
       toast.error(res?.response?.data?.message)
       setLoading(false)
-      if (res?.response?.data?.message === 'Unathenticated') {
+      if (res?.response?.data?.message === 'Unauthenticated.') {
         window.location.href = "/auth/signin"
       }
     }
