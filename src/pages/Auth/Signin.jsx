@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Visibility, VisibilityOff } from '@material-ui/icons'
 import { signinReq } from '../../utils/request';
-import { toast } from 'react-toastify';
 import AuthCheckBox from '../../components/input/AuthCheckBox'
 import { setAuth } from '../../store/General';
 import { useDispatch } from 'react-redux';
+import { ToastContainer, toast } from 'react-toastify';
 
 function Signin() {
   const [value, setformValue] = useState();
@@ -15,7 +15,6 @@ function Signin() {
   const [isload, setLoading] = useState(false);
   const addValue = (e) => {
     setformValue({ ...value, [e.target.name]: e.target.value })
-
   }
 
   const handleSubmit = async (e) => {
@@ -24,16 +23,20 @@ function Signin() {
     // setError(null)
     const res = await signinReq(value);
     if (res && res.data) {
-      toast.success(res?.data?.message)
+      toast.success("loggedIn succesfully !")
       setLoading(false)
       localStorage.setItem('token', res.data?.token)
       localStorage.setItem('email', res.data?.user?.email)
+      localStorage.setItem('username', res.data?.user?.username)
       dispatch(setAuth(res.data))
-      window.location.href = "/community"
+      if (res.data?.user?.profile?.first_name) {
+        window.location.href = "/community" 
+      } else {
+        window.location.href = "/auth/complete-profile" 
+      } 
     }
     else if (res && res?.response) {
       toast.error(res?.response?.data?.message)
-      // setError(res?.response?.data?.errors)
       setLoading(false)
     }
     else {
@@ -101,7 +104,7 @@ function Signin() {
       </div>
 
 
-
+      <ToastContainer />
     </div>
   )
 }

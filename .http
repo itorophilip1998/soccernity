@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+@baseApi=http://localhost:8000/api
+
+
+### signup
+POST  {{baseApi}}/auth/signup
+Content-Type: application/json
+
+{
+    "firstname":"itoro",
+    "lastname":"philip",
+    "email":"itoro@gmail.com1a",
+    "password":"philip",
+    "password_confirmation":"philip",
+    "phone":"09024195493",
+    "role":"user"
+=======
 @baseUrl=https://clisha-dev-server.herokuapp.com/api
 @accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjYxMzUzNDI5LCJleHAiOjE2NjY1Mzc0Mjl9.Gp5TyKqhtZ2hmwlhpspYkmwAymg0njiWEdOc2eAMTAw
 
@@ -31,4 +48,5 @@ Content-Type: application/json
 {
     "email":"admin@expectoo.dev",
     "password":"clisha_@dmin"
+>>>>>>> 70ce75cea19a2ca62044395a015e8db5ebd8c20c
 }

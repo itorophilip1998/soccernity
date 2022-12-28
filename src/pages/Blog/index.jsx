@@ -1,15 +1,15 @@
 import React from 'react'
-import BlogCards from '../../components/BlogCards' 
+import BlogCards from '../../components/BlogCards'
 import Categories from './components/Categories'
-import Hero from './components/Hero' 
-import {blog} from "../../DB"
+import Hero from './components/Hero'
+import { useSelector } from 'react-redux'
 function Blog() {
-  
+  const blog = useSelector((state) => state.blog?.categories)
   return (
-    <div> 
+    <div>
       <Hero />
-      <Categories />  
-      <BlogCards blog={blog}/>
+      <Categories />
+      <BlogCards blog={blog} />
     </div>
   )
 }

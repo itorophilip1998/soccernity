@@ -15,7 +15,9 @@ textarea {
     margin-top: .6rem;
 
     label,
-    input {
+    input,
+    select,
+    textarea {
         font-family: 'Inter';
         font-style: normal;
         font-weight: 600;
@@ -25,7 +27,19 @@ textarea {
         // text-transform: capitalize;
     }
 
-    input {
+    ::placeholder,
+    select {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    input,
+    select,
+    textarea {
         padding: 20px 40px;
         gap: 10px;
         height: 65px;
@@ -37,6 +51,10 @@ textarea {
         flex-grow: 0;
     }
 
+    textarea {
+        height: 200px;
+        resize: none;
+    }
 }
 
 .checkboxAuth {
@@ -84,7 +102,7 @@ textarea {
 .uploadFileInput {
     width: 177px !important;
     height: 177px !important;
-    border-radius: 50% !important; 
+    border-radius: 50% !important;
     cursor: pointer;
     -webkit-border-radius: 50% !important;
     -moz-border-radius: 50% !important;

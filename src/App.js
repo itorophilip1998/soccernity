@@ -19,8 +19,7 @@ import Verify from "./pages/Auth/Verify";
 import ProtectedRoutes from "./Middleware/ProtectedRoutes";
 import ShowProfile from "./pages/Community/components/Profile/ShowProfile";
 import AppLoader from "./AppLoader";
-import CompleteProfile from "./pages/Auth/CompleteProfile";
-
+import CompleteProfile from "./pages/Auth/CompleteProfile"; 
 
 function App() {
   AppLoader()
@@ -67,7 +66,7 @@ function App() {
 
         {/* Auth end */}
       </Routes>
-
+    
     </Router>
   );
 }
