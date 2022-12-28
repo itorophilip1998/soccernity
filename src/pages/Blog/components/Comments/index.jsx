@@ -3,17 +3,22 @@ import React, { useState } from 'react'
 import ThumbUpAltOutlinedIcon from '@material-ui/icons/ThumbUpAltOutlined';
 import { addLikeReq } from '../../../../utils/request';
 import { toast } from 'react-toastify';
+import { useDispatch } from 'react-redux';
+import { getSingleBlog } from '../../../../store/Blog';
 
 // import Reactions from '../React';
 function Comments({ user, item, article_id }) {
-  const [value] = useState({ type: "blog", article_id });
-
+  const [value] = useState({ type: "blog", article_id: item?.id });
+  const isLike = item?.likes.find((isLike) => isLike?.user_id === user?.id);
+  const dispatch = useDispatch()
 
   const likeFunc = async () => {
     // setError(null)
     const res = await addLikeReq(value);
     if (res && res.data) {
       toast.success(res.data?.message)
+      dispatch(getSingleBlog(article_id))
+
     }
     else if (res && res?.response) {
       toast.error(res?.response?.data?.message)
@@ -42,9 +47,12 @@ function Comments({ user, item, article_id }) {
           </h5>
           <p>{item.body}</p>
           <div className="infoSection">
-            <span className="length">25</span> <img src="/images/dot.png" alt="" />
+            <span className="length">{item?.likes?.length !== 0 ? item?.likes?.length : ""}</span> {item?.likes?.length !== 0 ? <img src="/images/dot.png" alt="" /> : ""}
             {/* {isReact && <Reactions />} */}
-            <span className="react" onClick={() => likeFunc()}><ThumbUpAltOutlinedIcon className='ico' /></span> <img src="/images/dot.png" alt="" />
+            <span className="react" onClick={() => likeFunc()}>
+              <ThumbUpAltOutlinedIcon className={`ico ${isLike ? 'isLike' : ""}`} /></span>
+
+            <img src="/images/dot.png" alt="" />
             {/* <span className="Like">Like</span> <img src="/images/dot.png" alt="" /> */}
             <span className="reply">Reply</span>
             {/* <img src="/images/dot.png" alt="" /> */}

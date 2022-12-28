@@ -31,9 +31,10 @@
             }
         }
     }
-.ico{
-    margin-top: -6px;
-}
+
+    .ico {
+        margin-top: -6px;
+    }
 
     .dot,
     .infoSection>img {
@@ -42,17 +43,23 @@
         height: 4px;
     }
 }
-.reactions{
-    img{
+
+.reactions {
+    img {
         width: 35px;
         height: 34px;
         margin: 0 1rem;
         cursor: pointer;
     }
+
     background: #fff;
     padding: 1rem;
     position: absolute;
     z-index: 2;
     margin: -6rem 0 0 3.5rem;
-    border-radius: 1rem 1rem 1rem 0; 
+    border-radius: 1rem 1rem 1rem 0;
+}
+
+.isLike {
+    color: $primary;
 }
