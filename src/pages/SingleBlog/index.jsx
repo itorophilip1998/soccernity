@@ -54,11 +54,11 @@ function SingleBlog() {
       </p>
       <div >
         Share via:
-        <SocialMedia />
-
+        <SocialMedia /> 
       </div>
       <div className="commentBlog">
-        <BlogForm user={user} article_id={article?.id} />
+        <BlogForm user={user} item={article} article_id={article?.id} />
+        
         {
           article?.comments?.map((item, key) =>
             < Comments user={user} item={item} key={key} article_id={article?.id} />

@@ -5,6 +5,7 @@ import { addLikeReq } from '../../../../utils/request';
 import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
 import { getSingleBlog } from '../../../../store/Blog';
+import RepliesForm from '../BlogForm/RepliesForm';
 
 // import Reactions from '../React';
 function Comments({ user, item, article_id }) {
@@ -18,7 +19,6 @@ function Comments({ user, item, article_id }) {
     if (res && res.data) {
       toast.success(res.data?.message)
       dispatch(getSingleBlog(article_id))
-
     }
     else if (res && res?.response) {
       toast.error(res?.response?.data?.message)
@@ -29,7 +29,6 @@ function Comments({ user, item, article_id }) {
     else {
       toast.info('Oops something went wrong')
     }
-
   }
   return (
     <div className="commentBox mt-4">
@@ -54,7 +53,8 @@ function Comments({ user, item, article_id }) {
 
             <img src="/images/dot.png" alt="" />
             {/* <span className="Like">Like</span> <img src="/images/dot.png" alt="" /> */}
-            <span className="reply">Reply</span>
+            <span className="reply" data-toggle="modal" data-target={`#reply${item?.id}`}>Reply</span>
+            <RepliesForm user={user} item={item} article_id={article_id} />
             {/* <img src="/images/dot.png" alt="" /> */}
             {/* <span className="share">Share</span> */}
           </div>
