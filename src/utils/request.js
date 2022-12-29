@@ -117,3 +117,11 @@ export const addLikeReq = async (req) => {
         return error
     }
 }
+export const addReplyReq = async (req) => {
+    try {
+        const res = await axios.post(`${Api}/like/reply/${req.article_id}`, req, Header);
+        return res
+    } catch (error) {
+        return error
+    }
+}
