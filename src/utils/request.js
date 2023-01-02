@@ -25,13 +25,18 @@ export const signinReq = async (req) => {
 }
 export const signoutReq = async (req) => {
     try {
-        window.localStorage.clear()
-        await axios.post(`${Api}/auth/signout`, Header);
-        window.location.href = '/auth/signin'
+        const res = await axios.post(`${Api}/auth/signout`, req, Header);
+
+        if (res) {
+            window.localStorage.clear()
+            window.location.href = '/auth/signin'
+        }
     } catch (error) {
+        console.log(error)
         return error
     }
 }
+
 export const resetPasswordReq = async (req) => {
     try {
         const res = await axios.post(`${Api}/auth/reset-password?token=${req.token}&email=${req.email}`, req);
