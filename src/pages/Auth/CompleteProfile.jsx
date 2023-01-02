@@ -1,11 +1,11 @@
 
 import React, { useState } from 'react'
 import { updatProfileReq } from '../../utils/request';
-import { ToastContainer, toast } from 'react-toastify'; 
+import { ToastContainer, toast } from 'react-toastify';
 // import { getTeams } from '../../store/LiveScores/Fixtures';
 
 function CompleteProfile() {
-  const [data, setformData] = useState(); 
+  const [data, setformData] = useState();
   const [img, setImg] = useState('/images/upload.png');
   const [error, setError] = useState();
   const [isload, setLoading] = useState(false);
@@ -76,8 +76,9 @@ function CompleteProfile() {
                   className={`uploadFileInput my-2`}
                   onChange={(e) => addPicture(e)}
                   value=""
-                  name="cover_photo"
+                  name="profile_photo"
                   title="Upload Profile image"
+                  accept="image/*"
                   style={{
                     backgroundImage: `url(${img})`,
                     backgroundRepeat: "no-repeat",
