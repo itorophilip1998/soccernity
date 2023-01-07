@@ -48,8 +48,9 @@
 
 }
 
-.imgBlogcard {
-    background-position: center;
+.imgBlogcard { 
+    object-fit: contain;
+    // object-position: 15% 100%;
 }
 
 #categories {

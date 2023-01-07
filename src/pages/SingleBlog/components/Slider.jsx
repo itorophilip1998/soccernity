@@ -10,8 +10,8 @@ function Slider({ article }) {
 
         </ol>
         <div className="carousel-inner">
-          {article?.images?.map((item, key) => <div className={`carousel-item ${key === 0 && 'active'}`}>
-            <img src={item?.url} className="d-block w-100" alt="..." />
+          {article?.images?.map((item, key) => <div className={`carousel-item ${key === 0 && 'active'} text-center`}>
+            <img src={item?.url} className=" imgBlogcard" alt="..." />
           </div>)}
         </div>
         <button className="carousel-control-prev" type="button" data-target="#imgSlider" data-slide="prev">
